@@ -1,178 +1,243 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Ravi Prakash | Portfolio</title>
-
-<link rel="stylesheet" href="style.css">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ravi Prakash</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
-
-
 <body>
 
-
-<nav>
-
-<h1>Ravi</h1>
-
-<ul>
-
-<li><a href="#about">About</a></li>
-
-<li><a href="#skills">Skills</a></li>
-
-<li><a href="#projects">Projects</a></li>
-
-<li><a href="#contact">Contact</a></li>
-
-</ul>
-
-</nav>
-
-
-
-<header class="hero">
-
-<h2>Hi, I'm <span>Ravi Prakash</span></h2>
-
-<p>
-
-Data Analyst & Product Enthusiast passionate about
-building insights and meaningful digital products.
-
-</p>
-
-<div class="buttons">
-
-<a class="btn" href="#projects">View Projects</a>
-
-<a class="btn secondary" href="resume.pdf">Download Resume</a>
-
-</div>
-
-</header>
-
-
-
-<section id="about">
-
-<h2>About Me</h2>
-
-<p>
-
-B.Tech student interested in data analytics, dashboards,
-and product development. I enjoy solving problems
-with data and building useful digital tools.
-
-</p>
-
-</section>
-
-
-
-<section id="skills">
-
-<h2>Skills</h2>
-
-<div class="skills">
-
-<span>Python</span>
-<span>SQL</span>
-<span>Power BI</span>
-<span>Excel</span>
-<span>Data Visualization</span>
-<span>Product Analytics</span>
-<span>Git</span>
-<span>GitHub</span>
-
-</div>
-
-</section>
-
-
-
-<section id="projects">
-
-<h2>Projects</h2>
-
-<div class="projects">
-
-<div class="card">
-
-<h3>Smart SCADA Analytics</h3>
-
-<p>
-
-Analyzed industrial monitoring data to detect anomalies
-and improve system insights.
-
-</p>
-
-</div>
-
-
-<div class="card">
-
-<h3>Unity Room Decorator</h3>
-
-<p>
-
-Built a 3D interactive interior design simulator
-using Unity.
-
-</p>
-
-</div>
-
-
-<div class="card">
-
-<h3>Sales Dashboard</h3>
-
-<p>
-
-Developed a Power BI dashboard to analyze sales
-performance and trends.
-
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<section id="contact">
-
-<h2>Contact</h2>
-
-<p>Email: yourmail@email.com</p>
-
-<p>GitHub: github.com/raviprakash-works</p>
-
-<p>LinkedIn: linkedin.com/in/ravi</p>
-
-</section>
-
-
-
-<footer>
-
-<p>© 2026 Ravi Prakash</p>
-
-</footer>
-
-
-<script src="script.js"></script>
-
+  <!-- NOISE OVERLAY -->
+  <div class="noise"></div>
+
+  <!-- CURSOR -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo">RP<span class="blink">_</span></div>
+    <ul>
+      <li><a href="#about"><span class="num">01</span>About</a></li>
+      <li><a href="#skills"><span class="num">02</span>Skills</a></li>
+      <li><a href="#projects"><span class="num">03</span>Projects</a></li>
+      <li><a href="#contact"><span class="num">04</span>Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-text">DATA</div>
+    <div class="hero-content">
+      <div class="hero-tag"><span class="dot"></span> Available for opportunities</div>
+      <h1 class="hero-name">
+        <span class="line-reveal">Ravi</span>
+        <span class="line-reveal delay-1">Prakash</span>
+      </h1>
+      <div class="hero-role">
+        <span class="role-text" id="roleText"></span>
+      </div>
+      <p class="hero-desc">
+        B.Tech ECE @ NSUT · Data &amp; SCADA Intern @ MECON · Building insight systems that actually matter.
+      </p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn-primary">View Work <span class="arrow">↗</span></a>
+        <a href="resume.pdf" class="btn-ghost">Resume.pdf</a>
+      </div>
+    </div>
+    <div class="hero-stat-bar">
+      <div class="stat"><span class="stat-num">5K+</span><span class="stat-label">Records Queried</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><span class="stat-num">20+</span><span class="stat-label">KPIs Tracked</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><span class="stat-num">40%</span><span class="stat-label">Monitoring Effort Saved</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><span class="stat-num">50%</span><span class="stat-label">Reporting Efficiency Gained</span></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section about-section">
+    <div class="section-label">// 01 — ABOUT</div>
+    <div class="about-grid">
+      <div class="about-left">
+        <h2 class="section-heading">I turn raw data into<br/><em>decisions.</em></h2>
+        <p>B.Tech Electronics & Communication Engineering student at NSUT Delhi, graduating 2026. I've spent the last year building real systems — SQL pipelines, Power BI dashboards, and Python automation — at MECON Limited, one of India's leading public sector engineering firms.</p>
+        <p>I don't just visualize data. I structure it, validate it, and make it tell a story that drives action.</p>
+        <div class="about-tags">
+          <span>Delhi, India</span>
+          <span>NSUT 2022–2026</span>
+          <span>ECE → Data</span>
+        </div>
+      </div>
+      <div class="about-right">
+        <div class="terminal">
+          <div class="terminal-bar">
+            <span class="t-dot red"></span>
+            <span class="t-dot yellow"></span>
+            <span class="t-dot green"></span>
+            <span class="t-title">ravi@portfolio ~ </span>
+          </div>
+          <div class="terminal-body" id="terminalBody"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section skills-section">
+    <div class="section-label">// 02 — SKILLS</div>
+    <h2 class="section-heading">Technical<br/><em>Arsenal</em></h2>
+    <div class="skills-grid">
+      <div class="skill-group">
+        <div class="skill-group-label">Languages</div>
+        <div class="skill-items">
+          <div class="skill-pill">SQL</div>
+          <div class="skill-pill">Python</div>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-label">Analytics</div>
+        <div class="skill-items">
+          <div class="skill-pill">Descriptive Analysis</div>
+          <div class="skill-pill">Correlation Analysis</div>
+          <div class="skill-pill">Time-Series Analysis</div>
+          <div class="skill-pill">KPI Monitoring</div>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-label">Tools</div>
+        <div class="skill-items">
+          <div class="skill-pill">Power BI</div>
+          <div class="skill-pill">Excel</div>
+          <div class="skill-pill">Power Query</div>
+          <div class="skill-pill">Pandas</div>
+          <div class="skill-pill">Git / GitHub</div>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-label">Data Mgmt</div>
+        <div class="skill-items">
+          <div class="skill-pill">ETL Pipelines</div>
+          <div class="skill-pill">Relational Models</div>
+          <div class="skill-pill">Data Validation</div>
+          <div class="skill-pill">Multi-source Integration</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="section exp-section">
+    <div class="section-label">// 02.5 — EXPERIENCE</div>
+    <h2 class="section-heading">Where I've<br/><em>Worked</em></h2>
+    <div class="exp-card">
+      <div class="exp-header">
+        <div>
+          <div class="exp-company">MECON Limited</div>
+          <div class="exp-role">Data & SCADA Intern</div>
+        </div>
+        <div class="exp-date">Jun – Jul 2025 · Delhi</div>
+      </div>
+      <ul class="exp-list">
+        <li>Queried, joined & validated <strong>5,000+ structured operational records</strong> using SQL — improving reporting accuracy and surfacing inefficiencies.</li>
+        <li>Designed & maintained Power BI dashboards tracking <strong>20+ KPIs</strong>, reducing manual monitoring effort by <strong>40%</strong>.</li>
+        <li>Applied descriptive, correlation & time-series analysis to detect performance gaps and recurring trends.</li>
+        <li>Automated MIS reports using Python & Power Query, cutting reporting turnaround by <strong>30%</strong>.</li>
+        <li>Delivered insight-driven summaries to cross-functional stakeholders supporting data-backed decisions.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section projects-section">
+    <div class="section-label">// 03 — PROJECTS</div>
+    <h2 class="section-heading">Selected<br/><em>Work</em></h2>
+    <div class="projects-list">
+
+      <div class="project-item reveal">
+        <div class="project-num">001</div>
+        <div class="project-info">
+          <h3>Communications & Business Performance Analytics Dashboard</h3>
+          <p>Analyzed 10,000+ records to evaluate engagement trends and KPI performance across regions. Developed interactive dashboards for real-time time-series monitoring. Conducted correlation analysis to identify conversion drivers. Automated reporting workflows — <strong>50% efficiency gain</strong>.</p>
+          <div class="project-stack">
+            <span>SQL</span><span>Power BI</span><span>Excel</span>
+          </div>
+        </div>
+        <div class="project-arrow">↗</div>
+      </div>
+
+      <div class="project-item reveal">
+        <div class="project-num">002</div>
+        <div class="project-info">
+          <h3>Operations Analytics & Data Transformation Framework</h3>
+          <p>End-to-end ETL across multi-source datasets — improved data consistency by <strong>35%</strong>. Built reusable SQL queries and structured reporting tables. Developed time-series dashboards for anomaly detection. Delivered executive-level summaries translating data into action.</p>
+          <div class="project-stack">
+            <span>Python</span><span>SQL</span><span>Power BI</span>
+          </div>
+        </div>
+        <div class="project-arrow">↗</div>
+      </div>
+
+      <div class="project-item reveal">
+        <div class="project-num">003</div>
+        <div class="project-info">
+          <h3>Smart SCADA Analytics</h3>
+          <p>Analyzed industrial monitoring data to detect anomalies and improve operational insights in India's oil & gas sector. Integrated AI/ML concepts into SCADA architecture for predictive monitoring.</p>
+          <div class="project-stack">
+            <span>SCADA</span><span>Power BI</span><span>Python</span>
+          </div>
+        </div>
+        <div class="project-arrow">↗</div>
+      </div>
+
+      <div class="project-item reveal">
+        <div class="project-num">004</div>
+        <div class="project-info">
+          <h3>Unity Room Decorator (AI-Powered)</h3>
+          <p>Built a 3D interactive interior design simulator in Unity integrating the Claude API for AI-generated decor suggestions, furniture placement, wall color control, and dynamic camera systems.</p>
+          <div class="project-stack">
+            <span>Unity</span><span>C#</span><span>Claude API</span>
+          </div>
+        </div>
+        <div class="project-arrow">↗</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section contact-section">
+    <div class="section-label">// 04 — CONTACT</div>
+    <h2 class="contact-heading">Let's build<br/>something<br/><em>real.</em></h2>
+    <div class="contact-links">
+      <a href="mailto:prakash.ravi.works@gmail.com" class="contact-item">
+        <span class="c-label">Email</span>
+        <span class="c-val">prakash.ravi.works@gmail.com <span class="arrow">↗</span></span>
+      </a>
+      <a href="https://linkedin.com/in/ravi-prakash-works" target="_blank" class="contact-item">
+        <span class="c-label">LinkedIn</span>
+        <span class="c-val">linkedin.com/in/ravi-prakash-works <span class="arrow">↗</span></span>
+      </a>
+      <a href="https://github.com/raviprakash-works" target="_blank" class="contact-item">
+        <span class="c-label">GitHub</span>
+        <span class="c-val">github.com/raviprakash-works <span class="arrow">↗</span></span>
+      </a>
+      <a href="tel:+917303061994" class="contact-item">
+        <span class="c-label">Phone</span>
+        <span class="c-val">+91 7303061994 <span class="arrow">↗</span></span>
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <span>© 2026 Ravi Prakash</span>
+    <span class="footer-right">Built with intention.</span>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
-
 </html>
