@@ -1,196 +1,111 @@
 'use strict';
 
-/* ─────────────────────────────────────────
-   1. CUSTOM CURSOR  (desktop only)
-───────────────────────────────────────── */
-const cursor    = document.getElementById('cursor');
+/* ── 1. CUSTOM CURSOR (desktop only) ── */
+const cursor     = document.getElementById('cursor');
 const cursorRing = document.getElementById('cursorRing');
-const isTouchDevice = () => window.matchMedia('(hover: none)').matches;
 
-if (!isTouchDevice() && cursor && cursorRing) {
-  let mouseX = 0, mouseY = 0, ringX = 0, ringY = 0;
-  let rafId = null;
+if (!window.matchMedia('(hover: none)').matches && cursor && cursorRing) {
+  let mx = 0, my = 0, rx = 0, ry = 0;
 
   document.addEventListener('mousemove', e => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-    cursor.style.left = mouseX + 'px';
-    cursor.style.top  = mouseY + 'px';
+    mx = e.clientX; my = e.clientY;
+    cursor.style.left = mx + 'px';
+    cursor.style.top  = my + 'px';
   });
 
-  function animateRing() {
-    ringX += (mouseX - ringX) * 0.12;
-    ringY += (mouseY - ringY) * 0.12;
-    cursorRing.style.left = ringX + 'px';
-    cursorRing.style.top  = ringY + 'px';
-    rafId = requestAnimationFrame(animateRing);
-  }
-  animateRing();
+  (function raf() {
+    rx += (mx - rx) * 0.12;
+    ry += (my - ry) * 0.12;
+    cursorRing.style.left = rx + 'px';
+    cursorRing.style.top  = ry + 'px';
+    requestAnimationFrame(raf);
+  })();
 
-  // Grow ring on interactive elements
-  const hoverTargets = 'a, button, .project-item, .skill-pill, .edu-card, .contact-item';
-  document.querySelectorAll(hoverTargets).forEach(el => {
+  document.querySelectorAll('a, button, .project-card, .skill-tags span, .contact-row').forEach(el => {
     el.addEventListener('mouseenter', () => {
-      cursorRing.style.width       = '56px';
-      cursorRing.style.height      = '56px';
-      cursorRing.style.borderColor = 'rgba(200,245,58,0.7)';
+      cursorRing.style.width       = '52px';
+      cursorRing.style.height      = '52px';
+      cursorRing.style.borderColor = 'rgba(200,245,58,.7)';
       cursor.style.transform       = 'translate(-50%,-50%) scale(1.5)';
     });
     el.addEventListener('mouseleave', () => {
-      cursorRing.style.width       = '36px';
-      cursorRing.style.height      = '36px';
-      cursorRing.style.borderColor = 'rgba(200,245,58,0.4)';
+      cursorRing.style.width       = '32px';
+      cursorRing.style.height      = '32px';
+      cursorRing.style.borderColor = 'rgba(200,245,58,.35)';
       cursor.style.transform       = 'translate(-50%,-50%) scale(1)';
     });
   });
 }
 
-/* ─────────────────────────────────────────
-   2. TYPEWRITER — hero role text
-───────────────────────────────────────── */
+/* ── 2. TYPEWRITER ── */
 const roleEl = document.getElementById('roleText');
-
 if (roleEl) {
   const roles = [
     'Data Analyst',
-    'Business Intelligence Dev',
+    'Business Intelligence Developer',
     'Product Analyst',
     'SQL & Power BI Engineer',
     'Insight Builder',
   ];
   let rIdx = 0, cIdx = 0, deleting = false;
 
-  function typeRole() {
+  function type() {
     const word = roles[rIdx];
     if (!deleting) {
       roleEl.textContent = word.slice(0, ++cIdx);
-      if (cIdx === word.length) {
-        deleting = true;
-        setTimeout(typeRole, 1800);
-        return;
-      }
-      setTimeout(typeRole, 75);
+      if (cIdx === word.length) { deleting = true; setTimeout(type, 1800); return; }
+      setTimeout(type, 72);
     } else {
       roleEl.textContent = word.slice(0, --cIdx);
-      if (cIdx === 0) {
-        deleting = false;
-        rIdx = (rIdx + 1) % roles.length;
-        setTimeout(typeRole, 350);
-        return;
-      }
-      setTimeout(typeRole, 38);
+      if (cIdx === 0) { deleting = false; rIdx = (rIdx + 1) % roles.length; setTimeout(type, 350); return; }
+      setTimeout(type, 36);
     }
   }
-
-  typeRole();
+  type();
 }
 
-/* ─────────────────────────────────────────
-   3. TERMINAL ANIMATION
-   — fires exactly once when scrolled into view
-───────────────────────────────────────── */
-const termBody = document.getElementById('terminalBody');
-
-if (termBody) {
-  const termLines = [
-    { type: 'comment', text: '# whoami' },
-    { type: 'val',     text: 'Ravi Prakash — Data & Product Jobseeker' },
-    { type: 'comment', text: '# cat status.txt' },
-    { type: 'key',     text: 'status:     ', val: 'Open to Work ✓' },
-    { type: 'key',     text: 'location:   ', val: 'Delhi, India' },
-    { type: 'key',     text: 'target:     ', val: 'Data / Product / BI roles' },
-    { type: 'comment', text: '# cat experience.log' },
-    { type: 'key',     text: 'intern:     ', val: 'MECON Limited (Jun–Jul 2025)' },
-    { type: 'key',     text: 'impact:     ', val: '40% effort saved · 30% faster reports' },
-    { type: 'key',     text: 'records:    ', val: '5,000+ SQL queries validated' },
-    { type: 'comment', text: '# ./skills --list' },
-    { type: 'key',     text: 'core:       ', val: 'SQL · Python · Power BI · Excel' },
-    { type: 'key',     text: 'analytics:  ', val: 'Time-Series · Correlation · KPI' },
-    { type: 'accent',  text: '> ready_for_next_opportunity_' },
-  ];
-
-  let tIdx = 0;
-  let termStarted = false; // guard — prevents double-fire
-
-  function buildLine(line) {
-    const s = document.createElement('span');
-    s.className = 't-line';
-    switch (line.type) {
-      case 'comment': s.innerHTML = `<span class="t-comment">${line.text}</span>`; break;
-      case 'key':     s.innerHTML = `<span class="t-key">${line.text}</span><span class="t-val">${line.val}</span>`; break;
-      case 'accent':  s.innerHTML = `<span class="t-accent">${line.text}</span>`; break;
-      default:        s.innerHTML = `<span class="t-val">${line.text}</span>`; break;
-    }
-    return s;
-  }
-
-  function typeLine() {
-    if (tIdx >= termLines.length) {
-      // add blinking cursor at end
-      const cur = document.createElement('span');
-      cur.className = 't-cursor';
-      termBody.appendChild(cur);
-      return;
-    }
-    termBody.appendChild(buildLine(termLines[tIdx++]));
-    setTimeout(typeLine, tIdx <= 2 ? 280 : 115);
-  }
-
-  const termObs = new IntersectionObserver(entries => {
-    if (entries[0].isIntersecting && !termStarted) {
-      termStarted = true;       // set guard immediately
-      termObs.disconnect();     // stop observing
-      setTimeout(typeLine, 400);
-    }
-  }, { threshold: 0.25 });
-
-  termObs.observe(termBody);
-}
-
-/* ─────────────────────────────────────────
-   4. SCROLL REVEAL — project cards
-   — uses DOM order index for consistent stagger
-───────────────────────────────────────── */
-const projectItems = Array.from(document.querySelectorAll('.project-item'));
-
-if (projectItems.length) {
-  const revealObs = new IntersectionObserver(entries => {
+/* ── 3. SCROLL REVEAL — project cards ── */
+const cards = Array.from(document.querySelectorAll('.project-card'));
+if (cards.length) {
+  const obs = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        // use the item's position in the full list for stagger, not batch index
-        const domIdx = projectItems.indexOf(entry.target);
-        setTimeout(() => entry.target.classList.add('visible'), domIdx * 80);
-        revealObs.unobserve(entry.target); // once revealed, stop watching
+        const i = cards.indexOf(entry.target);
+        setTimeout(() => entry.target.classList.add('visible'), i * 100);
+        obs.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.08 });
-
-  projectItems.forEach(el => revealObs.observe(el));
+  }, { threshold: 0.1 });
+  cards.forEach(c => obs.observe(c));
 }
 
-/* ─────────────────────────────────────────
-   5. ACTIVE NAV HIGHLIGHT on scroll
-───────────────────────────────────────── */
-const navLinks = Array.from(document.querySelectorAll('nav a[href^="#"]'));
+/* ── 4. SKILL BAR ANIMATION ── */
+const fills = Array.from(document.querySelectorAll('.sk-fill'));
+if (fills.length) {
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animated');
+        obs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+  fills.forEach(f => obs.observe(f));
+}
+
+/* ── 5. ACTIVE NAV HIGHLIGHT ── */
+const navLinks = Array.from(document.querySelectorAll('.nav-links a[href^="#"]'));
 const sections = Array.from(document.querySelectorAll('section[id]'));
 
 if (navLinks.length && sections.length) {
-  function setActiveLink(id) {
-    navLinks.forEach(l => {
-      const isActive = l.getAttribute('href') === '#' + id;
-      l.style.color = isActive ? 'var(--text)' : '';
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        navLinks.forEach(l => l.classList.remove('active'));
+        const match = document.querySelector(`.nav-links a[href="#${e.target.id}"]`);
+        if (match) match.classList.add('active');
+      }
     });
-  }
-
-  const sectionObs = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) setActiveLink(entry.target.id);
-    });
-  }, {
-    // fire when section occupies at least 30% of viewport
-    threshold: 0,
-    rootMargin: '-20% 0px -60% 0px',
-  });
-
-  sections.forEach(s => sectionObs.observe(s));
+  }, { rootMargin: '-20% 0px -60% 0px', threshold: 0 });
+  sections.forEach(s => obs.observe(s));
 }
