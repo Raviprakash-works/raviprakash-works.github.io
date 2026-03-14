@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HR Attrition Analytics | Ravi Prakash</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Syne:wght@700;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="case-study.css" />
+</head>
+<body>
+
+  <div class="noise"></div>
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ── NAV ── -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">← Back to Portfolio</a>
+      <a href="prakash-ravi.pdf" target="_blank" class="nav-cta">Resume ↗</a>
+    </div>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <section class="cs-hero">
+    <div class="cs-hero-inner">
+      <div class="cs-meta">
+        <span class="cs-tag">Data Analytics</span>
+        <span class="cs-tag">Power BI</span>
+        <span class="cs-tag">Python</span>
+        <span class="cs-tag">SQL</span>
+      </div>
+      <h1 class="cs-title">HR Employee<br/><em>Attrition Analytics</em></h1>
+      <p class="cs-subtitle">End-to-end analytics on 1,470 employee records to uncover the drivers behind employee attrition — from raw data to an interactive 3-page Power BI dashboard.</p>
+
+      <div class="cs-stats">
+        <div class="cs-stat">
+          <div class="cs-stat-n">1,470</div>
+          <div class="cs-stat-l">Employee Records</div>
+        </div>
+        <div class="cs-stat-sep"></div>
+        <div class="cs-stat">
+          <div class="cs-stat-n">35</div>
+          <div class="cs-stat-l">Variables Analysed</div>
+        </div>
+        <div class="cs-stat-sep"></div>
+        <div class="cs-stat">
+          <div class="cs-stat-n">9</div>
+          <div class="cs-stat-l">EDA Charts</div>
+        </div>
+        <div class="cs-stat-sep"></div>
+        <div class="cs-stat">
+          <div class="cs-stat-n">3</div>
+          <div class="cs-stat-l">Dashboard Pages</div>
+        </div>
+      </div>
+
+      <div class="cs-links">
+        <a href="https://github.com/raviprakash-works/hr-attrition-analytics" target="_blank" class="btn-primary">View on GitHub ↗</a>
+        <a href="#dashboard" class="btn-outline">See Dashboard ↓</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── OVERVIEW ── -->
+  <section class="cs-section">
+    <div class="cs-inner">
+      <div class="cs-two-col">
+        <div>
+          <span class="cs-section-tag">Problem Statement</span>
+          <h2 class="cs-section-title">Why does attrition matter?</h2>
+          <p>Employee attrition is one of the most costly problems for any organization — replacing a single employee can cost <strong>50–200% of their annual salary</strong> when you factor in recruitment, onboarding, and lost productivity.</p>
+          <p>The challenge is that most HR teams don't know <em>why</em> people leave until it's too late. This project uses IBM's HR dataset to identify the exact patterns and risk factors — so HR teams can act before employees decide to leave.</p>
+        </div>
+        <div class="cs-info-box">
+          <div class="cs-info-row">
+            <span class="cs-info-label">Dataset</span>
+            <span class="cs-info-val">IBM HR Analytics (Kaggle)</span>
+          </div>
+          <div class="cs-info-row">
+            <span class="cs-info-label">Records</span>
+            <span class="cs-info-val">1,470 employees</span>
+          </div>
+          <div class="cs-info-row">
+            <span class="cs-info-label">Tools</span>
+            <span class="cs-info-val">Python · SQL · Power BI · Excel</span>
+          </div>
+          <div class="cs-info-row">
+            <span class="cs-info-label">Libraries</span>
+            <span class="cs-info-val">Pandas · Matplotlib · Seaborn</span>
+          </div>
+          <div class="cs-info-row">
+            <span class="cs-info-label">Output</span>
+            <span class="cs-info-val">3-page interactive dashboard</span>
+          </div>
+          <div class="cs-info-row">
+            <span class="cs-info-label">Duration</span>
+            <span class="cs-info-val">Self-directed project</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── APPROACH ── -->
+  <section class="cs-section cs-section-alt">
+    <div class="cs-inner">
+      <span class="cs-section-tag">Methodology</span>
+      <h2 class="cs-section-title">How I approached it</h2>
+
+      <div class="cs-steps">
+
+        <div class="cs-step">
+          <div class="cs-step-num">01</div>
+          <div class="cs-step-content">
+            <div class="cs-step-title">Data Cleaning & Feature Engineering</div>
+            <p>Loaded the raw IBM HR CSV into Python. Dropped 4 constant columns with no analytical value. Engineered 5 new features: <strong>TenureBand</strong>, <strong>AgeBand</strong>, <strong>SalaryBand</strong>, <strong>SatisfactionScore</strong> (avg of 4 metrics), and binary encodings for Attrition and OverTime.</p>
+            <div class="cs-step-tags">
+              <span>Python</span><span>Pandas</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="cs-step">
+          <div class="cs-step-num">02</div>
+          <div class="cs-step-content">
+            <div class="cs-step-title">Exploratory Data Analysis</div>
+            <p>Generated 9 publication-ready charts covering attrition by department, job role, tenure, salary, overtime, age distribution, satisfaction score, and a full correlation heatmap. Each chart designed to answer a specific business question.</p>
+            <div class="cs-step-tags">
+              <span>Matplotlib</span><span>Seaborn</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="cs-step">
+          <div class="cs-step-num">03</div>
+          <div class="cs-step-content">
+            <div class="cs-step-title">SQL Analysis</div>
+            <p>Imported the cleaned dataset into SQLite and wrote 11 queries — from overview aggregations to cross-dimensional analysis (department × overtime) and a high-risk employee identification query filtering for active employees with overtime + low satisfaction + early tenure.</p>
+            <div class="cs-step-tags">
+              <span>SQL</span><span>SQLite</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="cs-step">
+          <div class="cs-step-num">04</div>
+          <div class="cs-step-content">
+            <div class="cs-step-title">Power BI Dashboard</div>
+            <p>Built a 3-page interactive dashboard in Power BI Desktop — Overview KPIs, Deep Dive analysis, and a Risk Profile page with 4 slicers (Department, Job Role, Overtime, Tenure) that filter all visuals simultaneously. Used DAX measures for accurate % calculations.</p>
+            <div class="cs-step-tags">
+              <span>Power BI</span><span>DAX</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── DASHBOARD ── -->
+  <section class="cs-section" id="dashboard">
+    <div class="cs-inner">
+      <span class="cs-section-tag">Dashboard</span>
+      <h2 class="cs-section-title">3-Page Interactive Dashboard</h2>
+
+      <div class="cs-dashboard-screens">
+
+        <div class="cs-screen">
+          <img src="page1-overview.png" alt="Dashboard Page 1 — Overview" />
+          <div class="cs-screen-label">
+            <span class="cs-screen-num">Page 01</span>
+            <span class="cs-screen-title">Overview — KPIs & Attrition by Department / Role</span>
+          </div>
+        </div>
+
+        <div class="cs-screen">
+          <img src="page2-deepdive.png" alt="Dashboard Page 2 — Deep Dive" />
+          <div class="cs-screen-label">
+            <span class="cs-screen-num">Page 02</span>
+            <span class="cs-screen-title">Deep Dive — Tenure, Salary, Overtime, Satisfaction, Age</span>
+          </div>
+        </div>
+
+        <div class="cs-screen">
+          <img src="page3-riskprofile.png" alt="Dashboard Page 3 — Risk Profile" />
+          <div class="cs-screen-label">
+            <span class="cs-screen-num">Page 03</span>
+            <span class="cs-screen-title">Risk Profile — Interactive slicers + High-risk employee table</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FINDINGS ── -->
+  <section class="cs-section cs-section-alt">
+    <div class="cs-inner">
+      <span class="cs-section-tag">Key Findings</span>
+      <h2 class="cs-section-title">What the data revealed</h2>
+
+      <div class="cs-findings">
+
+        <div class="cs-finding">
+          <div class="cs-finding-num">16.1%</div>
+          <div class="cs-finding-title">Overall Attrition Rate</div>
+          <p>Above the healthy 10% industry benchmark — meaning the organization is losing employees faster than it should be.</p>
+        </div>
+
+        <div class="cs-finding highlight">
+          <div class="cs-finding-num">39.8%</div>
+          <div class="cs-finding-title">Sales Rep Attrition</div>
+          <p>Highest of any job role — nearly 4 in 10 Sales Representatives leave. Combined with low average income ($2,626/month), compensation is a key driver.</p>
+        </div>
+
+        <div class="cs-finding">
+          <div class="cs-finding-num">30%+</div>
+          <div class="cs-finding-title">0–2 Year Tenure Attrition</div>
+          <p>The highest-risk window. Employees in their first 2 years are far more likely to leave — pointing to onboarding and early engagement gaps.</p>
+        </div>
+
+        <div class="cs-finding highlight">
+          <div class="cs-finding-num">3×</div>
+          <div class="cs-finding-title">Overtime Attrition Multiplier</div>
+          <p>Employees working overtime are roughly 3× more likely to leave than those who don't — work-life balance is a critical retention lever.</p>
+        </div>
+
+        <div class="cs-finding">
+          <div class="cs-finding-num">26%</div>
+          <div class="cs-finding-title">Low Salary Band Attrition</div>
+          <p>Employees earning under $3,000/month have a 26% attrition rate — the highest of any salary band. Compensation directly impacts retention.</p>
+        </div>
+
+        <div class="cs-finding">
+          <div class="cs-finding-num">20.6%</div>
+          <div class="cs-finding-title">Sales Dept vs 13.8% R&D</div>
+          <p>A 7-point gap between departments suggests culture, management style, and compensation structures vary significantly across the organization.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── WHAT I LEARNED ── -->
+  <section class="cs-section">
+    <div class="cs-inner">
+      <span class="cs-section-tag">Reflection</span>
+      <h2 class="cs-section-title">What I learned</h2>
+      <div class="cs-two-col">
+        <div>
+          <p>This project gave me hands-on experience with the full analytics workflow — from raw CSV to boardroom-ready dashboard. The most valuable lesson was that <strong>feature engineering matters more than the model</strong> — creating TenureBand, SalaryBand, and SatisfactionScore transformed a flat dataset into something with real analytical depth.</p>
+          <p>On the SQL side, writing the high-risk employee identification query (Query 11) taught me how to combine multiple filters to produce actionable output — not just descriptive stats, but a list HR can act on immediately.</p>
+          <p>Power BI's slicer interactivity was the biggest unlock — being able to filter the entire Risk Profile page by department and see KPIs update in real time is the kind of thing that genuinely impresses stakeholders.</p>
+        </div>
+        <div class="cs-skills-used">
+          <div class="cs-skills-label">Skills demonstrated</div>
+          <div class="cs-skills-list">
+            <div class="cs-skill-item">✓ Data cleaning & validation</div>
+            <div class="cs-skill-item">✓ Feature engineering</div>
+            <div class="cs-skill-item">✓ Exploratory data analysis</div>
+            <div class="cs-skill-item">✓ Correlation analysis</div>
+            <div class="cs-skill-item">✓ SQL aggregations & cross-analysis</div>
+            <div class="cs-skill-item">✓ DAX measures in Power BI</div>
+            <div class="cs-skill-item">✓ Interactive dashboard design</div>
+            <div class="cs-skill-item">✓ Business insight communication</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── NEXT ── -->
+  <section class="cs-section cs-section-alt">
+    <div class="cs-inner cs-next">
+      <div>
+        <span class="cs-section-tag">Next Project</span>
+        <h2 class="cs-section-title">Sales Performance Dashboard</h2>
+        <p>Excel → SQL → Power BI pipeline. Executive-level sales dashboard with regional breakdowns and time-series trends.</p>
+      </div>
+      <a href="index.html#projects" class="btn-primary">Back to Projects ↗</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <span>© 2026 Ravi Prakash</span>
+      <span>B.Tech ECE · NSUT Delhi · Open to opportunities</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
