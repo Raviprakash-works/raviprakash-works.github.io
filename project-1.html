@@ -165,58 +165,112 @@
     <div class="cs-inner">
       <span class="cs-section-tag">Exploratory Data Analysis</span>
       <h2 class="cs-section-title">9 Charts — Python output</h2>
-      <p class="cs-eda-intro">Generated using Matplotlib & Seaborn. Each chart answers a specific business question about attrition drivers.</p>
+      <p class="cs-eda-intro">Generated using Matplotlib & Seaborn. Click any chart to expand. Scroll to browse all 9.</p>
 
-      <div class="cs-eda-grid">
+      <div class="cs-eda-carousel-wrap">
+        <div class="cs-eda-carousel" id="edaCarousel">
 
-        <div class="cs-eda-item cs-eda-half">
-          <img src="outputs/charts/01_attrition_donut.png" alt="Overall Attrition Rate" />
-          <div class="cs-eda-label">01 — Overall Attrition Rate (16.1%)</div>
+          <div class="cs-eda-card" onclick="openLightbox(0)">
+            <img src="outputs/charts/01_attrition_donut.png" alt="Overall Attrition" />
+            <div class="cs-eda-card-label">
+              <span class="cs-eda-card-num">01</span>
+              <span class="cs-eda-card-title">Overall Attrition Rate</span>
+              <span class="cs-eda-card-expand">⤢</span>
+            </div>
+          </div>
+
+          <div class="cs-eda-card" onclick="openLightbox(1)">
+            <img src="outputs/charts/02_attrition_by_department.png" alt="By Department" />
+            <div class="cs-eda-card-label">
+              <span class="cs-eda-card-num">02</span>
+              <span class="cs-eda-card-title">Attrition by Department</span>
+              <span class="cs-eda-card-expand">⤢</span>
+            </div>
+          </div>
+
+          <div class="cs-eda-card" onclick="openLightbox(2)">
+            <img src="outputs/charts/03_attrition_by_tenure.png" alt="By Tenure" />
+            <div class="cs-eda-card-label">
+              <span class="cs-eda-card-num">03</span>
+              <span class="cs-eda-card-title">Attrition by Tenure Band</span>
+              <span class="cs-eda-card-expand">⤢</span>
+            </div>
+          </div>
+
+          <div class="cs-eda-card" onclick="openLightbox(3)">
+            <img src="outputs/charts/04_attrition_by_jobrole.png" alt="By Job Role" />
+            <div class="cs-eda-card-label">
+              <span class="cs-eda-card-num">04</span>
+              <span class="cs-eda-card-title">Attrition by Job Role</span>
+              <span class="cs-eda-card-expand">⤢</span>
+            </div>
+          </div>
+
+          <div class="cs-eda-card" onclick="openLightbox(4)">
+            <img src="outputs/charts/05_attrition_by_salary.png" alt="By Salary" />
+            <div class="cs-eda-card-label">
+              <span class="cs-eda-card-num">05</span>
+              <span class="cs-eda-card-title">Attrition by Salary Band</span>
+              <span class="cs-eda-card-expand">⤢</span>
+            </div>
+          </div>
+
+          <div class="cs-eda-card" onclick="openLightbox(5)">
+            <img src="outputs/charts/06_attrition_overtime.png" alt="Overtime" />
+            <div class="cs-eda-card-label">
+              <span class="cs-eda-card-num">06</span>
+              <span class="cs-eda-card-title">Overtime Impact</span>
+              <span class="cs-eda-card-expand">⤢</span>
+            </div>
+          </div>
+
+          <div class="cs-eda-card" onclick="openLightbox(6)">
+            <img src="outputs/charts/07_age_distribution.png" alt="Age Distribution" />
+            <div class="cs-eda-card-label">
+              <span class="cs-eda-card-num">07</span>
+              <span class="cs-eda-card-title">Age Distribution</span>
+              <span class="cs-eda-card-expand">⤢</span>
+            </div>
+          </div>
+
+          <div class="cs-eda-card" onclick="openLightbox(7)">
+            <img src="outputs/charts/08_satisfaction_vs_attrition.png" alt="Satisfaction" />
+            <div class="cs-eda-card-label">
+              <span class="cs-eda-card-num">08</span>
+              <span class="cs-eda-card-title">Satisfaction vs Attrition</span>
+              <span class="cs-eda-card-expand">⤢</span>
+            </div>
+          </div>
+
+          <div class="cs-eda-card" onclick="openLightbox(8)">
+            <img src="outputs/charts/09_correlation_heatmap.png" alt="Correlation" />
+            <div class="cs-eda-card-label">
+              <span class="cs-eda-card-num">09</span>
+              <span class="cs-eda-card-title">Correlation Heatmap</span>
+              <span class="cs-eda-card-expand">⤢</span>
+            </div>
+          </div>
+
         </div>
 
-        <div class="cs-eda-item cs-eda-half">
-          <img src="outputs/charts/06_attrition_overtime.png" alt="Overtime vs Attrition" />
-          <div class="cs-eda-label">06 — Overtime Impact on Attrition</div>
+        <div class="cs-eda-nav">
+          <button onclick="scrollCarousel(-1)">←</button>
+          <button onclick="scrollCarousel(1)">→</button>
         </div>
-
-        <div class="cs-eda-item cs-eda-half">
-          <img src="outputs/charts/02_attrition_by_department.png" alt="Attrition by Department" />
-          <div class="cs-eda-label">02 — Attrition by Department</div>
-        </div>
-
-        <div class="cs-eda-item cs-eda-half">
-          <img src="outputs/charts/05_attrition_by_salary.png" alt="Attrition by Salary Band" />
-          <div class="cs-eda-label">05 — Attrition by Salary Band</div>
-        </div>
-
-        <div class="cs-eda-item cs-eda-full">
-          <img src="outputs/charts/04_attrition_by_jobrole.png" alt="Attrition by Job Role" />
-          <div class="cs-eda-label">04 — Attrition by Job Role (Sales Rep highest at 39.8%)</div>
-        </div>
-
-        <div class="cs-eda-item cs-eda-half">
-          <img src="outputs/charts/03_attrition_by_tenure.png" alt="Attrition by Tenure" />
-          <div class="cs-eda-label">03 — Attrition by Tenure Band</div>
-        </div>
-
-        <div class="cs-eda-item cs-eda-half">
-          <img src="outputs/charts/08_satisfaction_vs_attrition.png" alt="Satisfaction vs Attrition" />
-          <div class="cs-eda-label">08 — Satisfaction Score vs Attrition</div>
-        </div>
-
-        <div class="cs-eda-item cs-eda-full">
-          <img src="outputs/charts/07_age_distribution.png" alt="Age Distribution" />
-          <div class="cs-eda-label">07 — Age Distribution: Attrited vs Retained</div>
-        </div>
-
-        <div class="cs-eda-item cs-eda-full">
-          <img src="outputs/charts/09_correlation_heatmap.png" alt="Correlation Heatmap" />
-          <div class="cs-eda-label">09 — Correlation Heatmap — Key Variables</div>
-        </div>
-
       </div>
     </div>
   </section>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+    <div class="lightbox-inner">
+      <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+      <button class="lightbox-prev" onclick="lightboxNav(-1)">←</button>
+      <button class="lightbox-next" onclick="lightboxNav(1)">→</button>
+      <img id="lightboxImg" src="" alt="" />
+      <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+  </div>
 
   <!-- ── DASHBOARD ── -->
   <section class="cs-section" id="dashboard">
@@ -350,5 +404,57 @@
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    // ── EDA Carousel ──
+    const carousel = document.getElementById('edaCarousel');
+
+    function scrollCarousel(dir) {
+      carousel.scrollBy({ left: dir * 340, behavior: 'smooth' });
+    }
+
+    // ── Lightbox ──
+    const charts = [
+      { src: 'outputs/charts/01_attrition_donut.png',          caption: '01 — Overall Attrition Rate (16.1%)' },
+      { src: 'outputs/charts/02_attrition_by_department.png',  caption: '02 — Attrition by Department' },
+      { src: 'outputs/charts/03_attrition_by_tenure.png',      caption: '03 — Attrition by Tenure Band' },
+      { src: 'outputs/charts/04_attrition_by_jobrole.png',     caption: '04 — Attrition by Job Role (Sales Rep: 39.8%)' },
+      { src: 'outputs/charts/05_attrition_by_salary.png',      caption: '05 — Attrition by Salary Band' },
+      { src: 'outputs/charts/06_attrition_overtime.png',        caption: '06 — Overtime Impact on Attrition' },
+      { src: 'outputs/charts/07_age_distribution.png',          caption: '07 — Age Distribution: Attrited vs Retained' },
+      { src: 'outputs/charts/08_satisfaction_vs_attrition.png', caption: '08 — Satisfaction Score vs Attrition' },
+      { src: 'outputs/charts/09_correlation_heatmap.png',       caption: '09 — Correlation Heatmap' },
+    ];
+
+    let currentIdx = 0;
+
+    function openLightbox(idx) {
+      currentIdx = idx;
+      const lb = document.getElementById('lightbox');
+      document.getElementById('lightboxImg').src     = charts[idx].src;
+      document.getElementById('lightboxCaption').textContent = charts[idx].caption;
+      lb.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox(e) {
+      if (e && e.target !== document.getElementById('lightbox') && !e.target.classList.contains('lightbox-close')) return;
+      document.getElementById('lightbox').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    function lightboxNav(dir) {
+      currentIdx = (currentIdx + dir + charts.length) % charts.length;
+      document.getElementById('lightboxImg').src = charts[currentIdx].src;
+      document.getElementById('lightboxCaption').textContent = charts[currentIdx].caption;
+    }
+
+    // Keyboard navigation
+    document.addEventListener('keydown', e => {
+      if (!document.getElementById('lightbox').classList.contains('open')) return;
+      if (e.key === 'Escape')      closeLightbox({ target: document.getElementById('lightbox') });
+      if (e.key === 'ArrowRight')  lightboxNav(1);
+      if (e.key === 'ArrowLeft')   lightboxNav(-1);
+    });
+  </script>
 </body>
 </html>
