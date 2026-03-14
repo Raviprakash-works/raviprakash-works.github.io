@@ -422,3 +422,48 @@
   .cs-findings { grid-template-columns: 1fr; }
   .cs-next { flex-direction: column; align-items: flex-start; }
 }
+
+/* ── EDA CHARTS GRID ── */
+.cs-eda-intro {
+  font-size: .87rem;
+  color: var(--muted);
+  margin-bottom: 36px;
+  line-height: 1.8;
+}
+
+.cs-eda-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.cs-eda-item {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: border-color .2s;
+}
+
+.cs-eda-item:hover { border-color: rgba(200,245,58,.25); }
+
+.cs-eda-item img {
+  width: 100%;
+  display: block;
+  border-bottom: 1px solid var(--border);
+}
+
+.cs-eda-label {
+  padding: 12px 16px;
+  font-size: .72rem;
+  color: var(--muted);
+  background: var(--surface);
+  font-family: var(--mono);
+}
+
+.cs-eda-full  { grid-column: 1 / -1; }
+.cs-eda-half  { grid-column: span 1; }
+
+@media (max-width: 768px) {
+  .cs-eda-grid { grid-template-columns: 1fr; }
+  .cs-eda-half { grid-column: 1 / -1; }
+}
