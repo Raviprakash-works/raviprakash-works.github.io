@@ -5,6 +5,7 @@ const cursor     = document.getElementById('cursor');
 const cursorRing = document.getElementById('cursorRing');
 
 if (!window.matchMedia('(hover: none)').matches && cursor && cursorRing) {
+  document.body.classList.add('custom-cursor-active');
   let mx = 0, my = 0, rx = 0, ry = 0;
 
   document.addEventListener('mousemove', e => {
