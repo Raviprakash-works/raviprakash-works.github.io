@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sales Performance Dashboard | Ravi Prakash</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Syne:wght@700;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="case-study.css" />
+</head>
+<body>
+
+  <div class="noise"></div>
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ── NAV ── -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">← Back to Portfolio</a>
+      <a href="Ravi_Prakash_Resume.pdf" target="_blank" class="nav-cta">Resume ↗</a>
+    </div>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <section class="cs-hero">
+    <div class="cs-hero-inner">
+      <div class="cs-meta">
+        <span class="cs-tag">Sales Analytics</span>
+        <span class="cs-tag">Power BI</span>
+        <span class="cs-tag">Python</span>
+        <span class="cs-tag">SQL</span>
+        <span class="cs-tag">Excel</span>
+      </div>
+      <h1 class="cs-title">Sales Performance<br/><em>Analytics Dashboard</em></h1>
+      <p class="cs-subtitle">End-to-end BI pipeline on 5,009 orders across 4 years — Python EDA, 12 SQL queries, and a 3-page executive Power BI dashboard uncovering discount impact, regional performance, and profitability drivers.</p>
+
+      <div class="cs-stats">
+        <div class="cs-stat"><div class="cs-stat-n">$2.3M</div><div class="cs-stat-l">Total Revenue</div></div>
+        <div class="cs-stat-sep"></div>
+        <div class="cs-stat"><div class="cs-stat-n">5,009</div><div class="cs-stat-l">Unique Orders</div></div>
+        <div class="cs-stat-sep"></div>
+        <div class="cs-stat"><div class="cs-stat-n">9</div><div class="cs-stat-l">EDA Charts</div></div>
+        <div class="cs-stat-sep"></div>
+        <div class="cs-stat"><div class="cs-stat-n">12</div><div class="cs-stat-l">SQL Queries</div></div>
+        <div class="cs-stat-sep"></div>
+        <div class="cs-stat"><div class="cs-stat-n">3</div><div class="cs-stat-l">Dashboard Pages</div></div>
+      </div>
+
+      <div class="cs-links">
+        <a href="https://github.com/raviprakash-works/sales-dashboard-project" target="_blank" class="btn-primary">View on GitHub ↗</a>
+        <a href="#dashboard" class="btn-outline">See Dashboard ↓</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── OVERVIEW ── -->
+  <section class="cs-section">
+    <div class="cs-inner">
+      <div class="cs-two-col">
+        <div>
+          <span class="cs-section-tag">Problem Statement</span>
+          <h2 class="cs-section-title">Why do discounts hurt?</h2>
+          <p>Most sales teams assume more discounting drives more revenue. This project proves the opposite — using 4 years of Superstore transaction data to show that <strong>orders with 40%+ discounts average -$108 profit per line</strong>, while orders with no discount average +$67.</p>
+          <p>Beyond discounting, the analysis surfaces which regions, categories, and customer segments are actually driving profitability — giving sales leadership the visibility they need to make smarter decisions.</p>
+        </div>
+        <div class="cs-info-box">
+          <div class="cs-info-row"><span class="cs-info-label">Dataset</span><span class="cs-info-val">Sample Superstore (Kaggle)</span></div>
+          <div class="cs-info-row"><span class="cs-info-label">Records</span><span class="cs-info-val">9,994 rows · 5,009 orders</span></div>
+          <div class="cs-info-row"><span class="cs-info-label">Period</span><span class="cs-info-val">January 2014 – December 2017</span></div>
+          <div class="cs-info-row"><span class="cs-info-label">Tools</span><span class="cs-info-val">Python · SQL · Power BI · Excel</span></div>
+          <div class="cs-info-row"><span class="cs-info-label">Libraries</span><span class="cs-info-val">Pandas · Matplotlib · Seaborn</span></div>
+          <div class="cs-info-row"><span class="cs-info-label">Output</span><span class="cs-info-val">3-page executive dashboard</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── APPROACH ── -->
+  <section class="cs-section cs-section-alt">
+    <div class="cs-inner">
+      <span class="cs-section-tag">Methodology</span>
+      <h2 class="cs-section-title">How I approached it</h2>
+      <div class="cs-steps">
+
+        <div class="cs-step">
+          <div class="cs-step-num">01</div>
+          <div class="cs-step-content">
+            <div class="cs-step-title">Data Cleaning & Feature Engineering</div>
+            <p>Loaded raw Superstore CSV into Python. Parsed order and ship dates, extracted year/month/quarter time features, calculated ship days, and engineered <strong>Sales Band</strong>, <strong>Discount Band</strong>, and <strong>Profit Margin %</strong> columns for segmented analysis.</p>
+            <div class="cs-step-tags"><span>Python</span><span>Pandas</span></div>
+          </div>
+        </div>
+
+        <div class="cs-step">
+          <div class="cs-step-num">02</div>
+          <div class="cs-step-content">
+            <div class="cs-step-title">Exploratory Data Analysis</div>
+            <p>Generated 9 charts covering sales & profit by category, region, sub-category, segment, ship mode, yearly growth, monthly trends, discount impact scatter, and quarterly breakdowns. Each chart designed to answer a specific business question.</p>
+            <div class="cs-step-tags"><span>Matplotlib</span><span>Seaborn</span></div>
+          </div>
+        </div>
+
+        <div class="cs-step">
+          <div class="cs-step-num">03</div>
+          <div class="cs-step-content">
+            <div class="cs-step-title">SQL Analysis</div>
+            <p>Wrote 12 queries in SQLite — from overview KPIs to cross-dimensional analysis (Region × Category), discount band impact, top 10 customers by revenue, quarterly trends, and a loss-making orders identification query filtering for high-discount negative-profit transactions.</p>
+            <div class="cs-step-tags"><span>SQL</span><span>SQLite</span></div>
+          </div>
+        </div>
+
+        <div class="cs-step">
+          <div class="cs-step-num">04</div>
+          <div class="cs-step-content">
+            <div class="cs-step-title">Power BI Dashboard</div>
+            <p>Built a 3-page executive dashboard — Overview KPIs, Deep Dive analysis, and a Trends & Insights page with Year and Region slicers. Used DAX measures for accurate KPI calculations, conditional formatting for profit/loss colors, and a monthly trend line with average reference.</p>
+            <div class="cs-step-tags"><span>Power BI</span><span>DAX</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── EDA CHARTS ── -->
+  <section class="cs-section">
+    <div class="cs-inner">
+      <span class="cs-section-tag">Exploratory Data Analysis</span>
+      <h2 class="cs-section-title">9 Charts — Python output</h2>
+      <p class="cs-eda-intro">Generated using Matplotlib & Seaborn on the cleaned dataset. Click any chart to expand.</p>
+
+      <div class="cs-eda-carousel-wrap">
+        <div class="cs-eda-carousel" id="edaCarousel">
+
+          <div class="cs-eda-card" onclick="openLightbox(0)">
+            <img src="outputs/charts/01_sales_profit_by_category.png" alt="Sales & Profit by Category" />
+            <div class="cs-eda-card-label">
+              <span class="cs-eda-card-num">01</span>
+              <span class="cs-eda-card-title">Sales & Profit by Category</span>
+              <span class="cs-eda-card-expand">⤢</span>
+            </div>
+          </div>
+
+          <div class="cs-eda-card" onclick="openLightbox(1)">
+            <img src="outputs/charts/02_sales_profit_by_region.png" alt="Sales & Profit by Region" />
+            <div class="cs-eda-card-label">
+              <span class="cs-eda-card-num">02</span>
+              <span class="cs-eda-card-title">Sales & Profit by Region</span>
+              <span class="cs-eda-card-expand">⤢</span>
+            </div>
+          </div>
+
+          <div class="cs-eda-card" onclick="openLightbox(2)">
+            <img src="outputs/charts/03_monthly_sales_trend.png" alt="Monthly Sales Trend" />
+            <div class="cs-eda-card-label">
+              <span class="cs-eda-card-num">03</span>
+              <span class="cs-eda-card-title">Monthly Sales Trend</span>
+              <span class="cs-eda-card-expand">⤢</span>
+            </div>
+          </div>
+
+          <div class="cs-eda-card" onclick="openLightbox(3)">
+            <img src="outputs/charts/04_top_subcategories.png" alt="Top Sub-Categories" />
+            <div class="cs-eda-card-label">
+              <span class="cs-eda-card-num">04</span>
+              <span class="cs-eda-card-title">Top Sub-Categories by Sales</span>
+              <span class="cs-eda-card-expand">⤢</span>
+            </div>
+          </div>
+
+          <div class="cs-eda-card" onclick="openLightbox(4)">
+            <img src="outputs/charts/05_profit_margin_category_segment.png" alt="Profit Margin" />
+            <div class="cs-eda-card-label">
+              <span class="cs-eda-card-num">05</span>
+              <span class="cs-eda-card-title">Profit Margin by Category & Segment</span>
+              <span class="cs-eda-card-expand">⤢</span>
+            </div>
+          </div>
+
+          <div class="cs-eda-card" onclick="openLightbox(5)">
+            <img src="outputs/charts/06_discount_vs_profit.png" alt="Discount vs Profit" />
+            <div class="cs-eda-card-label">
+              <span class="cs-eda-card-num">06</span>
+              <span class="cs-eda-card-title">Discount vs Profit Scatter</span>
+              <span class="cs-eda-card-expand">⤢</span>
+            </div>
+          </div>
+
+          <div class="cs-eda-card" onclick="openLightbox(6)">
+            <img src="outputs/charts/07_sales_by_segment.png" alt="Sales by Segment" />
+            <div class="cs-eda-card-label">
+              <span class="cs-eda-card-num">07</span>
+              <span class="cs-eda-card-title">Sales by Segment</span>
+              <span class="cs-eda-card-expand">⤢</span>
+            </div>
+          </div>
+
+          <div class="cs-eda-card" onclick="openLightbox(7)">
+            <img src="outputs/charts/08_yearly_growth.png" alt="Yearly Growth" />
+            <div class="cs-eda-card-label">
+              <span class="cs-eda-card-num">08</span>
+              <span class="cs-eda-card-title">Yearly Sales & Profit Growth</span>
+              <span class="cs-eda-card-expand">⤢</span>
+            </div>
+          </div>
+
+          <div class="cs-eda-card" onclick="openLightbox(8)">
+            <img src="outputs/charts/09_ship_mode_analysis.png" alt="Ship Mode" />
+            <div class="cs-eda-card-label">
+              <span class="cs-eda-card-num">09</span>
+              <span class="cs-eda-card-title">Ship Mode Analysis</span>
+              <span class="cs-eda-card-expand">⤢</span>
+            </div>
+          </div>
+
+        </div>
+        <div class="cs-eda-nav">
+          <button onclick="scrollCarousel(-1)">←</button>
+          <button onclick="scrollCarousel(1)">→</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+    <div class="lightbox-inner">
+      <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+      <button class="lightbox-prev" onclick="lightboxNav(-1)">←</button>
+      <button class="lightbox-next" onclick="lightboxNav(1)">→</button>
+      <img id="lightboxImg" src="" alt="" />
+      <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+  </div>
+
+  <!-- ── DASHBOARD ── -->
+  <section class="cs-section cs-section-alt" id="dashboard">
+    <div class="cs-inner">
+      <span class="cs-section-tag">Dashboard</span>
+      <h2 class="cs-section-title">3-Page Executive Dashboard</h2>
+
+      <div class="cs-dashboard-screens">
+
+        <div class="cs-screen">
+          <img src="sales-page1.png" alt="Dashboard Page 1 — Overview" />
+          <div class="cs-screen-label">
+            <span class="cs-screen-num">Page 01</span>
+            <span class="cs-screen-title">Overview — KPI Cards, Category, Region & Yearly Growth</span>
+          </div>
+        </div>
+
+        <div class="cs-screen">
+          <img src="sales-page2.png" alt="Dashboard Page 2 — Deep Dive" />
+          <div class="cs-screen-label">
+            <span class="cs-screen-num">Page 02</span>
+            <span class="cs-screen-title">Deep Dive — Sub-Category Profit, Discount Impact, Segment & Ship Mode</span>
+          </div>
+        </div>
+
+        <div class="cs-screen">
+          <img src="sales-page3.png" alt="Dashboard Page 3 — Trends" />
+          <div class="cs-screen-label">
+            <span class="cs-screen-num">Page 03</span>
+            <span class="cs-screen-title">Trends & Insights — Monthly Trend, Quarterly, Top Customers, Region × Category</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FINDINGS ── -->
+  <section class="cs-section">
+    <div class="cs-inner">
+      <span class="cs-section-tag">Key Findings</span>
+      <h2 class="cs-section-title">What the data revealed</h2>
+
+      <div class="cs-findings">
+
+        <div class="cs-finding">
+          <div class="cs-finding-num">12.5%</div>
+          <div class="cs-finding-title">Overall Profit Margin</div>
+          <p>On $2.3M revenue, the business generates $286,397 profit — a healthy overall margin, but unevenly distributed across categories and regions.</p>
+        </div>
+
+        <div class="cs-finding highlight">
+          <div class="cs-finding-num">-$99K</div>
+          <div class="cs-finding-title">High Discount Loss</div>
+          <p>Orders with 40%+ discounts collectively generate -$99,559 in losses. Meanwhile, no-discount orders generate $329,988 profit — 3× more effective.</p>
+        </div>
+
+        <div class="cs-finding">
+          <div class="cs-finding-num">-$17K</div>
+          <div class="cs-finding-title">Tables Sub-Category</div>
+          <p>Tables is the worst-performing sub-category at -$17,725 profit despite $206K in sales — a clear pricing and discount problem that needs immediate attention.</p>
+        </div>
+
+        <div class="cs-finding highlight">
+          <div class="cs-finding-num">50.6%</div>
+          <div class="cs-finding-title">Consumer Segment</div>
+          <p>The Consumer segment drives over half of total sales at $1.16M — making it the core revenue engine and highest-priority segment for retention strategies.</p>
+        </div>
+
+        <div class="cs-finding">
+          <div class="cs-finding-num">$725K</div>
+          <div class="cs-finding-title">West Region Leads</div>
+          <p>West region dominates with $725,458 in sales and the highest profit. Central region is the weakest — Furniture is actually loss-making there at -$2,871.</p>
+        </div>
+
+        <div class="cs-finding">
+          <div class="cs-finding-num">Q4 📈</div>
+          <div class="cs-finding-title">Consistent Seasonal Peak</div>
+          <p>Q4 is the strongest quarter every year without exception — a clear seasonal pattern that should drive inventory planning, staffing, and marketing spend.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── REFLECTION ── -->
+  <section class="cs-section cs-section-alt">
+    <div class="cs-inner">
+      <span class="cs-section-tag">Reflection</span>
+      <h2 class="cs-section-title">What I learned</h2>
+      <div class="cs-two-col">
+        <div>
+          <p>The most surprising finding was how clearly the discount analysis exposed a business problem hiding in plain sight. Discounting felt like a sales driver — but the data showed it was quietly destroying margins. This is exactly the kind of insight that separates a data analyst from someone who just builds charts.</p>
+          <p>Building the Region × Category matrix on Page 3 was a Power BI technique I hadn't used before — it compresses what would normally be 12 separate charts into a single scannable table that executives can act on immediately.</p>
+          <p>The monthly trend with an average reference line was another deliberate choice — it lets stakeholders instantly see which months are above or below baseline without needing to mentally calculate averages themselves.</p>
+        </div>
+        <div class="cs-skills-used">
+          <div class="cs-skills-label">Skills demonstrated</div>
+          <div class="cs-skills-list">
+            <div class="cs-skill-item">✓ Data cleaning & feature engineering</div>
+            <div class="cs-skill-item">✓ Time-series analysis</div>
+            <div class="cs-skill-item">✓ Discount impact analysis</div>
+            <div class="cs-skill-item">✓ Regional performance breakdown</div>
+            <div class="cs-skill-item">✓ SQL cross-dimensional queries</div>
+            <div class="cs-skill-item">✓ DAX measures & KPI cards</div>
+            <div class="cs-skill-item">✓ Conditional formatting in Power BI</div>
+            <div class="cs-skill-item">✓ Executive dashboard design</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── NEXT ── -->
+  <section class="cs-section">
+    <div class="cs-inner cs-next">
+      <div>
+        <span class="cs-section-tag">Next Project</span>
+        <h2 class="cs-section-title">Python EDA & Reporting Pipeline</h2>
+        <p>Automated reporting pipeline — full EDA with Pandas, correlation analysis, and clean Excel + chart outputs generated from raw CSVs with zero manual effort.</p>
+      </div>
+      <a href="index.html#projects" class="btn-primary">Back to Projects ↗</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <span>© 2026 Ravi Prakash</span>
+      <span>B.Tech ECE · NSUT Delhi · Open to opportunities</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    const carousel = document.getElementById('edaCarousel');
+    function scrollCarousel(dir) { carousel.scrollBy({ left: dir * 340, behavior: 'smooth' }); }
+
+    const charts = [
+      { src: 'outputs/charts/01_sales_profit_by_category.png',        caption: '01 — Sales & Profit by Category' },
+      { src: 'outputs/charts/02_sales_profit_by_region.png',          caption: '02 — Sales & Profit by Region' },
+      { src: 'outputs/charts/03_monthly_sales_trend.png',             caption: '03 — Monthly Sales Trend' },
+      { src: 'outputs/charts/04_top_subcategories.png',               caption: '04 — Top Sub-Categories by Sales' },
+      { src: 'outputs/charts/05_profit_margin_category_segment.png',  caption: '05 — Profit Margin by Category & Segment' },
+      { src: 'outputs/charts/06_discount_vs_profit.png',              caption: '06 — Discount vs Profit Scatter' },
+      { src: 'outputs/charts/07_sales_by_segment.png',                caption: '07 — Sales by Segment' },
+      { src: 'outputs/charts/08_yearly_growth.png',                   caption: '08 — Yearly Sales & Profit Growth' },
+      { src: 'outputs/charts/09_ship_mode_analysis.png',              caption: '09 — Ship Mode Analysis' },
+    ];
+
+    let currentIdx = 0;
+
+    function openLightbox(idx) {
+      currentIdx = idx;
+      document.getElementById('lightboxImg').src = charts[idx].src;
+      document.getElementById('lightboxCaption').textContent = charts[idx].caption;
+      document.getElementById('lightbox').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox(e) {
+      if (e && e.target !== document.getElementById('lightbox') && !e.target.classList.contains('lightbox-close')) return;
+      document.getElementById('lightbox').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    function lightboxNav(dir) {
+      currentIdx = (currentIdx + dir + charts.length) % charts.length;
+      document.getElementById('lightboxImg').src = charts[currentIdx].src;
+      document.getElementById('lightboxCaption').textContent = charts[currentIdx].caption;
+    }
+
+    document.addEventListener('keydown', e => {
+      if (!document.getElementById('lightbox').classList.contains('open')) return;
+      if (e.key === 'Escape')     closeLightbox({ target: document.getElementById('lightbox') });
+      if (e.key === 'ArrowRight') lightboxNav(1);
+      if (e.key === 'ArrowLeft')  lightboxNav(-1);
+    });
+  </script>
+</body>
+</html>
