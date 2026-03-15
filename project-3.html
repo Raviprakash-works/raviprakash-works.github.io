@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IPL Cricket Analytics | Ravi Prakash</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Syne:wght@700;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="case-study.css" />
+</head>
+<body>
+
+  <div class="noise"></div>
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">← Back to Portfolio</a>
+      <a href="Ravi_Prakash_Resume.pdf" target="_blank" class="nav-cta">Resume ↗</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="cs-hero">
+    <div class="cs-hero-inner">
+      <div class="cs-meta">
+        <span class="cs-tag">Cricket Analytics</span>
+        <span class="cs-tag">Python</span>
+        <span class="cs-tag">SQL</span>
+        <span class="cs-tag">Plotly</span>
+        <span class="cs-tag">Excel</span>
+        <span class="cs-tag">PDF Automation</span>
+      </div>
+      <h1 class="cs-title">IPL Cricket<br/><em>Analytics Pipeline</em></h1>
+      <p class="cs-subtitle">End-to-end analytics on 17 IPL seasons and 1,090 matches — Python EDA, SQL queries, automated Excel & PDF reports, and a fully interactive static HTML dashboard deployable with zero server.</p>
+
+      <div class="cs-stats">
+        <div class="cs-stat"><div class="cs-stat-n">1,090</div><div class="cs-stat-l">Matches</div></div>
+        <div class="cs-stat-sep"></div>
+        <div class="cs-stat"><div class="cs-stat-n">17</div><div class="cs-stat-l">Seasons</div></div>
+        <div class="cs-stat-sep"></div>
+        <div class="cs-stat"><div class="cs-stat-n">250K+</div><div class="cs-stat-l">Deliveries</div></div>
+        <div class="cs-stat-sep"></div>
+        <div class="cs-stat"><div class="cs-stat-n">9</div><div class="cs-stat-l">EDA Charts</div></div>
+        <div class="cs-stat-sep"></div>
+        <div class="cs-stat"><div class="cs-stat-n">12</div><div class="cs-stat-l">SQL Queries</div></div>
+      </div>
+
+      <div class="cs-links">
+        <a href="ipl_dashboard.html" target="_blank" class="btn-primary">Live Dashboard ↗</a>
+        <a href="https://github.com/raviprakash-works/ipl-analytics-project" target="_blank" class="btn-outline">GitHub ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- OVERVIEW -->
+  <section class="cs-section">
+    <div class="cs-inner">
+      <div class="cs-two-col">
+        <div>
+          <span class="cs-section-tag">Problem Statement</span>
+          <h2 class="cs-section-title">What makes IPL data interesting?</h2>
+          <p>IPL generates ball-by-ball data across 17 seasons — but raw CSVs don't tell you who the most <em>efficient</em> batter is, which teams win despite fewer resources, or whether winning the toss actually changes outcomes. This project processes the complete dataset to surface meaningful patterns through automated reports and an interactive dashboard.</p>
+          <p>A key goal was demonstrating <strong>automated reporting</strong> — the Python script generates a 5-sheet Excel workbook and a 5-page PDF report with zero manual effort. This mirrors real-world MIS automation workflows like those used at MECON.</p>
+          <p>The dashboard is deployed as a <strong>self-contained HTML file</strong> — no server, no dependencies, just a file that opens in any browser. This is the kind of practical thinking that matters in product and data roles.</p>
+        </div>
+        <div class="cs-info-box">
+          <div class="cs-info-row"><span class="cs-info-label">Dataset</span><span class="cs-info-val">IPL Complete Dataset (Kaggle)</span></div>
+          <div class="cs-info-row"><span class="cs-info-label">Files</span><span class="cs-info-val">matches.csv + deliveries.csv</span></div>
+          <div class="cs-info-row"><span class="cs-info-label">Seasons</span><span class="cs-info-val">2007/08 – 2024</span></div>
+          <div class="cs-info-row"><span class="cs-info-label">Tools</span><span class="cs-info-val">Python · SQL · Plotly · openpyxl</span></div>
+          <div class="cs-info-row"><span class="cs-info-label">Libraries</span><span class="cs-info-val">Pandas · Matplotlib · Seaborn · PdfPages</span></div>
+          <div class="cs-info-row"><span class="cs-info-label">Outputs</span><span class="cs-info-val">9 charts · Excel · PDF · HTML dashboard</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- APPROACH -->
+  <section class="cs-section cs-section-alt">
+    <div class="cs-inner">
+      <span class="cs-section-tag">Methodology</span>
+      <h2 class="cs-section-title">How I built it</h2>
+      <div class="cs-steps">
+
+        <div class="cs-step">
+          <div class="cs-step-num">01</div>
+          <div class="cs-step-content">
+            <div class="cs-step-title">Data Cleaning & Standardisation</div>
+            <p>Loaded two CSVs — match-level and ball-by-ball delivery data. Standardised team names across franchise renames (e.g. Delhi Daredevils → Delhi Capitals, Kings XI Punjab → Punjab Kings). Filtered no-result matches. Computed batting averages, strike rates, bowling economy, and dismissal counts from raw ball data.</p>
+            <div class="cs-step-tags"><span>Python</span><span>Pandas</span></div>
+          </div>
+        </div>
+
+        <div class="cs-step">
+          <div class="cs-step-num">02</div>
+          <div class="cs-step-content">
+            <div class="cs-step-title">EDA & Visualisation</div>
+            <p>Generated 9 dark-themed charts using Matplotlib and Seaborn — team win records, win rates, top run scorers, top wicket takers, batting average vs strike rate scatter, economy vs wickets scatter, six/four hitters, toss analysis, and matches per season.</p>
+            <div class="cs-step-tags"><span>Matplotlib</span><span>Seaborn</span></div>
+          </div>
+        </div>
+
+        <div class="cs-step">
+          <div class="cs-step-num">03</div>
+          <div class="cs-step-content">
+            <div class="cs-step-title">Automated Excel & PDF Reports</div>
+            <p>Used openpyxl to build a formatted 5-sheet Excel workbook (Overview, Team Stats, Top Batters, Top Bowlers, Boundaries) with styled headers, alternating row fills, and column widths. Used Matplotlib's PdfPages to generate a 5-page PDF with a cover page and 4 analysis pages — fully automated, zero manual formatting.</p>
+            <div class="cs-step-tags"><span>openpyxl</span><span>PdfPages</span></div>
+          </div>
+        </div>
+
+        <div class="cs-step">
+          <div class="cs-step-num">04</div>
+          <div class="cs-step-content">
+            <div class="cs-step-title">Static Interactive HTML Dashboard</div>
+            <p>Used Plotly to build 10 interactive charts and exported them as a single self-contained HTML file using <code>pio.to_html(include_plotlyjs=False)</code> with Plotly loaded from CDN. The result is a 748KB file that opens in any browser with full hover, zoom, and tooltip interactivity — no server, no Python, no deployment needed.</p>
+            <div class="cs-step-tags"><span>Plotly</span><span>HTML Export</span></div>
+          </div>
+        </div>
+
+        <div class="cs-step">
+          <div class="cs-step-num">05</div>
+          <div class="cs-step-content">
+            <div class="cs-step-title">SQL Analysis</div>
+            <p>Wrote 12 SQL queries in SQLite covering team win records, toss advantage by team, top run scorers with strike rate, top wicket takers with economy, most sixes and fours, highest innings totals, dismissal type breakdown, and best economy rates (min 50 overs).</p>
+            <div class="cs-step-tags"><span>SQL</span><span>SQLite</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EDA CHARTS -->
+  <section class="cs-section">
+    <div class="cs-inner">
+      <span class="cs-section-tag">Exploratory Data Analysis</span>
+      <h2 class="cs-section-title">9 Charts — Python output</h2>
+      <p class="cs-eda-intro">Click any chart to expand. Scroll → to browse all 9.</p>
+
+      <div class="cs-eda-carousel-wrap">
+        <div class="cs-eda-carousel" id="edaCarousel">
+          <div class="cs-eda-card" onclick="openLightbox(0)">
+            <img src="outputs/charts/01_team_wins.png" alt="Team Wins" />
+            <div class="cs-eda-card-label"><span class="cs-eda-card-num">01</span><span class="cs-eda-card-title">Team Win Records</span><span class="cs-eda-card-expand">⤢</span></div>
+          </div>
+          <div class="cs-eda-card" onclick="openLightbox(1)">
+            <img src="outputs/charts/02_team_winrate.png" alt="Win Rate" />
+            <div class="cs-eda-card-label"><span class="cs-eda-card-num">02</span><span class="cs-eda-card-title">Team Win Rate %</span><span class="cs-eda-card-expand">⤢</span></div>
+          </div>
+          <div class="cs-eda-card" onclick="openLightbox(2)">
+            <img src="outputs/charts/03_top_run_scorers.png" alt="Run Scorers" />
+            <div class="cs-eda-card-label"><span class="cs-eda-card-num">03</span><span class="cs-eda-card-title">Top Run Scorers</span><span class="cs-eda-card-expand">⤢</span></div>
+          </div>
+          <div class="cs-eda-card" onclick="openLightbox(3)">
+            <img src="outputs/charts/04_top_wicket_takers.png" alt="Wicket Takers" />
+            <div class="cs-eda-card-label"><span class="cs-eda-card-num">04</span><span class="cs-eda-card-title">Top Wicket Takers</span><span class="cs-eda-card-expand">⤢</span></div>
+          </div>
+          <div class="cs-eda-card" onclick="openLightbox(4)">
+            <img src="outputs/charts/05_matches_per_season.png" alt="Matches per Season" />
+            <div class="cs-eda-card-label"><span class="cs-eda-card-num">05</span><span class="cs-eda-card-title">Matches per Season</span><span class="cs-eda-card-expand">⤢</span></div>
+          </div>
+          <div class="cs-eda-card" onclick="openLightbox(5)">
+            <img src="outputs/charts/06_toss_analysis.png" alt="Toss Analysis" />
+            <div class="cs-eda-card-label"><span class="cs-eda-card-num">06</span><span class="cs-eda-card-title">Toss Analysis</span><span class="cs-eda-card-expand">⤢</span></div>
+          </div>
+          <div class="cs-eda-card" onclick="openLightbox(6)">
+            <img src="outputs/charts/07_boundaries.png" alt="Boundaries" />
+            <div class="cs-eda-card-label"><span class="cs-eda-card-num">07</span><span class="cs-eda-card-title">Six & Four Hitters</span><span class="cs-eda-card-expand">⤢</span></div>
+          </div>
+          <div class="cs-eda-card" onclick="openLightbox(7)">
+            <img src="outputs/charts/08_batting_avg_sr_scatter.png" alt="Batting Scatter" />
+            <div class="cs-eda-card-label"><span class="cs-eda-card-num">08</span><span class="cs-eda-card-title">Avg vs Strike Rate</span><span class="cs-eda-card-expand">⤢</span></div>
+          </div>
+          <div class="cs-eda-card" onclick="openLightbox(8)">
+            <img src="outputs/charts/09_bowling_economy_scatter.png" alt="Bowling Scatter" />
+            <div class="cs-eda-card-label"><span class="cs-eda-card-num">09</span><span class="cs-eda-card-title">Economy vs Wickets</span><span class="cs-eda-card-expand">⤢</span></div>
+          </div>
+        </div>
+        <div class="cs-eda-nav">
+          <button onclick="scrollCarousel(-1)">←</button>
+          <button onclick="scrollCarousel(1)">→</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+    <div class="lightbox-inner">
+      <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+      <button class="lightbox-prev" onclick="lightboxNav(-1)">←</button>
+      <button class="lightbox-next" onclick="lightboxNav(1)">→</button>
+      <img id="lightboxImg" src="" alt="" />
+      <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+  </div>
+
+  <!-- DASHBOARD SCREENSHOTS -->
+  <section class="cs-section cs-section-alt" id="dashboard">
+    <div class="cs-inner">
+      <span class="cs-section-tag">Interactive Dashboard</span>
+      <h2 class="cs-section-title">Live Plotly <em>Dashboard</em></h2>
+      <p style="font-size:.87rem;color:var(--muted);margin-bottom:32px;line-height:1.8;">A self-contained 748KB HTML file — 10 interactive Plotly charts with hover tooltips, zoom, and pan. No server, no Python required. <a href="ipl_dashboard.html" target="_blank" style="color:var(--accent);">Open Live Dashboard ↗</a></p>
+
+      <div class="cs-dashboard-screens">
+        <div class="cs-screen">
+          <img src="ipl-page1.png" alt="Overview — KPIs & Team Records" />
+          <div class="cs-screen-label"><span class="cs-screen-num">View 01</span><span class="cs-screen-title">Overview — KPI Cards, Team Wins & Win Rate</span></div>
+        </div>
+        <div class="cs-screen">
+          <img src="ipl-page2.png" alt="Seasons & Toss" />
+          <div class="cs-screen-label"><span class="cs-screen-num">View 02</span><span class="cs-screen-title">Seasons per Year & Toss Analysis Donut</span></div>
+        </div>
+        <div class="cs-screen">
+          <img src="ipl-page3.png" alt="Batting Tab" />
+          <div class="cs-screen-label"><span class="cs-screen-num">View 03</span><span class="cs-screen-title">Batting — Top Run Scorers & Avg vs Strike Rate Scatter</span></div>
+        </div>
+        <div class="cs-screen">
+          <img src="ipl-page4.png" alt="Bowling Tab" />
+          <div class="cs-screen-label"><span class="cs-screen-num">View 04</span><span class="cs-screen-title">Bowling — Top Wicket Takers & Economy Scatter</span></div>
+        </div>
+        <div class="cs-screen">
+          <img src="ipl-page5.png" alt="Boundaries Tab" />
+          <div class="cs-screen-label"><span class="cs-screen-num">View 05</span><span class="cs-screen-title">Boundaries — Six & Four Hitters</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINDINGS -->
+  <section class="cs-section">
+    <div class="cs-inner">
+      <span class="cs-section-tag">Key Findings</span>
+      <h2 class="cs-section-title">What the data revealed</h2>
+      <div class="cs-findings">
+        <div class="cs-finding highlight">
+          <div class="cs-finding-num">144</div>
+          <div class="cs-finding-title">Mumbai Indians — Most Wins</div>
+          <p>Mumbai Indians lead all-time with 144 wins, 6 more than CSK (138). Yet Gujarat Titans have a higher win rate at 62.2% — a newer franchise performing at elite level.</p>
+        </div>
+        <div class="cs-finding">
+          <div class="cs-finding-num">8,014</div>
+          <div class="cs-finding-title">Virat Kohli — All-Time Top Scorer</div>
+          <p>Kohli leads with 8,014 runs in 244 innings — nearly 1,300 more than Shikhar Dhawan (6,769). Average of 38.71 with SR of 132.05.</p>
+        </div>
+        <div class="cs-finding highlight">
+          <div class="cs-finding-num">50.8%</div>
+          <div class="cs-finding-title">Toss Barely Matters</div>
+          <p>Winning the toss leads to winning the match only 50.8% of the time — statistically insignificant. Team quality matters far more than the coin flip.</p>
+        </div>
+        <div class="cs-finding">
+          <div class="cs-finding-num">359</div>
+          <div class="cs-finding-title">CH Gayle — King of Sixes</div>
+          <p>Chris Gayle hit 359 sixes — 78 more than #2 Rohit Sharma (281). His strike rate of 149.34 with 4,997 runs makes him the most destructive batter in IPL history.</p>
+        </div>
+        <div class="cs-finding">
+          <div class="cs-finding-num">205</div>
+          <div class="cs-finding-title">YS Chahal — Top Wicket Taker</div>
+          <p>Chahal leads with 205 wickets. SP Narine stands out with 180 wickets at just 6.85 economy — the most economical among top wicket takers.</p>
+        </div>
+        <div class="cs-finding highlight">
+          <div class="cs-finding-num">151.9</div>
+          <div class="cs-finding-title">AB de Villiers — Best Strike Rate</div>
+          <p>Among top run scorers, AB de Villiers has the best strike rate at 151.89 with 5,181 runs — a perfect combination of volume and aggression.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REFLECTION -->
+  <section class="cs-section cs-section-alt">
+    <div class="cs-inner">
+      <span class="cs-section-tag">Reflection</span>
+      <h2 class="cs-section-title">What I learned</h2>
+      <div class="cs-two-col">
+        <div>
+          <p>The most technically valuable part of this project was building the <strong>automated Excel report with openpyxl</strong>. Writing formatted multi-sheet workbooks with styled headers, alternating fills, and column widths programmatically is exactly what data analysts do for MIS automation — it directly mirrors what I did at MECON with Python and Power Query.</p>
+          <p>The static HTML dashboard approach was a deliberate engineering decision. Dash is powerful but requires a running server — not practical for a portfolio. Converting to a self-contained Plotly HTML file using <code>pio.to_html</code> gives full interactivity at zero hosting cost. That kind of practical thinking is what separates a good analyst from a great one.</p>
+          <p>The toss finding (50.8%) is a good example of <strong>letting data challenge assumptions</strong>. Most cricket fans believe the toss is crucial — the data says otherwise. This is the kind of insight that makes for memorable interview conversations.</p>
+        </div>
+        <div class="cs-skills-used">
+          <div class="cs-skills-label">Skills demonstrated</div>
+          <div class="cs-skills-list">
+            <div class="cs-skill-item">✓ Multi-file data merging & cleaning</div>
+            <div class="cs-skill-item">✓ Aggregation from ball-by-ball data</div>
+            <div class="cs-skill-item">✓ Automated Excel report (openpyxl)</div>
+            <div class="cs-skill-item">✓ Automated PDF generation (PdfPages)</div>
+            <div class="cs-skill-item">✓ Interactive Plotly visualisations</div>
+            <div class="cs-skill-item">✓ Static HTML dashboard export</div>
+            <div class="cs-skill-item">✓ SQL analytics on sports data</div>
+            <div class="cs-skill-item">✓ Insight communication & storytelling</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEXT -->
+  <section class="cs-section">
+    <div class="cs-inner cs-next">
+      <div>
+        <span class="cs-section-tag">All Projects</span>
+        <h2 class="cs-section-title">Back to Portfolio</h2>
+        <p>View all 3 projects — HR Attrition Analytics, Sales Performance Dashboard, and IPL Cricket Analytics.</p>
+      </div>
+      <a href="index.html#projects" class="btn-primary">View All Projects ↗</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <span>© 2026 Ravi Prakash</span>
+      <span>B.Tech ECE · NSUT Delhi · Open to opportunities</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    const carousel = document.getElementById('edaCarousel');
+    function scrollCarousel(dir) { carousel.scrollBy({ left: dir * 300, behavior: 'smooth' }); }
+
+    const charts = [
+      { src: 'outputs/charts/01_team_wins.png',               caption: '01 — Team Win Records (All Time)' },
+      { src: 'outputs/charts/02_team_winrate.png',            caption: '02 — Team Win Rate % (min 20 matches)' },
+      { src: 'outputs/charts/03_top_run_scorers.png',         caption: '03 — Top 10 Run Scorers' },
+      { src: 'outputs/charts/04_top_wicket_takers.png',       caption: '04 — Top 10 Wicket Takers' },
+      { src: 'outputs/charts/05_matches_per_season.png',      caption: '05 — Matches per IPL Season' },
+      { src: 'outputs/charts/06_toss_analysis.png',           caption: '06 — Toss Analysis' },
+      { src: 'outputs/charts/07_boundaries.png',              caption: '07 — Six & Four Hitters' },
+      { src: 'outputs/charts/08_batting_avg_sr_scatter.png',  caption: '08 — Batting Average vs Strike Rate' },
+      { src: 'outputs/charts/09_bowling_economy_scatter.png', caption: '09 — Economy Rate vs Wickets' },
+    ];
+    let currentIdx = 0;
+
+    function openLightbox(idx) {
+      currentIdx = idx;
+      document.getElementById('lightboxImg').src = charts[idx].src;
+      document.getElementById('lightboxCaption').textContent = charts[idx].caption;
+      document.getElementById('lightbox').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox(e) {
+      if (e && e.target !== document.getElementById('lightbox') && !e.target.classList.contains('lightbox-close')) return;
+      document.getElementById('lightbox').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    function lightboxNav(dir) {
+      currentIdx = (currentIdx + dir + charts.length) % charts.length;
+      document.getElementById('lightboxImg').src = charts[currentIdx].src;
+      document.getElementById('lightboxCaption').textContent = charts[currentIdx].caption;
+    }
+    document.addEventListener('keydown', e => {
+      if (!document.getElementById('lightbox').classList.contains('open')) return;
+      if (e.key === 'Escape')     closeLightbox({ target: document.getElementById('lightbox') });
+      if (e.key === 'ArrowRight') lightboxNav(1);
+      if (e.key === 'ArrowLeft')  lightboxNav(-1);
+    });
+  </script>
+</body>
+</html>
