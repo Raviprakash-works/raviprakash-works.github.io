@@ -557,8 +557,48 @@ nav {
   box-shadow:0 8px 32px rgba(0,0,0,.4);
 }
 
+/* Flagship Project Card */
+.project-card.flagship {
+  grid-column: 1 / -1;
+  background: linear-gradient(135deg, rgba(22,22,22,0.95) 0%, rgba(13,13,13,0.98) 100%);
+  border: 1px solid rgba(200,245,58,0.3);
+  padding: 32px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+}
+.project-card.flagship .project-title {
+  font-size: 1.4rem;
+  margin-top: 8px;
+}
+.project-card.flagship .project-desc {
+  font-size: 0.88rem;
+}
+
+.prd-badge {
+  background: rgba(200,245,58,0.15);
+  color: var(--accent);
+  border: 1px solid rgba(200,245,58,0.4);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 100px;
+}
+
+.flagship-badge {
+  background: rgba(255,255,255,0.06);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.15);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 100px;
+}
+
 .project-card-top {
-  display:flex; justify-content:space-between; align-items:center;
+  display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;
 }
 .project-number {
   font-family:var(--mono);
