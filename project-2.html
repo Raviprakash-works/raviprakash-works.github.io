@@ -105,51 +105,49 @@
     </div>
   </section>
 
-  <!-- ── USER PERSONAS & PAIN POINTS ── -->
+  <!-- ── BESPOKE VISUAL DIAGRAM ── -->
   <section class="cs-section cs-section-alt">
     <div class="cs-inner">
-      <span class="cs-section-tag">02 / User Discovery</span>
-      <h2 class="cs-section-title">Target Personas & User Needs</h2>
+      <span class="cs-section-tag">02 / Speech AI Architecture</span>
+      <h2 class="cs-section-title">Evaluation Workflow & Scoring Pipeline</h2>
+      <p style="margin-bottom:20px;">VoiceEval processes speech input through a modular acoustic and NLP scoring pipeline to output multi-dimensional candidate diagnostics:</p>
 
-      <div class="cs-steps" style="grid-template-columns:1fr 1fr; gap:24px;">
-        <div class="cs-step">
-          <div class="cs-step-num">P1</div>
-          <div class="cs-step-content">
-            <div class="cs-step-title">Job Candidates / Students</div>
-            <p><strong>Goal:</strong> Receive rapid, non-judgmental, actionable feedback on fluency, speech clarity, and pace to prepare for interviews.</p>
-            <p><strong>Pain Point:</strong> Waiting weeks for human evaluations with vague feedback like "needs improvement".</p>
-          </div>
-        </div>
+      <div class="svg-diagram-card">
+        <svg viewBox="0 0 760 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="760" height="140" rx="6" fill="#0d0d0d"/>
+          <rect x="20" y="45" width="130" height="50" rx="4" fill="#161616" stroke="#c8f53a" stroke-width="1.5"/>
+          <text x="85" y="68" fill="#edebe4" font-size="11" font-family="monospace" text-anchor="middle" font-weight="bold">Candidate Audio</text>
+          <text x="85" y="83" fill="#888" font-size="9" font-family="sans-serif" text-anchor="middle">Mic Recording Stream</text>
 
-        <div class="cs-step">
-          <div class="cs-step-num">P2</div>
-          <div class="cs-step-content">
-            <div class="cs-step-title">Recruiters & Evaluators</div>
-            <p><strong>Goal:</strong> Screen thousands of applicants efficiently with zero evaluator fatigue or subjective scoring variance.</p>
-            <p><strong>Pain Point:</strong> Spending hundreds of hours manually interviewing baseline candidates.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+          <path d="M150 70 H190" stroke="#c8f53a" stroke-width="1.5" stroke-dasharray="4 4"/>
+          <polygon points="190,70 183,66 183,74" fill="#c8f53a"/>
 
-  <!-- ── PRODUCT DESIGN & WORKFLOW ── -->
-  <section class="cs-section">
-    <div class="cs-inner">
-      <span class="cs-section-tag">03 / Product Strategy</span>
-      <h2 class="cs-section-title">User Journey & System Architecture</h2>
-      <p style="margin-bottom:24px;">The core product insight is that candidates and recruiters do not care about speech model parameters. They care about receiving fast, clear, and actionable feedback.</p>
+          <rect x="195" y="45" width="140" height="50" rx="4" fill="#161616" stroke="#c8f53a" stroke-width="1.5"/>
+          <text x="265" y="68" fill="#edebe4" font-size="11" font-family="monospace" text-anchor="middle" font-weight="bold">Acoustic Feature Extraction</text>
+          <text x="265" y="83" fill="#888" font-size="9" font-family="sans-serif" text-anchor="middle">Pitch, Pause & Pace</text>
 
-      <div style="background:var(--surface2); border:1px solid var(--border); border-radius:6px; padding:24px; font-family:var(--mono); font-size:0.82rem; color:var(--muted); line-height:1.8;">
-        [ Audio Prompt ] ➔ [ Candidate Speech Recording ] ➔ [ Acoustic & NLP Processing ] ➔ [ Fluency & Clarity Scoring Engine ] ➔ [ Detailed Performance Breakdown & Recommendations ]
+          <path d="M335 70 H375" stroke="#c8f53a" stroke-width="1.5" stroke-dasharray="4 4"/>
+          <polygon points="375,70 368,66 368,74" fill="#c8f53a"/>
+
+          <rect x="380" y="45" width="140" height="50" rx="4" fill="#161616" stroke="#c8f53a" stroke-width="1.5"/>
+          <text x="450" y="68" fill="#edebe4" font-size="11" font-family="monospace" text-anchor="middle" font-weight="bold">NLP Fluency Engine</text>
+          <text x="450" y="83" fill="#888" font-size="9" font-family="sans-serif" text-anchor="middle">Grammar & Pronunciation</text>
+
+          <path d="M520 70 H560" stroke="#c8f53a" stroke-width="1.5" stroke-dasharray="4 4"/>
+          <polygon points="560,70 553,66 553,74" fill="#c8f53a"/>
+
+          <rect x="565" y="45" width="175" height="50" rx="4" fill="rgba(200,245,58,0.15)" stroke="#c8f53a" stroke-width="1.5"/>
+          <text x="652" y="68" fill="#c8f53a" font-size="11" font-family="monospace" text-anchor="middle" font-weight="bold">Objective Scorecard</text>
+          <text x="652" y="83" fill="#c8f53a" font-size="9" font-family="sans-serif" text-anchor="middle">Actionable Diagnostic Loop</text>
+        </svg>
       </div>
     </div>
   </section>
 
   <!-- ── IMPACT & ROADMAP ── -->
-  <section class="cs-section cs-section-alt">
+  <section class="cs-section">
     <div class="cs-inner">
-      <span class="cs-section-tag">04 / Impact & Future Roadmap</span>
+      <span class="cs-section-tag">03 / Impact & Future Roadmap</span>
       <h2 class="cs-section-title">Business Outcomes & Product Learnings</h2>
 
       <div class="cs-steps" style="grid-template-columns:1fr 1fr; gap:24px;">
