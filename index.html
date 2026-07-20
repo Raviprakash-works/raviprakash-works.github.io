@@ -3,759 +3,366 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- SEO & OpenGraph Metadata -->
-  <meta name="description" content="Ravi Prakash — Product Manager specializing in AI platforms, workflow automation, and data products. NSUT Delhi ECE '26. View product case studies, PRDs, and frameworks." />
-  <meta name="keywords" content="Ravi Prakash, Product Manager, APM, AI Product Manager, Product Analytics, EdgePlay AI, PRD, Product Strategy, NSUT Delhi" />
-  <meta property="og:title" content="Ravi Prakash | Product Manager — AI & Platform Products" />
-  <meta property="og:description" content="Portfolio of Ravi Prakash — Aspiring Product Manager building AI platforms, workflow automation, and data products." />
+  <title>Ravi Prakash — Product Manager | AI Platforms & Data Products</title>
+  <meta name="description" content="Product Manager portfolio of Ravi Prakash — building AI platforms, data products, and scalable systems. NSUT Delhi ECE '26." />
+  <meta property="og:title" content="Ravi Prakash — Product Manager" />
+  <meta property="og:description" content="Building AI platforms, data products, and scalable systems that solve real operational problems." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://raviprakash-works.github.io/" />
-  <meta property="og:image" content="profile.jpeg" />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Syne:wght@700;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href="https://raviprakash-works.github.io/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;700&family=Syne:wght@700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/main.css" />
 </head>
 <body>
 
   <div class="noise"></div>
-  <div class="cursor" id="cursor"></div>
-  <div class="cursor-ring" id="cursorRing"></div>
 
-  <!-- ── NAV ── -->
-  <nav id="navbar">
+  <!-- ── NAVIGATION ── -->
+  <nav class="site-nav" role="navigation" aria-label="Main navigation">
     <div class="nav-inner">
-      <a href="#hero" class="nav-logo">Ravi Prakash<span class="blink">_</span></a>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#case-studies">Case Studies</a></li>
-        <li><a href="#product-thinking">Product Thinking</a></li>
-        <li><a href="#leadership">Leadership</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="Ravi_Prakash_Resume.pdf" target="_blank" class="nav-cta-mobile">Resume ↗</a></li>
+      <a href="index.html" class="nav-logo">Ravi Prakash<span class="accent">.</span></a>
+      <ul class="nav-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="case-studies.html">Case Studies</a></li>
+        <li><a href="product-thinking.html">Product Thinking</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
-      <a href="Ravi_Prakash_Resume.pdf" target="_blank" class="nav-cta">Resume ↗</a>
+      <a href="Ravi_Prakash_Resume.pdf" target="_blank" rel="noopener" class="nav-cta hide-mobile">Resume ↗</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </nav>
 
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Mobile navigation">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="case-studies.html">Case Studies</a>
+    <a href="product-thinking.html">Product Thinking</a>
+    <a href="experience.html">Experience</a>
+    <a href="contact.html">Contact</a>
+    <a href="Ravi_Prakash_Resume.pdf" target="_blank" rel="noopener">Resume ↗</a>
+  </div>
+
   <!-- ── HERO ── -->
   <section class="hero" id="hero">
-    <div class="hero-inner">
-      <div class="hero-left">
-        <div class="hero-badge"><span class="badge-dot"></span>Available for Product Manager & APM Roles</div>
-        <h1 class="hero-name">
-          <span class="reveal">Ravi</span>
-          <span class="reveal d1">Prakash</span>
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <div class="hero-badge reveal">
+          <span class="dot"></span>
+          Available for PM & APM Roles
+        </div>
+
+        <h1 class="heading-xl hero-title reveal reveal-delay-1">
+          Ravi<br/>Prakash
         </h1>
-        <p class="hero-sub">
-          <span id="roleText"></span><span class="t-cursor"></span>
+
+        <p class="hero-subtitle reveal reveal-delay-2">
+          <span id="typedText"></span><span class="typed-cursor"></span>
         </p>
-        <p class="hero-desc">
-          I bridge technical complexity with user-centric product strategy. Final-year ECE student @ NSUT Delhi ('26) · Ex-MECON Limited · Community & Product Ops Lead @ ShakesJeer. Building AI platforms, workflow automation, and data products.
+
+        <p class="hero-desc reveal reveal-delay-3">
+          I bridge technical complexity with user-centric product strategy. Final-year ECE student at NSUT Delhi — building AI platforms, workflow automation, and data products that reduce operational friction and empower teams.
         </p>
-        <div class="hero-actions">
-          <a href="#case-studies" class="btn-primary">Explore Case Studies ↗</a>
-          <a href="#product-thinking" class="btn-outline">Read PRDs & Artifacts ↗</a>
-        </div>
-      </div>
-      <div class="hero-right">
-        <div class="hero-photo-wrap">
-          <img src="profile.jpeg" alt="Ravi Prakash — Product Manager" class="hero-photo" />
-          <div class="photo-accent"></div>
-        </div>
-      </div>
-    </div>
 
-    <!-- Stats row (Product Impact Metrics) -->
-    <div class="hero-stats">
-      <div class="hstat">
-        <div class="hstat-n">3</div>
-        <div class="hstat-l">Product Case Studies</div>
+        <div class="hero-actions reveal reveal-delay-4">
+          <a href="case-studies.html" class="btn-primary">Explore Case Studies ↗</a>
+          <a href="product-thinking.html" class="btn-ghost">View PRDs & Frameworks</a>
+        </div>
       </div>
-      <div class="hstat-sep"></div>
-      <div class="hstat">
-        <div class="hstat-n">40%</div>
-        <div class="hstat-l">Operational Efficiency Saved</div>
-      </div>
-      <div class="hstat-sep"></div>
-      <div class="hstat">
-        <div class="hstat-n">500+</div>
-        <div class="hstat-l">Active Users Led</div>
-      </div>
-      <div class="hstat-sep"></div>
-      <div class="hstat">
-        <div class="hstat-n">20+</div>
-        <div class="hstat-l">Telemetry KPIs Tracked</div>
+
+      <div class="hero-visual reveal hide-mobile">
+        <svg viewBox="0 0 480 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Abstract product architecture node graph -->
+          <circle cx="240" cy="200" r="160" stroke="rgba(163,230,53,0.08)" stroke-width="1" fill="none"/>
+          <circle cx="240" cy="200" r="100" stroke="rgba(163,230,53,0.12)" stroke-width="1" fill="none"/>
+          <circle cx="240" cy="200" r="40" stroke="rgba(163,230,53,0.2)" stroke-width="1.5" fill="rgba(163,230,53,0.04)"/>
+
+          <!-- Center node -->
+          <circle cx="240" cy="200" r="6" fill="#a3e635"/>
+          <text x="240" y="170" fill="#a3e635" font-size="9" font-family="monospace" text-anchor="middle" font-weight="bold">PRODUCT</text>
+
+          <!-- User Need node -->
+          <circle cx="120" cy="110" r="28" fill="rgba(17,17,19,0.8)" stroke="rgba(163,230,53,0.3)" stroke-width="1.5"/>
+          <text x="120" y="108" fill="#fafafa" font-size="8" font-family="monospace" text-anchor="middle">User</text>
+          <text x="120" y="120" fill="#a1a1aa" font-size="7" font-family="monospace" text-anchor="middle">Need</text>
+          <line x1="145" y1="130" x2="210" y2="175" stroke="rgba(163,230,53,0.2)" stroke-width="1" stroke-dasharray="4 4"/>
+
+          <!-- PRD node -->
+          <circle cx="360" cy="110" r="28" fill="rgba(17,17,19,0.8)" stroke="rgba(163,230,53,0.3)" stroke-width="1.5"/>
+          <text x="360" y="108" fill="#fafafa" font-size="8" font-family="monospace" text-anchor="middle">PRD</text>
+          <text x="360" y="120" fill="#a1a1aa" font-size="7" font-family="monospace" text-anchor="middle">Spec</text>
+          <line x1="335" y1="130" x2="270" y2="175" stroke="rgba(163,230,53,0.2)" stroke-width="1" stroke-dasharray="4 4"/>
+
+          <!-- Data node -->
+          <circle cx="120" cy="290" r="28" fill="rgba(17,17,19,0.8)" stroke="rgba(163,230,53,0.3)" stroke-width="1.5"/>
+          <text x="120" y="288" fill="#fafafa" font-size="8" font-family="monospace" text-anchor="middle">Data</text>
+          <text x="120" y="300" fill="#a1a1aa" font-size="7" font-family="monospace" text-anchor="middle">Pipeline</text>
+          <line x1="145" y1="270" x2="210" y2="225" stroke="rgba(163,230,53,0.2)" stroke-width="1" stroke-dasharray="4 4"/>
+
+          <!-- AI Cloud node -->
+          <circle cx="360" cy="290" r="28" fill="rgba(17,17,19,0.8)" stroke="rgba(163,230,53,0.3)" stroke-width="1.5"/>
+          <text x="360" y="288" fill="#fafafa" font-size="8" font-family="monospace" text-anchor="middle">AI</text>
+          <text x="360" y="300" fill="#a1a1aa" font-size="7" font-family="monospace" text-anchor="middle">Cloud</text>
+          <line x1="335" y1="270" x2="270" y2="225" stroke="rgba(163,230,53,0.2)" stroke-width="1" stroke-dasharray="4 4"/>
+
+          <!-- Metrics node -->
+          <circle cx="240" cy="360" r="28" fill="rgba(17,17,19,0.8)" stroke="rgba(163,230,53,0.3)" stroke-width="1.5"/>
+          <text x="240" y="358" fill="#fafafa" font-size="8" font-family="monospace" text-anchor="middle">Metrics</text>
+          <text x="240" y="370" fill="#a1a1aa" font-size="7" font-family="monospace" text-anchor="middle">& KPIs</text>
+          <line x1="240" y1="332" x2="240" y2="240" stroke="rgba(163,230,53,0.2)" stroke-width="1" stroke-dasharray="4 4"/>
+        </svg>
       </div>
     </div>
   </section>
 
-  <!-- ── ABOUT ── -->
-  <section id="about" class="section">
-    <div class="section-inner">
-      <div class="section-header">
-        <span class="section-tag">01 / About</span>
-        <h2 class="section-title">Product Engineering & Philosophy</h2>
-      </div>
-
-      <div class="about-grid">
-        <div class="about-text">
-          <p>I am a final-year Electronics & Communication Engineering undergraduate at <strong>NSUT Delhi (2026)</strong>. My journey began with hardware systems, embedded logic, and data pipelines—before evolving into a deep focus on <strong>Product Management</strong>, AI platform design, and workflow optimization.</p>
-          <p>Instead of viewing technology as an end goal, I approach it as a vehicle to solve operational friction. At <strong>MECON Limited (Govt. of India PSU)</strong>, I observed how enterprise telemetry improves decision-making, tracking 20+ KPIs and cutting monitoring effort by 40%.</p>
-          <p>Building 0-to-1 platforms like <strong>EdgePlay AI</strong> taught me how to manage the complete product lifecycle—from user discovery and platform architecture to PRD documentation, cloud data pipelines (Backblaze B2), and cross-functional execution.</p>
-          <p>As <strong>President of ShakesJeer (NSUT)</strong>, I led community and product operations—scaling a 100+ member organization, organizing 20+ major events for 500+ attendees, and growing engagement by 30%.</p>
-
-          <div class="about-pills">
-            <span>📍 Delhi, India</span>
-            <span>🎓 NSUT · ECE '26</span>
-            <span>💼 Open to PM & APM Roles</span>
-            <span>🤖 AI & Platform Products</span>
-          </div>
+  <!-- ── IMPACT METRICS ── -->
+  <section class="page-section-alt">
+    <div class="container">
+      <div class="metric-row reveal">
+        <div class="metric-badge">
+          <div class="metric-num">5</div>
+          <div class="metric-label">Product Case Studies</div>
         </div>
-
-        <div class="about-cards">
-          <!-- Education -->
-          <div class="info-card">
-            <div class="info-card-label">Education</div>
-            <div class="info-card-row">
-              <div class="org-badge nsut">NSUT</div>
-              <div>
-                <div class="org-name">Netaji Subhas University of Technology</div>
-                <div class="org-sub">B.Tech · Electronics & Communication Engineering</div>
-                <div class="org-sub">2022 – 2026 · Delhi, India</div>
-              </div>
-            </div>
-            <div class="info-card-divider"></div>
-            <div class="courses-label">Core Product Foundations</div>
-            <div class="courses">
-              <span>Database Management Systems</span>
-              <span>Information Systems & Architecture</span>
-              <span>Probability & Statistics</span>
-              <span>Business & Product Analytics</span>
-            </div>
-          </div>
-
-          <!-- Product Competencies Card -->
-          <div class="info-card">
-            <div class="info-card-label">Core PM Strengths</div>
-            <div class="courses" style="gap:8px; margin-top:8px;">
-              <span>Product Strategy & PRDs</span>
-              <span>0-to-1 AI Infrastructure</span>
-              <span>User Discovery & SOPs</span>
-              <span>RICE Prioritization</span>
-              <span>Telemetry & Telematics</span>
-              <span>System Design & Trade-offs</span>
-            </div>
-          </div>
+        <div class="metric-badge">
+          <div class="metric-num">50%</div>
+          <div class="metric-label">Pipeline Efficiency Gain</div>
+        </div>
+        <div class="metric-badge">
+          <div class="metric-num">500+</div>
+          <div class="metric-label">Community Users Led</div>
+        </div>
+        <div class="metric-badge">
+          <div class="metric-num">20+</div>
+          <div class="metric-label">Telemetry KPIs Defined</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ── EXPERIENCE ── -->
-  <section id="experience" class="section section-alt">
-    <div class="section-inner">
-      <div class="section-header">
-        <span class="section-tag">02 / Experience</span>
-        <h2 class="section-title">Professional & Technical Experience</h2>
-      </div>
-
-      <div class="timeline">
-
-        <!-- MECON -->
-        <div class="timeline-item">
-          <div class="timeline-left">
-            <div class="org-badge mecon">MECON</div>
-            <div class="tl-line"></div>
-          </div>
-          <div class="timeline-right">
-            <div class="tl-header">
-              <div>
-                <div class="tl-company">MECON Limited <span class="tl-type">· PSU, Govt. of India</span></div>
-                <div class="tl-role">Product & Operations Analytics Intern</div>
-              </div>
-              <div class="tl-date">May – Jun 2025 · Delhi</div>
-            </div>
-            <ul class="tl-list">
-              <li>Analyzed operational workflows and telemetry across multi-departmental plant infrastructure, identifying key reporting bottlenecks in industrial SCADA operations.</li>
-              <li>Defined & implemented <strong>20+ core telemetry KPIs</strong> across automated Power BI dashboards, reducing manual plant monitoring effort by <strong>40%</strong>.</li>
-              <li>Queried, joined, and validated <strong>5,000+ structured operational records</strong> in SQL to establish data integrity across plant reporting systems.</li>
-              <li>Automated multi-source MIS reporting using Python & Power Query, cutting ad-hoc retrieval turnaround time by <strong>30%</strong>.</li>
-              <li>Authored comprehensive SOPs and technical documentation covering SCADA telemetry, digital transformation, and industrial workflow automation.</li>
-            </ul>
-            <div class="tl-tags">
-              <span>Telemetry & Telematics</span><span>Product Analytics</span><span>SQL</span><span>Power BI</span><span>Python</span><span>Enterprise SOPs</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Technical Foundation / Hardware Systems -->
-        <div class="timeline-item">
-          <div class="timeline-left">
-            <div class="org-badge nsut">NSUT</div>
-          </div>
-          <div class="timeline-right">
-            <div class="tl-header">
-              <div>
-                <div class="tl-company">Platform Engineering & System Design <span class="tl-type">· Hardware & Systems Research</span></div>
-                <div class="tl-role">Hardware & Embedded Systems Researcher</div>
-              </div>
-              <div class="tl-date">2024 – 2025 · Delhi</div>
-            </div>
-            <ul class="tl-list">
-              <li>Architected a Power Management Controller (PMC) for RISC-V processors using Dynamic Voltage and Frequency Scaling (DVFS), balancing performance vs. power consumption.</li>
-              <li>Evaluated complex system trade-offs through hardware simulation and FPGA board validation, ensuring operational reliability under physical constraints.</li>
-              <li>Designed state machines and power management logic to optimize resource utilization, demonstrating deep technical credibility for platform PM roles.</li>
-            </ul>
-            <div class="tl-tags">
-              <span>System Design</span><span>Trade-off Analysis</span><span>RISC-V</span><span>FPGA Validation</span><span>Verilog</span>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-    </div>
-  </section>
-
-  <!-- ── CASE STUDIES ── -->
-  <section id="case-studies" class="section">
-    <div class="section-inner">
-      <div class="section-header">
-        <span class="section-tag">03 / Case Studies</span>
-        <h2 class="section-title">Featured Product Case Studies</h2>
+  <!-- ── FEATURED WORK ── -->
+  <section class="page-section" id="work">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="label">Featured Work</span>
+        <h2 class="heading-lg">Product Case Studies</h2>
+        <p class="body-lg">End-to-end product thinking — from user discovery to PRD specification to measurable impact.</p>
       </div>
 
       <div class="projects-grid">
-
-        <!-- FLAGSHIP CASE STUDY: EdgePlay AI Platform -->
+        <!-- FLAGSHIP: EdgePlay AI -->
         <div class="project-card flagship reveal">
-          <div class="project-card-top">
-            <div class="project-number">FLAGSHIP / 001</div>
-            <div style="display:flex; gap:8px;">
-              <span class="flagship-badge">⭐ Flagship Product</span>
-              <span class="prd-badge">📄 PRD Included</span>
+          <div class="project-card-visual">
+            <div class="svg-diagram">
+              <svg viewBox="0 0 800 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="10" y="25" width="120" height="50" rx="4" fill="#18181b" stroke="rgba(163,230,53,0.4)" stroke-width="1.5"/>
+                <text x="70" y="48" fill="#fafafa" font-size="10" font-family="monospace" text-anchor="middle">Raw Video</text>
+                <text x="70" y="62" fill="#71717a" font-size="8" text-anchor="middle">50GB Ingest</text>
+                <path d="M130 50 H170" stroke="#a3e635" stroke-width="1.5" stroke-dasharray="4 3"/><polygon points="170,50 163,46 163,54" fill="#a3e635"/>
+                <rect x="175" y="25" width="120" height="50" rx="4" fill="#18181b" stroke="rgba(163,230,53,0.4)" stroke-width="1.5"/>
+                <text x="235" y="48" fill="#fafafa" font-size="10" font-family="monospace" text-anchor="middle">FFmpeg Trim</text>
+                <text x="235" y="62" fill="#71717a" font-size="8" text-anchor="middle">10s Clips</text>
+                <path d="M295 50 H335" stroke="#a3e635" stroke-width="1.5" stroke-dasharray="4 3"/><polygon points="335,50 328,46 328,54" fill="#a3e635"/>
+                <rect x="340" y="25" width="130" height="50" rx="4" fill="#18181b" stroke="rgba(163,230,53,0.4)" stroke-width="1.5"/>
+                <text x="405" y="48" fill="#fafafa" font-size="10" font-family="monospace" text-anchor="middle">Backblaze B2</text>
+                <text x="405" y="62" fill="#71717a" font-size="8" text-anchor="middle">Pre-Signed URLs</text>
+                <path d="M470 50 H510" stroke="#a3e635" stroke-width="1.5" stroke-dasharray="4 3"/><polygon points="510,50 503,46 503,54" fill="#a3e635"/>
+                <rect x="515" y="25" width="130" height="50" rx="4" fill="#18181b" stroke="rgba(163,230,53,0.4)" stroke-width="1.5"/>
+                <text x="580" y="48" fill="#fafafa" font-size="10" font-family="monospace" text-anchor="middle">Label Studio</text>
+                <text x="580" y="62" fill="#71717a" font-size="8" text-anchor="middle">Task Queue</text>
+                <path d="M645 50 H685" stroke="#a3e635" stroke-width="1.5" stroke-dasharray="4 3"/><polygon points="685,50 678,46 678,54" fill="#a3e635"/>
+                <rect x="690" y="25" width="100" height="50" rx="4" fill="rgba(163,230,53,0.1)" stroke="#a3e635" stroke-width="1.5"/>
+                <text x="740" y="48" fill="#a3e635" font-size="10" font-family="monospace" text-anchor="middle" font-weight="bold">YOLO</text>
+                <text x="740" y="62" fill="#a3e635" font-size="8" text-anchor="middle">Dataset</text>
+              </svg>
             </div>
           </div>
-          
-          <!-- Bespoke SVG Cloud Architecture Pipeline -->
-          <div class="svg-diagram-card">
-            <svg viewBox="0 0 800 140" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="800" height="140" rx="6" fill="#0d0d0d"/>
-              <rect x="20" y="45" width="130" height="50" rx="4" fill="#161616" stroke="#c8f53a" stroke-width="1.5"/>
-              <text x="85" y="68" fill="#edebe4" font-size="11" font-family="monospace" text-anchor="middle" font-weight="bold">Raw Video Ingest</text>
-              <text x="85" y="83" fill="#888" font-size="9" font-family="sans-serif" text-anchor="middle">50GB Match File</text>
-
-              <path d="M150 70 H190" stroke="#c8f53a" stroke-width="1.5" stroke-dasharray="4 4"/>
-              <polygon points="190,70 183,66 183,74" fill="#c8f53a"/>
-
-              <rect x="195" y="45" width="130" height="50" rx="4" fill="#161616" stroke="#c8f53a" stroke-width="1.5"/>
-              <text x="260" y="68" fill="#edebe4" font-size="11" font-family="monospace" text-anchor="middle" font-weight="bold">FFmpeg Trimmer</text>
-              <text x="260" y="83" fill="#888" font-size="9" font-family="sans-serif" text-anchor="middle">10s Event Slices</text>
-
-              <path d="M325 70 H365" stroke="#c8f53a" stroke-width="1.5" stroke-dasharray="4 4"/>
-              <polygon points="365,70 358,66 358,74" fill="#c8f53a"/>
-
-              <rect x="370" y="45" width="140" height="50" rx="4" fill="#161616" stroke="#c8f53a" stroke-width="1.5"/>
-              <text x="440" y="68" fill="#edebe4" font-size="11" font-family="monospace" text-anchor="middle" font-weight="bold">Backblaze B2 S3</text>
-              <text x="440" y="83" fill="#888" font-size="9" font-family="sans-serif" text-anchor="middle">Pre-Signed URLs</text>
-
-              <path d="M510 70 H550" stroke="#c8f53a" stroke-width="1.5" stroke-dasharray="4 4"/>
-              <polygon points="550,70 543,66 543,74" fill="#c8f53a"/>
-
-              <rect x="555" y="45" width="130" height="50" rx="4" fill="#161616" stroke="#c8f53a" stroke-width="1.5"/>
-              <text x="620" y="68" fill="#edebe4" font-size="11" font-family="monospace" text-anchor="middle" font-weight="bold">Label Studio Queue</text>
-              <text x="620" y="83" fill="#888" font-size="9" font-family="sans-serif" text-anchor="middle">Auto-Task Sync</text>
-
-              <path d="M685 70 H725" stroke="#c8f53a" stroke-width="1.5" stroke-dasharray="4 4"/>
-              <polygon points="725,70 718,66 718,74" fill="#c8f53a"/>
-
-              <rect x="730" y="45" width="55" height="50" rx="4" fill="rgba(200,245,58,0.15)" stroke="#c8f53a" stroke-width="1.5"/>
-              <text x="757" y="68" fill="#c8f53a" font-size="10" font-family="monospace" text-anchor="middle" font-weight="bold">YOLO</text>
-              <text x="757" y="83" fill="#c8f53a" font-size="8" font-family="sans-serif" text-anchor="middle">Dataset</text>
-            </svg>
-          </div>
-
-          <h3 class="project-title">EdgePlay AI — Sports Computer Vision & Annotation OS</h3>
-          <p class="project-desc">
-            0-to-1 AI dataset & annotation infrastructure platform designed to solve data operations bottlenecks in sports AI. Built a unified cloud pipeline (Backblaze B2) that automates video segmentation, raw match trimming, and task distribution—including a specialized cricket annotation module that <strong>reduced annotation turnaround by 50%</strong>.
-          </p>
-
-          <!-- Before / After Workflow Table -->
-          <table class="comparison-table">
-            <thead>
-              <tr>
-                <th>Workflow Dimension</th>
-                <th>Before EdgePlay (Manual Ops)</th>
-                <th>With EdgePlay (Platform OS)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>Video Pre-Processing</strong></td>
-                <td class="before">4 Hours manual trimming per match</td>
-                <td class="after"><strong>&lt; 10 Mins</strong> automated FFmpeg cloud slices</td>
-              </tr>
-              <tr>
-                <td><strong>Data Storage</strong></td>
-                <td class="before">Physical hard drives, duplicated 50GB files</td>
-                <td class="after"><strong>Backblaze B2 S3</strong> pre-signed URL streaming</td>
-              </tr>
-              <tr>
-                <td><strong>Dataset Reproducibility</strong></td>
-                <td class="before">Untracked versions & broken annotations</td>
-                <td class="after"><strong>100% Immutable</strong> SHA-256 metadata tags</td>
-              </tr>
-            </tbody>
-          </table>
-
-          <div class="project-stack">
-            <span>Product Strategy</span><span>0-to-1 Platform</span><span>AI Data Ops</span><span>Backblaze B2</span><span>PRD & SOPs</span><span>Computer Vision</span>
-          </div>
-          <div class="project-footer">
-            <a href="project-1.html" class="proj-link">Read Product Case Study ↗</a>
-            <a href="#product-thinking" class="proj-link">View PRD & Architecture ↗</a>
+          <div class="project-card-body">
+            <div class="project-card-meta">
+              <span class="tag">⭐ Flagship Product</span>
+              <span class="tag">PRD Included</span>
+            </div>
+            <h3 class="project-card-title">EdgePlay AI — Sports Computer Vision & Annotation OS</h3>
+            <p class="project-card-desc">0-to-1 AI dataset & annotation infrastructure platform. Built a unified cloud pipeline (Backblaze B2) automating video segmentation, task distribution, and annotation management — <strong>reducing turnaround by 50%</strong>.</p>
+            <div class="tags-row" style="margin-bottom:var(--space-4)">
+              <span class="tag-muted tag">Product Strategy</span>
+              <span class="tag-muted tag">0-to-1 Platform</span>
+              <span class="tag-muted tag">AI Data Ops</span>
+              <span class="tag-muted tag">Cloud Infrastructure</span>
+            </div>
+            <div class="project-card-footer">
+              <a href="edgeplay.html">Read Full Case Study ↗</a>
+            </div>
           </div>
         </div>
 
-        <!-- FEATURED 2: VoiceEval AI -->
+        <!-- VoiceEval AI -->
         <div class="project-card reveal">
-          <div class="project-card-top">
-            <div class="project-number">002</div>
-            <span class="prd-badge">AI Product</span>
+          <div class="project-card-visual">
+            <div class="svg-diagram">
+              <svg viewBox="0 0 400 80" fill="none"><rect x="10" y="15" width="100" height="50" rx="4" fill="#18181b" stroke="rgba(163,230,53,0.3)"/><text x="60" y="38" fill="#fafafa" font-size="9" font-family="monospace" text-anchor="middle">Speech In</text><text x="60" y="52" fill="#71717a" font-size="7" text-anchor="middle">Audio Stream</text><path d="M110 40 H140" stroke="#a3e635" stroke-width="1.5"/><polygon points="140,40 133,36 133,44" fill="#a3e635"/><rect x="145" y="15" width="110" height="50" rx="4" fill="#18181b" stroke="rgba(163,230,53,0.3)"/><text x="200" y="38" fill="#fafafa" font-size="9" font-family="monospace" text-anchor="middle">NLP Engine</text><text x="200" y="52" fill="#71717a" font-size="7" text-anchor="middle">Fluency & Pace</text><path d="M255 40 H285" stroke="#a3e635" stroke-width="1.5"/><polygon points="285,40 278,36 278,44" fill="#a3e635"/><rect x="290" y="15" width="100" height="50" rx="4" fill="rgba(163,230,53,0.08)" stroke="#a3e635"/><text x="340" y="38" fill="#a3e635" font-size="9" font-family="monospace" text-anchor="middle">Scorecard</text><text x="340" y="52" fill="#a3e635" font-size="7" text-anchor="middle">0 Bias</text></svg>
+            </div>
           </div>
-          
-          <!-- Bespoke SVG VoiceEval Flow -->
-          <div class="svg-diagram-card">
-            <svg viewBox="0 0 400 110" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="400" height="110" rx="4" fill="#0d0d0d"/>
-              <rect x="15" y="30" width="100" height="50" rx="4" fill="#161616" stroke="rgba(200,245,58,0.4)"/>
-              <text x="65" y="53" fill="#edebe4" font-size="10" font-family="monospace" text-anchor="middle">Speech Input</text>
-              <text x="65" y="67" fill="#888" font-size="8" text-anchor="middle">Audio Stream</text>
-              <path d="M115 55 H145" stroke="#c8f53a" stroke-width="1.5"/>
-              <polygon points="145,55 138,51 138,59" fill="#c8f53a"/>
-              <rect x="150" y="30" width="100" height="50" rx="4" fill="#161616" stroke="rgba(200,245,58,0.4)"/>
-              <text x="200" y="53" fill="#edebe4" font-size="10" font-family="monospace" text-anchor="middle">Fluency & Clarity</text>
-              <text x="200" y="67" fill="#888" font-size="8" text-anchor="middle">NLP Engine</text>
-              <path d="M250 55 H280" stroke="#c8f53a" stroke-width="1.5"/>
-              <polygon points="280,55 273,51 273,59" fill="#c8f53a"/>
-              <rect x="285" y="30" width="100" height="50" rx="4" fill="rgba(200,245,58,0.1)" stroke="#c8f53a"/>
-              <text x="335" y="53" fill="#c8f53a" font-size="10" font-family="monospace" text-anchor="middle">Instant Scorecard</text>
-              <text x="335" y="67" fill="#c8f53a" font-size="8" text-anchor="middle">0 Bias Feedback</text>
-            </svg>
-          </div>
-
-          <h3 class="project-title">VoiceEval — AI Voice Evaluation & Quality Assessment</h3>
-          <p class="project-desc">
-            AI-assisted spoken language evaluation platform replacing manual evaluator bias with objective feedback loops. Designed user flows and evaluation criteria for speech clarity, fluency, and scoring consistency across automated candidate assessments.
-          </p>
-          <div class="project-stack">
-            <span>AI Product Design</span><span>Workflow Automation</span><span>User Discovery</span><span>Speech AI</span>
-          </div>
-          <div class="project-footer">
-            <a href="project-2.html" class="proj-link">Read Case Study ↗</a>
+          <div class="project-card-body">
+            <div class="project-card-meta"><span class="tag">AI Product</span></div>
+            <h3 class="project-card-title">VoiceEval AI — Speech Evaluation Platform</h3>
+            <p class="project-card-desc">AI-assisted evaluation platform replacing subjective scoring with objective, scalable feedback loops. <strong>10x faster</strong> than manual evaluation with zero evaluator bias.</p>
+            <div class="project-card-footer"><a href="voiceeval.html">Read Case Study ↗</a></div>
           </div>
         </div>
 
-        <!-- FEATURED 3: HR Employee Attrition Analytics -->
+        <!-- HR Analytics -->
         <div class="project-card reveal">
-          <div class="project-card-top">
-            <div class="project-number">003</div>
-            <span class="project-status live">Completed</span>
+          <div class="project-card-visual">
+            <div class="svg-diagram">
+              <svg viewBox="0 0 400 80" fill="none"><rect x="10" y="15" width="100" height="50" rx="4" fill="#18181b" stroke="rgba(163,230,53,0.3)"/><text x="60" y="38" fill="#fafafa" font-size="9" font-family="monospace" text-anchor="middle">1,470 Records</text><text x="60" y="52" fill="#71717a" font-size="7" text-anchor="middle">HR Telemetry</text><path d="M110 40 H140" stroke="#a3e635" stroke-width="1.5"/><polygon points="140,40 133,36 133,44" fill="#a3e635"/><rect x="145" y="15" width="110" height="50" rx="4" fill="#18181b" stroke="rgba(163,230,53,0.3)"/><text x="200" y="38" fill="#fafafa" font-size="9" font-family="monospace" text-anchor="middle">Risk Filter</text><text x="200" y="52" fill="#71717a" font-size="7" text-anchor="middle">OT + &lt;2yr</text><path d="M255 40 H285" stroke="#a3e635" stroke-width="1.5"/><polygon points="285,40 278,36 278,44" fill="#a3e635"/><rect x="290" y="15" width="100" height="50" rx="4" fill="rgba(163,230,53,0.08)" stroke="#a3e635"/><text x="340" y="38" fill="#a3e635" font-size="9" font-family="monospace" text-anchor="middle">39.8%</text><text x="340" y="52" fill="#a3e635" font-size="7" text-anchor="middle">Attrition Alert</text></svg>
+            </div>
           </div>
-
-          <!-- Bespoke SVG HR Risk Tree -->
-          <div class="svg-diagram-card">
-            <svg viewBox="0 0 400 110" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="400" height="110" rx="4" fill="#0d0d0d"/>
-              <rect x="15" y="30" width="100" height="50" rx="4" fill="#161616" stroke="rgba(200,245,58,0.4)"/>
-              <text x="65" y="53" fill="#edebe4" font-size="10" font-family="monospace" text-anchor="middle">1,470 Employees</text>
-              <text x="65" y="67" fill="#888" font-size="8" text-anchor="middle">HR Telemetry</text>
-              <path d="M115 55 H145" stroke="#c8f53a" stroke-width="1.5"/>
-              <polygon points="145,55 138,51 138,59" fill="#c8f53a"/>
-              <rect x="150" y="30" width="100" height="50" rx="4" fill="#161616" stroke="rgba(200,245,58,0.4)"/>
-              <text x="200" y="53" fill="#edebe4" font-size="10" font-family="monospace" text-anchor="middle">Risk Filter</text>
-              <text x="200" y="67" fill="#888" font-size="8" text-anchor="middle">OverTime + &lt;2yr</text>
-              <path d="M250 55 H280" stroke="#c8f53a" stroke-width="1.5"/>
-              <polygon points="280,55 273,51 273,59" fill="#c8f53a"/>
-              <rect x="285" y="30" width="100" height="50" rx="4" fill="rgba(200,245,58,0.1)" stroke="#c8f53a"/>
-              <text x="335" y="53" fill="#c8f53a" font-size="10" font-family="monospace" text-anchor="middle">39.8% Attrition</text>
-              <text x="335" y="67" fill="#c8f53a" font-size="8" text-anchor="middle">Early HR Alert</text>
-            </svg>
-          </div>
-
-          <h3 class="project-title">HR Employee Attrition — Predictive Retention Strategy</h3>
-          <p class="project-desc">
-            Transformed 1,470 employee records into predictive retention interventions. Identified <strong>39.8% Sales Rep attrition</strong> and early tenure risk factors (0–2 yrs), establishing telemetry frameworks to help HR leadership intervene before attrition occurs.
-          </p>
-          <div class="project-stack">
-            <span>Product Analytics</span><span>SQL</span><span>Power BI</span><span>Telemetry</span>
-          </div>
-          <div class="project-footer">
-            <a href="https://github.com/raviprakash-works/hr-attrition-analytics" target="_blank" class="proj-link">GitHub ↗</a>
-            <a href="project-3.html" class="proj-link">Read Case Study ↗</a>
+          <div class="project-card-body">
+            <div class="project-card-meta"><span class="tag">Product Analytics</span></div>
+            <h3 class="project-card-title">HR Attrition — Predictive Retention Strategy</h3>
+            <p class="project-card-desc">Transformed 1,470 employee records into a proactive retention product identifying <strong>39.8% Sales Rep attrition</strong> and early tenure risk bands.</p>
+            <div class="project-card-footer"><a href="hr-analytics.html">Read Case Study ↗</a></div>
           </div>
         </div>
 
-        <!-- FEATURED 4: Sales Performance BI -->
+        <!-- Sales Analytics -->
         <div class="project-card reveal">
-          <div class="project-card-top">
-            <div class="project-number">004</div>
-            <span class="project-status live">Completed</span>
+          <div class="project-card-visual">
+            <div class="svg-diagram">
+              <svg viewBox="0 0 400 80" fill="none"><line x1="30" y1="65" x2="370" y2="65" stroke="#27272a" stroke-width="1"/><line x1="30" y1="10" x2="30" y2="65" stroke="#27272a" stroke-width="1"/><path d="M30 20 Q160 25 250 45 T370 70" fill="none" stroke="#a3e635" stroke-width="2"/><circle cx="30" cy="20" r="4" fill="#a3e635"/><text x="42" y="24" fill="#a3e635" font-size="8" font-family="monospace">+$329.9k Profit</text><circle cx="310" cy="58" r="4" fill="#f87171"/><text x="210" y="58" fill="#f87171" font-size="8" font-family="monospace">-$99.5k Leakage</text></svg>
+            </div>
           </div>
-
-          <!-- Bespoke SVG Sales Discount Leakage Curve -->
-          <div class="svg-diagram-card">
-            <svg viewBox="0 0 400 110" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="400" height="110" rx="4" fill="#0d0d0d"/>
-              <line x1="40" y1="90" x2="360" y2="90" stroke="#444" stroke-width="1"/>
-              <line x1="40" y1="20" x2="40" y2="90" stroke="#444" stroke-width="1"/>
-              <path d="M 40 30 Q 180 35 260 65 T 360 95" fill="none" stroke="#c8f53a" stroke-width="2"/>
-              <text x="48" y="38" fill="#c8f53a" font-size="9" font-family="monospace">0% Discount: +$329.9k Profit</text>
-              <text x="230" y="85" fill="#ff6b6b" font-size="9" font-family="monospace">40%+ Discount: -$99.5k Loss</text>
-            </svg>
-          </div>
-
-          <h3 class="project-title">Sales Performance Analytics — Pricing & Discount Strategy</h3>
-          <p class="project-desc">
-            Commercial decision-support product analyzing 5,009 orders across 4 years. Uncovered <strong>-$99,559 net loss</strong> driven by unmonitored high-discount (40%+) structures, formulating data-informed pricing guardrails for revenue optimization.
-          </p>
-          <div class="project-stack">
-            <span>Pricing Strategy</span><span>Revenue Leakage</span><span>SQL</span><span>Power BI</span>
-          </div>
-          <div class="project-footer">
-            <a href="https://github.com/raviprakash-works/sales-dashboard-project" target="_blank" class="proj-link">GitHub ↗</a>
-            <a href="project-4.html" class="proj-link">Read Case Study ↗</a>
+          <div class="project-card-body">
+            <div class="project-card-meta"><span class="tag">Commercial Strategy</span></div>
+            <h3 class="project-card-title">Sales Analytics — Pricing Guardrails</h3>
+            <p class="project-card-desc">Analyzed 5,009 orders to uncover <strong>-$99,559 revenue leakage</strong> from unmonitored discount structures. Formulated data-informed pricing guardrails.</p>
+            <div class="project-card-footer"><a href="sales-analytics.html">Read Case Study ↗</a></div>
           </div>
         </div>
 
-        <!-- FEATURED 5: IPL Cricket Analytics -->
+        <!-- IPL Analytics -->
         <div class="project-card reveal">
-          <div class="project-card-top">
-            <div class="project-number">005</div>
-            <span class="project-status live">Completed</span>
+          <div class="project-card-visual">
+            <div class="svg-diagram">
+              <svg viewBox="0 0 400 80" fill="none"><rect x="10" y="15" width="100" height="50" rx="4" fill="#18181b" stroke="rgba(163,230,53,0.3)"/><text x="60" y="38" fill="#fafafa" font-size="9" font-family="monospace" text-anchor="middle">1,090 Matches</text><text x="60" y="52" fill="#71717a" font-size="7" text-anchor="middle">17 Seasons</text><path d="M110 40 H140" stroke="#a3e635" stroke-width="1.5"/><polygon points="140,40 133,36 133,44" fill="#a3e635"/><rect x="145" y="15" width="110" height="50" rx="4" fill="#18181b" stroke="rgba(163,230,53,0.3)"/><text x="200" y="38" fill="#fafafa" font-size="9" font-family="monospace" text-anchor="middle">Telemetry</text><text x="200" y="52" fill="#71717a" font-size="7" text-anchor="middle">Python Engine</text><path d="M255 40 H285" stroke="#a3e635" stroke-width="1.5"/><polygon points="285,40 278,36 278,44" fill="#a3e635"/><rect x="290" y="15" width="100" height="50" rx="4" fill="rgba(163,230,53,0.08)" stroke="#a3e635"/><text x="340" y="38" fill="#a3e635" font-size="9" font-family="monospace" text-anchor="middle">Multi-Format</text><text x="340" y="52" fill="#a3e635" font-size="7" text-anchor="middle">Dash/PDF/XLS</text></svg>
+            </div>
           </div>
-
-          <!-- Bespoke SVG IPL Sports Telemetry Engine -->
-          <div class="svg-diagram-card">
-            <svg viewBox="0 0 400 110" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="400" height="110" rx="4" fill="#0d0d0d"/>
-              <rect x="15" y="30" width="100" height="50" rx="4" fill="#161616" stroke="rgba(200,245,58,0.4)"/>
-              <text x="65" y="53" fill="#edebe4" font-size="10" font-family="monospace" text-anchor="middle">1,090 Matches</text>
-              <text x="65" y="67" fill="#888" font-size="8" text-anchor="middle">17 IPL Seasons</text>
-              <path d="M115 55 H145" stroke="#c8f53a" stroke-width="1.5"/>
-              <polygon points="145,55 138,51 138,59" fill="#c8f53a"/>
-              <rect x="150" y="30" width="100" height="50" rx="4" fill="#161616" stroke="rgba(200,245,58,0.4)"/>
-              <text x="200" y="53" fill="#edebe4" font-size="10" font-family="monospace" text-anchor="middle">Telemetry Engine</text>
-              <text x="200" y="67" fill="#888" font-size="8" text-anchor="middle">Python Pipeline</text>
-              <path d="M250 55 H280" stroke="#c8f53a" stroke-width="1.5"/>
-              <polygon points="280,55 273,51 273,59" fill="#c8f53a"/>
-              <rect x="285" y="30" width="100" height="50" rx="4" fill="rgba(200,245,58,0.1)" stroke="#c8f53a"/>
-              <text x="335" y="53" fill="#c8f53a" font-size="10" font-family="monospace" text-anchor="middle">Multi-Format</text>
-              <text x="335" y="67" fill="#c8f53a" font-size="8" text-anchor="middle">Dash / PDF / Excel</text>
-            </svg>
-          </div>
-
-          <h3 class="project-title">IPL Cricket Analytics — Automated Telemetry Engine</h3>
-          <p class="project-desc">
-            Interactive sports data product analyzing 17 seasons and 1,090 matches. Automated multi-format reporting (Plotly/Dash, PDF, Excel) to deliver game strategy telemetry and win-probability insights for sports media stakeholders.
-          </p>
-          <div class="project-stack">
-            <span>Sports Telemetry</span><span>Plotly/Dash</span><span>Python</span><span>Data Automation</span>
-          </div>
-          <div class="project-footer">
-            <a href="https://github.com/raviprakash-works/ipl-analytics-project" target="_blank" class="proj-link">GitHub ↗</a>
-            <a href="ipl_dashboard.html" target="_blank" class="proj-link">Live Dashboard ↗</a>
-            <a href="project-5.html" class="proj-link">Read Case Study ↗</a>
+          <div class="project-card-body">
+            <div class="project-card-meta"><span class="tag">Data Product</span></div>
+            <h3 class="project-card-title">IPL Analytics — Sports Telemetry Engine</h3>
+            <p class="project-card-desc">Interactive data product analyzing 17 seasons and 1,090 matches with automated multi-format reporting for sports media stakeholders.</p>
+            <div class="project-card-footer"><a href="ipl-analytics.html">Read Case Study ↗</a><a href="ipl_dashboard.html" target="_blank">Live Dashboard ↗</a></div>
           </div>
         </div>
-
       </div>
 
-      <!-- Technical Foundation Note -->
-      <div style="margin-top:40px; padding:24px; background:var(--surface2); border:1px solid var(--border); border-radius:4px; font-size:0.85rem; color:var(--muted);">
-        <strong style="color:var(--accent);">⚙️ Technical Foundation & Systems Engineering:</strong> Beyond software and product analytics, my background includes hardware systems and industrial automation:
-        <span style="display:block; margin-top:8px;">
-          • <strong>RISC-V Power Management Controller (PMC):</strong> Modeled Dynamic Voltage & Frequency Scaling (DVFS) trade-offs between performance and energy consumption.<br/>
-          • <strong>FPGA Board Validation:</strong> Verified physical deployment constraints, clock behavior, and state machine reliability.<br/>
-          • <strong>MECON SCADA Infrastructure:</strong> Studied industrial automation telemetry, monitoring 20+ KPIs across enterprise plant systems.
-        </span>
+      <div style="text-align:center; margin-top:var(--space-7)" class="reveal">
+        <a href="case-studies.html" class="btn-ghost">View All Case Studies →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PRODUCT THINKING PREVIEW ── -->
+  <section class="page-section-alt" id="thinking">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="label">Product Thinking</span>
+        <h2 class="heading-lg">How I Build Products</h2>
       </div>
 
-  <!-- ── PRODUCT THINKING ── -->
-  <section id="product-thinking" class="section section-alt">
-    <div class="section-inner">
-      <div class="section-header">
-        <span class="section-tag">04 / Product Thinking</span>
-        <h2 class="section-title">Frameworks, PRDs & Product Philosophy</h2>
+      <div class="projects-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+        <div class="glass-card reveal">
+          <div class="label" style="margin-bottom:var(--space-3)">Prioritization</div>
+          <h3 class="heading-sm" style="margin-bottom:var(--space-2)">RICE, MoSCoW & Impact Matrices</h3>
+          <p class="body-md">Structured frameworks to evaluate trade-offs and align technical roadmaps with user value.</p>
+        </div>
+        <div class="glass-card reveal reveal-delay-1">
+          <div class="label" style="margin-bottom:var(--space-3)">Specification</div>
+          <h3 class="heading-sm" style="margin-bottom:var(--space-2)">PRDs & Product Artifacts</h3>
+          <p class="body-md">Real product requirement documents with problem statements, user personas, and success metrics.</p>
+        </div>
+        <div class="glass-card reveal reveal-delay-2">
+          <div class="label" style="margin-bottom:var(--space-3)">Measurement</div>
+          <h3 class="heading-sm" style="margin-bottom:var(--space-2)">North Star & Input KPIs</h3>
+          <p class="body-md">Defining the right metrics — from north star outcomes to input signals that drive product decisions.</p>
+        </div>
       </div>
 
-      <div class="pt-grid">
-        <!-- Principles -->
-        <div class="pt-card">
-          <div class="pt-card-title">💡 4 Core Product Principles</div>
-          <ul class="pt-list">
-            <li><strong>User Pain > Feature Creep:</strong> Prioritize solving acute operational bottlenecks before expanding product scope.</li>
-            <li><strong>Data-Informed, Not Data-Obsessed:</strong> Use telemetry to validate hypotheses, but rely on empathy and systems thinking for 0-to-1 direction.</li>
-            <li><strong>Speed to Value:</strong> Minimize time-to-value by automating repetitive steps in human workflows.</li>
-            <li><strong>Platform Scalability:</strong> Build reusable data pipelines and metadata schemas rather than isolated one-off utilities.</li>
-          </ul>
+      <div style="text-align:center; margin-top:var(--space-6)" class="reveal">
+        <a href="product-thinking.html" class="btn-ghost">Explore Frameworks & PRDs →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── ABOUT PREVIEW ── -->
+  <section class="page-section" id="about-preview">
+    <div class="container">
+      <div class="two-col">
+        <div class="reveal">
+          <span class="label" style="display:block; margin-bottom:var(--space-3)">About</span>
+          <h2 class="heading-lg" style="margin-bottom:var(--space-4)">Engineering Roots,<br/>Product Mindset</h2>
+          <p class="body-lg" style="margin-bottom:var(--space-4)">My journey started with hardware systems and embedded logic at NSUT Delhi. Through industrial automation at MECON Limited, AI platform engineering, and community leadership at ShakesJeer — I evolved into a Product Manager who understands both the technical foundation and the user experience.</p>
+          <a href="about.html" class="btn-ghost">Read My Full Story →</a>
         </div>
-
-        <!-- Prioritization & Frameworks -->
-        <div class="pt-card">
-          <div class="pt-card-title">🎯 Decision & Prioritization Frameworks</div>
-          <p class="pt-desc" style="margin-bottom:16px;">Structured methodologies I apply to evaluate trade-offs and align technical roadmaps:</p>
-          <div class="pt-tags">
-            <span>RICE Scoring (Reach, Impact, Confidence, Effort)</span>
-            <span>MoSCoW Prioritization</span>
-            <span>Impact vs. Effort Matrix</span>
-            <span>North Star & Input Metrics</span>
-            <span>AARRR Conversion Funnel</span>
-            <span>Opportunity Solution Trees</span>
-          </div>
-        </div>
-
-        <!-- Artifacts & Interactive PRD Showcase -->
-        <div class="pt-card full-width">
-          <div class="pt-card-title">📄 Interactive Product Artifacts & PRD Showcase</div>
-          
-          <div class="prd-tabs">
-            <button class="prd-tab-btn active" data-tab="tab-prd">PRD-001: EdgePlay Queue</button>
-            <button class="prd-tab-btn" data-tab="tab-rice">RICE Prioritization Matrix</button>
-            <button class="prd-tab-btn" data-tab="tab-metrics">North Star Metrics Framework</button>
-          </div>
-
-          <!-- Tab 1: PRD Snippet -->
-          <div class="prd-tab-content active" id="tab-prd">
-            <div class="prd-box">
-              <div class="prd-header">
-                <span class="prd-tag">PRD-001</span>
-                <span class="prd-title">EdgePlay AI — Automated Video Annotation Queue & Cloud Sync</span>
-              </div>
-              <div class="prd-body">
-                <p><strong>1. Problem Statement:</strong> ML engineers manually trimmed 50GB+ raw match files, creating 4-hour operational delays before annotators could start labeling.</p>
-                <p><strong>2. Target User Persona:</strong> Data Annotators & Computer Vision Engineers requiring standardized 60fps frame rates and pre-trimmed 10-second event clips.</p>
-                <p><strong>3. Prioritization (RICE Score = 8.4/10):</strong> Reach: 100% of video ingest | Impact: 50% turnaround reduction | Confidence: 90% | Effort: 4-day sprint.</p>
-                <p><strong>4. Key Requirements:</strong> Cloud ingest trigger via FFmpeg segmentation to slice video into 10-second clips, auto-generating Backblaze B2 S3 pre-signed URLs and populating the Label Studio annotation queue.</p>
-                <p><strong>5. Success Metric:</strong> Reduce task prep time from 4 hours to &lt; 10 minutes (50% overall pipeline turnaround reduction).</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Tab 2: RICE Matrix -->
-          <div class="prd-tab-content" id="tab-rice">
-            <div class="prd-box">
-              <div class="prd-header">
-                <span class="prd-tag">FRAMEWORK</span>
-                <span class="prd-title">RICE Prioritization Matrix — EdgePlay V1 Feature Backlog</span>
-              </div>
-              <div class="prd-body">
-                <table class="comparison-table" style="margin-top:10px;">
-                  <thead>
-                    <tr>
-                      <th>Feature Initiative</th>
-                      <th>Reach</th>
-                      <th>Impact</th>
-                      <th>Confidence</th>
-                      <th>Effort (wks)</th>
-                      <th>RICE Score</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td><strong>Automated FFmpeg Event Slicing</strong></td>
-                      <td>100%</td>
-                      <td>3 (High)</td>
-                      <td>90%</td>
-                      <td>1.0</td>
-                      <td style="color:var(--accent); font-weight:bold;">270 (Rank 1)</td>
-                    </tr>
-                    <tr>
-                      <td><strong>Backblaze B2 Pre-Signed URL Streaming</strong></td>
-                      <td>100%</td>
-                      <td>3 (High)</td>
-                      <td>85%</td>
-                      <td>1.0</td>
-                      <td style="color:var(--accent); font-weight:bold;">255 (Rank 2)</td>
-                    </tr>
-                    <tr>
-                      <td><strong>Multi-Camera Angle Synchronization</strong></td>
-                      <td>40%</td>
-                      <td>2 (Med)</td>
-                      <td>60%</td>
-                      <td>3.0</td>
-                      <td style="color:var(--muted);">16 (Rank 3)</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-
-          <!-- Tab 3: North Star Metrics -->
-          <div class="prd-tab-content" id="tab-metrics">
-            <div class="prd-box">
-              <div class="prd-header">
-                <span class="prd-tag">METRICS</span>
-                <span class="prd-title">North Star Metric & Input KPIs — AI Data Infrastructure</span>
-              </div>
-              <div class="prd-body">
-                <p><strong>North Star Metric:</strong> <em>Weekly High-Quality Bounding Box Annotations Delivered to Training Pipeline.</em></p>
-                <p><strong>Input Metric 1 (Efficiency):</strong> Average Time-to-Annotate per 10-second Event Clip (&lt; 45 seconds target).</p>
-                <p><strong>Input Metric 2 (Quality):</strong> Inter-Annotator Agreement Score (&gt; 95% IoU overlap target).</p>
-                <p><strong>Input Metric 3 (Infrastructure):</strong> Storage Redundancy Overhead (Target: 0% duplicate files saved across local drives).</p>
-              </div>
-            </div>
-          </div>
-
+        <div class="reveal reveal-delay-1" style="display:flex; align-items:center; justify-content:center;">
+          <img src="profile.jpeg" alt="Ravi Prakash — Product Manager" style="width:280px; height:280px; object-fit:cover; border-radius:12px; border:1px solid var(--border);" loading="lazy" />
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ── SKILLS ── -->
-  <section id="skills" class="section section-alt">
-    <div class="section-inner">
-      <div class="section-header">
-        <span class="section-tag">04 / Skills</span>
-        <h2 class="section-title">Technical stack</h2>
-      </div>
-
-      <div class="skills-layout">
-        <div class="skill-block">
-          <div class="skill-block-label">Languages</div>
-          <div class="skill-rows">
-            <div class="skill-row"><span class="sk-name">SQL</span><div class="sk-bar"><div class="sk-fill" style="width:90%"></div></div></div>
-            <div class="skill-row"><span class="sk-name">Python</span><div class="sk-bar"><div class="sk-fill" style="width:78%"></div></div></div>
-            <div class="skill-row"><span class="sk-name">C#</span><div class="sk-bar"><div class="sk-fill" style="width:45%"></div></div></div>
-          </div>
-        </div>
-
-        <div class="skill-block">
-          <div class="skill-block-label">BI & Analytics</div>
-          <div class="skill-rows">
-            <div class="skill-row"><span class="sk-name">Power BI</span><div class="sk-bar"><div class="sk-fill" style="width:85%"></div></div></div>
-            <div class="skill-row"><span class="sk-name">Excel & Power Query</span><div class="sk-bar"><div class="sk-fill" style="width:88%"></div></div></div>
-            <div class="skill-row"><span class="sk-name">Time-Series Analysis</span><div class="sk-bar"><div class="sk-fill" style="width:75%"></div></div></div>
-            <div class="skill-row"><span class="sk-name">KPI Monitoring</span><div class="sk-bar"><div class="sk-fill" style="width:82%"></div></div></div>
-          </div>
-        </div>
-
-        <div class="skill-block">
-          <div class="skill-block-label">Data Engineering</div>
-          <div class="skill-rows">
-            <div class="skill-row"><span class="sk-name">ETL Pipelines</span><div class="sk-bar"><div class="sk-fill" style="width:72%"></div></div></div>
-            <div class="skill-row"><span class="sk-name">Data Validation</span><div class="sk-bar"><div class="sk-fill" style="width:80%"></div></div></div>
-            <div class="skill-row"><span class="sk-name">Relational Models</span><div class="sk-bar"><div class="sk-fill" style="width:75%"></div></div></div>
-            <div class="skill-row"><span class="sk-name">Multi-source Integration</span><div class="sk-bar"><div class="sk-fill" style="width:70%"></div></div></div>
-          </div>
-        </div>
-
-        <div class="skill-block">
-          <div class="skill-block-label">Tools & Libraries</div>
-          <div class="skill-tags">
-            <span>Pandas</span><span>Matplotlib</span><span>Git</span><span>GitHub</span>
-            <span>Power Query</span><span>SCADA</span><span>Unity</span><span>LaTeX</span>
-          </div>
-        </div>
-  <!-- ── LEADERSHIP & COMMUNITY OPS ── -->
-  <section id="leadership" class="section">
-    <div class="section-inner">
-      <div class="section-header">
-        <span class="section-tag">05 / Leadership</span>
-        <h2 class="section-title">Community Operations & Product Leadership</h2>
-      </div>
-
-      <div class="timeline">
-        <div class="timeline-item">
-          <div class="timeline-left">
-            <div class="org-badge nsut">SJ</div>
-          </div>
-          <div class="timeline-right">
-            <div class="tl-header">
-              <div>
-                <div class="tl-company">ShakesJeer — NSUT <span class="tl-type">· Open Mic & Performing Arts Society</span></div>
-                <div class="tl-role">President & Operations Lead</div>
-              </div>
-              <div class="tl-date">2023 – Present · Delhi</div>
-            </div>
-            <ul class="tl-list">
-              <li>Scaled NSUT's performing arts society from an informal group into a structured <strong>100+ member</strong> community, leading recruitment, onboarding, and team operations.</li>
-              <li>Executed <strong>20+ large-scale events</strong> with live audiences exceeding <strong>500+ attendees</strong>, overseeing stage logistics, budget allocation, and cross-functional team coordination.</li>
-              <li>Formulated data-informed engagement strategies and feedback loops, increasing active member participation metrics by <strong>30%</strong> year-over-year.</li>
-              <li>Mentored junior team members in public speaking, creative direction, and operational ownership.</li>
-            </ul>
-            <div class="tl-tags">
-              <span>0-to-1 Community Growth</span><span>Event Operations</span><span>Stakeholder Management</span><span>Team Leadership</span><span>Engagement Analytics</span>
-            </div>
-          </div>
-        </div>
+  <!-- ── CTA STRIP ── -->
+  <section class="page-section-alt">
+    <div class="container" style="text-align:center;">
+      <h2 class="heading-lg reveal" style="margin-bottom:var(--space-4)">Let's Build Products Together</h2>
+      <p class="body-lg reveal reveal-delay-1" style="max-width:500px; margin:0 auto var(--space-6);">Open to Product Manager and Associate Product Manager opportunities at product-led companies.</p>
+      <div class="reveal reveal-delay-2" style="display:flex; gap:var(--space-4); justify-content:center; flex-wrap:wrap;">
+        <a href="contact.html" class="btn-primary">Get in Touch ↗</a>
+        <a href="Ravi_Prakash_Resume.pdf" target="_blank" rel="noopener" class="btn-ghost">Download Resume</a>
       </div>
     </div>
   </section>
 
-  <!-- ── CONTACT & RESUME ── -->
-  <section id="contact" class="section">
-    <div class="section-inner contact-inner">
-      <div class="contact-left">
-        <span class="section-tag">06 / Contact</span>
-        <h2 class="section-title">Let's build together.</h2>
-        <p class="contact-desc">I am actively looking for <strong>Product Manager</strong> and <strong>Associate Product Manager (APM)</strong> roles. Open to full-time opportunities in AI platforms, developer tools, product analytics, and workflow automation. Feel free to reach out—I respond within 24 hours.</p>
-        <a href="mailto:raviprakash.works@gmail.com" class="btn-primary">Send Email ↗</a>
-      </div>
-      <div class="contact-right">
-        <div class="contact-list">
-          <a href="mailto:raviprakash.works@gmail.com" class="contact-row">
-            <span class="cr-label">Email</span>
-            <span class="cr-val">raviprakash.works@gmail.com</span>
-          </a>
-          <a href="https://linkedin.com/in/ravi-prakash-works" target="_blank" class="contact-row">
-            <span class="cr-label">LinkedIn</span>
-            <span class="cr-val">ravi-prakash-works</span>
-          </a>
-          <a href="https://github.com/raviprakash-works" target="_blank" class="contact-row">
-            <span class="cr-label">GitHub</span>
-            <span class="cr-val">raviprakash-works</span>
-          </a>
-          <a href="tel:+917303061994" class="contact-row">
-            <span class="cr-label">Phone</span>
-            <span class="cr-val">+91 73030 61994</span>
-          </a>
-          <a href="Ravi_Prakash_Resume.pdf" target="_blank" class="contact-row">
-            <span class="cr-label">Resume PDF</span>
-            <span class="cr-val">Download PDF ↗</span>
-          </a>
+  <!-- ── FOOTER ── -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="footer-logo">Ravi Prakash<span class="accent">.</span></div>
+          <div class="footer-tagline">Product Manager | AI Platforms & Data Products</div>
+        </div>
+        <div>
+          <div class="footer-col-title">Pages</div>
+          <div class="footer-links">
+            <a href="about.html">About</a>
+            <a href="case-studies.html">Case Studies</a>
+            <a href="product-thinking.html">Product Thinking</a>
+            <a href="experience.html">Experience</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-title">Connect</div>
+          <div class="footer-links">
+            <a href="mailto:ravi20140248332@gmail.com">Email</a>
+            <a href="https://linkedin.com/in/raviprakash-works" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://github.com/raviprakash-works" target="_blank" rel="noopener">GitHub</a>
+            <a href="Ravi_Prakash_Resume.pdf" target="_blank" rel="noopener">Resume PDF</a>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <footer>
-    <div class="footer-inner">
-      <div class="footer-left">
-        <span class="footer-logo">Ravi Prakash<span class="blink">_</span></span>
-        <p class="footer-tag">Building AI-powered products, intelligent platforms & data-driven experiences.</p>
+      <div class="footer-bottom">
+        © 2025 Ravi Prakash. Built with product thinking.
       </div>
-      <div class="footer-links">
-        <a href="#hero">Back to Top ↑</a>
-        <a href="https://linkedin.com/in/ravi-prakash-works" target="_blank">LinkedIn</a>
-        <a href="https://github.com/raviprakash-works" target="_blank">GitHub</a>
-        <a href="Ravi_Prakash_Resume.pdf" target="_blank">Resume PDF</a>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2026 Ravi Prakash. Designed & Built with Product Thinking.</p>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
