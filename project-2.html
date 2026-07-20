@@ -20,6 +20,20 @@
   <nav id="navbar">
     <div class="nav-inner">
       <a href="index.html#case-studies" class="nav-logo">← Back to Portfolio</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#experience">Experience</a></li>
+        <li><a href="index.html#case-studies">Case Studies</a></li>
+        <li><a href="index.html#product-thinking">Product Thinking</a></li>
+        <li><a href="index.html#leadership">Leadership</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <li><a href="Ravi_Prakash_Resume.pdf" target="_blank" class="nav-cta-mobile">Resume ↗</a></li>
+      </ul>
       <a href="Ravi_Prakash_Resume.pdf" target="_blank" class="nav-cta">Resume ↗</a>
     </div>
   </nav>
@@ -54,7 +68,7 @@
       </div>
 
       <div class="cs-links">
-        <a href="index.html#case-studies" class="btn-outline">← All Case Studies</a>
+        <a href="index.html#case-studies" class="btn-outline">← Back to Case Studies</a>
       </div>
     </div>
   </section>
@@ -76,7 +90,7 @@
           </div>
           <div class="cs-info-row">
             <span class="cs-info-label">Target Users</span>
-            <span class="cs-info-val">Students, Candidates & Recruiters</span>
+            <span class="cs-info-val">Students, Job Applicants & Recruiters</span>
           </div>
           <div class="cs-info-row">
             <span class="cs-info-label">Key Focus</span>
@@ -91,15 +105,70 @@
     </div>
   </section>
 
-  <!-- ── PRODUCT DESIGN & WORKFLOW ── -->
+  <!-- ── USER PERSONAS & PAIN POINTS ── -->
   <section class="cs-section cs-section-alt">
     <div class="cs-inner">
-      <span class="cs-section-tag">02 / Product Strategy</span>
-      <h2 class="cs-section-title">User Journey & Feedback Architecture</h2>
+      <span class="cs-section-tag">02 / User Discovery</span>
+      <h2 class="cs-section-title">Target Personas & User Needs</h2>
+
+      <div class="cs-steps" style="grid-template-columns:1fr 1fr; gap:24px;">
+        <div class="cs-step">
+          <div class="cs-step-num">P1</div>
+          <div class="cs-step-content">
+            <div class="cs-step-title">Job Candidates / Students</div>
+            <p><strong>Goal:</strong> Receive rapid, non-judgmental, actionable feedback on fluency, speech clarity, and pace to prepare for interviews.</p>
+            <p><strong>Pain Point:</strong> Waiting weeks for human evaluations with vague feedback like "needs improvement".</p>
+          </div>
+        </div>
+
+        <div class="cs-step">
+          <div class="cs-step-num">P2</div>
+          <div class="cs-step-content">
+            <div class="cs-step-title">Recruiters & Evaluators</div>
+            <p><strong>Goal:</strong> Screen thousands of applicants efficiently with zero evaluator fatigue or subjective scoring variance.</p>
+            <p><strong>Pain Point:</strong> Spending hundreds of hours manually interviewing baseline candidates.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PRODUCT DESIGN & WORKFLOW ── -->
+  <section class="cs-section">
+    <div class="cs-inner">
+      <span class="cs-section-tag">03 / Product Strategy</span>
+      <h2 class="cs-section-title">User Journey & System Architecture</h2>
       <p style="margin-bottom:24px;">The core product insight is that candidates and recruiters do not care about speech model parameters. They care about receiving fast, clear, and actionable feedback.</p>
 
-      <div style="background:var(--surface); border:1px solid var(--border); border-radius:6px; padding:24px; font-family:var(--mono); font-size:0.82rem; color:var(--muted); line-height:1.8;">
+      <div style="background:var(--surface2); border:1px solid var(--border); border-radius:6px; padding:24px; font-family:var(--mono); font-size:0.82rem; color:var(--muted); line-height:1.8;">
         [ Audio Prompt ] ➔ [ Candidate Speech Recording ] ➔ [ Acoustic & NLP Processing ] ➔ [ Fluency & Clarity Scoring Engine ] ➔ [ Detailed Performance Breakdown & Recommendations ]
+      </div>
+    </div>
+  </section>
+
+  <!-- ── IMPACT & ROADMAP ── -->
+  <section class="cs-section cs-section-alt">
+    <div class="cs-inner">
+      <span class="cs-section-tag">04 / Impact & Future Roadmap</span>
+      <h2 class="cs-section-title">Business Outcomes & Product Learnings</h2>
+
+      <div class="cs-steps" style="grid-template-columns:1fr 1fr; gap:24px;">
+        <div class="cs-step">
+          <div class="cs-step-num">📈</div>
+          <div class="cs-step-content">
+            <div class="cs-step-title">Measurable Outcomes</div>
+            <p>• <strong>10x Faster</strong> evaluation turnaround compared to manual scoring.</p>
+            <p>• <strong>100% Objective Consistency:</strong> Eliminated evaluator bias across candidate batches.</p>
+          </div>
+        </div>
+
+        <div class="cs-step">
+          <div class="cs-step-num">🚀</div>
+          <div class="cs-step-content">
+            <div class="cs-step-title">V2 Product Roadmap</div>
+            <p>• <strong>V2 Feature:</strong> Real-time visual speech pacing meter and personalized AI practice drills.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>

@@ -20,6 +20,20 @@
   <nav id="navbar">
     <div class="nav-inner">
       <a href="index.html#case-studies" class="nav-logo">← Back to Portfolio</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#experience">Experience</a></li>
+        <li><a href="index.html#case-studies">Case Studies</a></li>
+        <li><a href="index.html#product-thinking">Product Thinking</a></li>
+        <li><a href="index.html#leadership">Leadership</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <li><a href="Ravi_Prakash_Resume.pdf" target="_blank" class="nav-cta-mobile">Resume ↗</a></li>
+      </ul>
       <a href="Ravi_Prakash_Resume.pdf" target="_blank" class="nav-cta">Resume ↗</a>
     </div>
   </nav>
@@ -55,7 +69,7 @@
 
       <div class="cs-links">
         <a href="https://github.com/raviprakash-works/hr-attrition-analytics" target="_blank" class="btn-primary">View on GitHub ↗</a>
-        <a href="index.html#case-studies" class="btn-outline">← All Case Studies</a>
+        <a href="index.html#case-studies" class="btn-outline">← Back to Case Studies</a>
       </div>
     </div>
   </section>
@@ -86,6 +100,32 @@
           <div class="cs-info-row">
             <span class="cs-info-label">Key Finding</span>
             <span class="cs-info-val">Sales Reps & 0–2 Yr Tenure High Risk</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── METHODOLOGY & PRODUCT ANALYTICS ── -->
+  <section class="cs-section cs-section-alt">
+    <div class="cs-inner">
+      <span class="cs-section-tag">02 / Methodology</span>
+      <h2 class="cs-section-title">Data Ingestion & Telemetry Pipeline</h2>
+
+      <div class="cs-steps" style="grid-template-columns:1fr 1fr; gap:24px;">
+        <div class="cs-step">
+          <div class="cs-step-num">01</div>
+          <div class="cs-step-content">
+            <div class="cs-step-title">Feature Engineering & Cleaning</div>
+            <p>Loaded 1,470 IBM HR records into Python. Created 5 engineered telemetry features: <strong>TenureBand</strong>, <strong>AgeBand</strong>, <strong>SalaryBand</strong>, <strong>SatisfactionScore</strong>, and binary encodings for Attrition.</p>
+          </div>
+        </div>
+
+        <div class="cs-step">
+          <div class="cs-step-num">02</div>
+          <div class="cs-step-content">
+            <div class="cs-step-title">SQL Analytics & High-Risk Query</div>
+            <p>Executed 11 SQL queries filtering for active employees working overtime with low satisfaction and &lt; 2 years tenure to output an actionable intervention list for HR directors.</p>
           </div>
         </div>
       </div>
