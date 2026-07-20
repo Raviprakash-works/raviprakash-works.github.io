@@ -42,11 +42,11 @@ if (!window.matchMedia('(hover: none)').matches && cursor && cursorRing) {
 const roleEl = document.getElementById('roleText');
 if (roleEl) {
   const roles = [
-    'Data Analyst',
-    'Business Intelligence Developer',
-    'Product Analyst',
-    'SQL & Power BI Engineer',
-    'Insight Builder',
+    'Product Manager — AI & Platforms',
+    'Product & Data Strategist',
+    '0-to-1 AI Platform Builder',
+    'Workflow Automation Lead',
+    'Product Operations & Growth',
   ];
   let rIdx = 0, cIdx = 0, deleting = false;
 
