@@ -110,3 +110,21 @@ if (navLinks.length && sections.length) {
   }, { rootMargin: '-20% 0px -60% 0px', threshold: 0 });
   sections.forEach(s => obs.observe(s));
 }
+
+/* ── 6. MOBILE NAV TOGGLE ── */
+const navToggle = document.getElementById('navToggle');
+const navLinksContainer = document.getElementById('navLinks');
+
+if (navToggle && navLinksContainer) {
+  navToggle.addEventListener('click', () => {
+    navToggle.classList.toggle('active');
+    navLinksContainer.classList.toggle('open');
+  });
+
+  navLinksContainer.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navToggle.classList.remove('active');
+      navLinksContainer.classList.remove('open');
+    });
+  });
+}

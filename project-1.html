@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HR Attrition Analytics | Ravi Prakash</title>
+  <title>EdgePlay AI Platform | Flagship Product Case Study — Ravi Prakash</title>
+  <meta name="description" content="EdgePlay AI — 0-to-1 Sports Computer Vision & Annotation OS. Product Case Study by Ravi Prakash." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Syne:wght@700;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
@@ -18,7 +19,7 @@
   <!-- ── NAV ── -->
   <nav id="navbar">
     <div class="nav-inner">
-      <a href="index.html" class="nav-logo">← Back to Portfolio</a>
+      <a href="index.html#case-studies" class="nav-logo">← Back to Portfolio</a>
       <a href="Ravi_Prakash_Resume.pdf" target="_blank" class="nav-cta">Resume ↗</a>
     </div>
   </nav>
@@ -27,434 +28,214 @@
   <section class="cs-hero">
     <div class="cs-hero-inner">
       <div class="cs-meta">
-        <span class="cs-tag">Data Analytics</span>
-        <span class="cs-tag">Power BI</span>
-        <span class="cs-tag">Python</span>
-        <span class="cs-tag">SQL</span>
+        <span class="cs-tag">0-to-1 AI Product</span>
+        <span class="cs-tag">Platform Infrastructure</span>
+        <span class="cs-tag">Backblaze B2</span>
+        <span class="cs-tag">PRD & SOPs</span>
       </div>
-      <h1 class="cs-title">HR Employee<br/><em>Attrition Analytics</em></h1>
-      <p class="cs-subtitle">End-to-end analytics on 1,470 employee records to uncover the drivers behind employee attrition — from raw data to an interactive 3-page Power BI dashboard.</p>
+      <h1 class="cs-title">EdgePlay AI<br/><em>Sports Computer Vision & Annotation OS</em></h1>
+      <p class="cs-subtitle">A unified cloud data platform designed to solve operational bottlenecks in sports computer vision—automating video segmentation, cloud ingestion (Backblaze B2), task assignment, and annotation pipelines to <strong>cut turnaround time by 50%</strong>.</p>
 
       <div class="cs-stats">
         <div class="cs-stat">
-          <div class="cs-stat-n">1,470</div>
-          <div class="cs-stat-l">Employee Records</div>
+          <div class="cs-stat-n">50%</div>
+          <div class="cs-stat-l">Turnaround Time Saved</div>
         </div>
         <div class="cs-stat-sep"></div>
         <div class="cs-stat">
-          <div class="cs-stat-n">35</div>
-          <div class="cs-stat-l">Variables Analysed</div>
+          <div class="cs-stat-n">0%</div>
+          <div class="cs-stat-l">Storage Duplication</div>
         </div>
         <div class="cs-stat-sep"></div>
         <div class="cs-stat">
-          <div class="cs-stat-n">9</div>
-          <div class="cs-stat-l">EDA Charts</div>
+          <div class="cs-stat-n">100%</div>
+          <div class="cs-stat-l">Centralized Version Control</div>
         </div>
         <div class="cs-stat-sep"></div>
         <div class="cs-stat">
-          <div class="cs-stat-n">3</div>
-          <div class="cs-stat-l">Dashboard Pages</div>
+          <div class="cs-stat-n">10s</div>
+          <div class="cs-stat-l">Automated Event Trimming</div>
         </div>
       </div>
 
       <div class="cs-links">
-        <a href="https://github.com/raviprakash-works/hr-attrition-analytics" target="_blank" class="btn-primary">View on GitHub ↗</a>
-        <a href="#dashboard" class="btn-outline">See Dashboard ↓</a>
+        <a href="#prd" class="btn-primary">View PRD Artifact ↓</a>
+        <a href="index.html#case-studies" class="btn-outline">All Case Studies ←</a>
       </div>
     </div>
   </section>
 
-  <!-- ── OVERVIEW ── -->
+  <!-- ── OVERVIEW & PROBLEM ── -->
   <section class="cs-section">
     <div class="cs-inner">
       <div class="cs-two-col">
         <div>
-          <span class="cs-section-tag">Problem Statement</span>
-          <h2 class="cs-section-title">Why does attrition matter?</h2>
-          <p>Employee attrition is one of the most costly problems for any organization — replacing a single employee can cost <strong>50–200% of their annual salary</strong> when you factor in recruitment, onboarding, and lost productivity.</p>
-          <p>The challenge is that most HR teams don't know <em>why</em> people leave until it's too late. This project uses IBM's HR dataset to identify the exact patterns and risk factors — so HR teams can act before employees decide to leave.</p>
+          <span class="cs-section-tag">01 / Problem Statement</span>
+          <h2 class="cs-section-title">The Bottleneck in Sports AI Development</h2>
+          <p>Building computer vision models for sports like cricket involves an enormous operational burden. While capturing raw match footage is easy, preparing high-quality, frame-accurate training datasets is extremely difficult.</p>
+          <p>Before EdgePlay, raw footage (50GB+ per match) lived across physical hard drives. ML engineers spent up to 4 hours manually searching for specific events, trimming clips, and sending files to annotators via ad-hoc tools. This fragmented workflow caused severe storage waste, version control failures, and delayed model training cycles.</p>
         </div>
         <div class="cs-info-box">
           <div class="cs-info-row">
-            <span class="cs-info-label">Dataset</span>
-            <span class="cs-info-val">IBM HR Analytics (Kaggle)</span>
+            <span class="cs-info-label">Product Type</span>
+            <span class="cs-info-val">0-to-1 AI Data Platform</span>
           </div>
           <div class="cs-info-row">
-            <span class="cs-info-label">Records</span>
-            <span class="cs-info-val">1,470 employees</span>
+            <span class="cs-info-label">Target Users</span>
+            <span class="cs-info-val">ML Engineers & Data Annotators</span>
           </div>
           <div class="cs-info-row">
-            <span class="cs-info-label">Tools</span>
-            <span class="cs-info-val">Python · SQL · Power BI · Excel</span>
+            <span class="cs-info-label">Core Infrastructure</span>
+            <span class="cs-info-val">Python · FFmpeg · Backblaze B2 · Label Studio</span>
           </div>
           <div class="cs-info-row">
-            <span class="cs-info-label">Libraries</span>
-            <span class="cs-info-val">Pandas · Matplotlib · Seaborn</span>
+            <span class="cs-info-label">Primary Metric</span>
+            <span class="cs-info-val">50% Reduction in Annotation Turnaround</span>
           </div>
           <div class="cs-info-row">
-            <span class="cs-info-label">Output</span>
-            <span class="cs-info-val">3-page interactive dashboard</span>
-          </div>
-          <div class="cs-info-row">
-            <span class="cs-info-label">Duration</span>
-            <span class="cs-info-val">Self-directed project</span>
+            <span class="cs-info-label">My Role</span>
+            <span class="cs-info-val">Product Strategy, PRD, Architecture & Ops</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ── APPROACH ── -->
+  <!-- ── USER PERSONAS & PAIN POINTS ── -->
   <section class="cs-section cs-section-alt">
     <div class="cs-inner">
-      <span class="cs-section-tag">Methodology</span>
-      <h2 class="cs-section-title">How I approached it</h2>
+      <span class="cs-section-tag">02 / User Discovery</span>
+      <h2 class="cs-section-title">Target Personas & Workflow Pain Points</h2>
 
-      <div class="cs-steps">
-
+      <div class="cs-steps" style="grid-template-columns:1fr 1fr; gap:24px;">
         <div class="cs-step">
-          <div class="cs-step-num">01</div>
+          <div class="cs-step-num">P1</div>
           <div class="cs-step-content">
-            <div class="cs-step-title">Data Cleaning & Feature Engineering</div>
-            <p>Loaded the raw IBM HR CSV into Python. Dropped 4 constant columns with no analytical value. Engineered 5 new features: <strong>TenureBand</strong>, <strong>AgeBand</strong>, <strong>SalaryBand</strong>, <strong>SatisfactionScore</strong> (avg of 4 metrics), and binary encodings for Attrition and OverTime.</p>
-            <div class="cs-step-tags">
-              <span>Python</span><span>Pandas</span>
-            </div>
+            <div class="cs-step-title">Machine Learning Engineer</div>
+            <p><strong>Goal:</strong> Obtain clean, version-controlled bounding-box annotations to train event detection models.</p>
+            <p><strong>Pain Point:</strong> Spent 30%+ of weekly time manually formatting videos and troubleshooting missing metadata instead of building models.</p>
           </div>
         </div>
 
         <div class="cs-step">
-          <div class="cs-step-num">02</div>
+          <div class="cs-step-num">P2</div>
           <div class="cs-step-content">
-            <div class="cs-step-title">Exploratory Data Analysis</div>
-            <p>Generated 9 publication-ready charts covering attrition by department, job role, tenure, salary, overtime, age distribution, satisfaction score, and a full correlation heatmap. Each chart designed to answer a specific business question.</p>
-            <div class="cs-step-tags">
-              <span>Matplotlib</span><span>Seaborn</span>
-            </div>
+            <div class="cs-step-title">Data Annotator / Ops Specialist</div>
+            <p><strong>Goal:</strong> Efficiently label player actions, ball trajectories, and pitch events with high precision.</p>
+            <p><strong>Pain Point:</strong> Loaded massive 2-hour match files over slow local drives, causing software crashes and inconsistent frame labeling.</p>
           </div>
         </div>
-
-        <div class="cs-step">
-          <div class="cs-step-num">03</div>
-          <div class="cs-step-content">
-            <div class="cs-step-title">SQL Analysis</div>
-            <p>Imported the cleaned dataset into SQLite and wrote 11 queries — from overview aggregations to cross-dimensional analysis (department × overtime) and a high-risk employee identification query filtering for active employees with overtime + low satisfaction + early tenure.</p>
-            <div class="cs-step-tags">
-              <span>SQL</span><span>SQLite</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="cs-step">
-          <div class="cs-step-num">04</div>
-          <div class="cs-step-content">
-            <div class="cs-step-title">Power BI Dashboard</div>
-            <p>Built a 3-page interactive dashboard in Power BI Desktop — Overview KPIs, Deep Dive analysis, and a Risk Profile page with 4 slicers (Department, Job Role, Overtime, Tenure) that filter all visuals simultaneously. Used DAX measures for accurate % calculations.</p>
-            <div class="cs-step-tags">
-              <span>Power BI</span><span>DAX</span>
-            </div>
-          </div>
-        </div>
-
       </div>
     </div>
   </section>
 
-  <!-- ── EDA CHARTS ── -->
+  <!-- ── PRODUCT STRATEGY & ARCHITECTURE ── -->
   <section class="cs-section">
     <div class="cs-inner">
-      <span class="cs-section-tag">Exploratory Data Analysis</span>
-      <h2 class="cs-section-title">9 Charts — Python output</h2>
-      <p class="cs-eda-intro">Generated using Matplotlib & Seaborn. Click any chart to expand. Scroll to browse all 9.</p>
+      <span class="cs-section-tag">03 / Product Strategy</span>
+      <h2 class="cs-section-title">Cloud-First System Architecture</h2>
+      <p style="margin-bottom:32px;">Instead of building another isolated annotation utility, EdgePlay was envisioned as an integrated <strong>operating system for sports AI data</strong>. The raw footage enters the cloud, is automatically segmented, assigned to queue workers, annotated, and exported into training datasets.</p>
 
-      <div class="cs-eda-carousel-wrap">
-        <div class="cs-eda-carousel" id="edaCarousel">
-
-          <div class="cs-eda-card" onclick="openLightbox(0)">
-            <img src="outputs/charts/01_attrition_donut.png" alt="Overall Attrition" />
-            <div class="cs-eda-card-label">
-              <span class="cs-eda-card-num">01</span>
-              <span class="cs-eda-card-title">Overall Attrition Rate</span>
-              <span class="cs-eda-card-expand">⤢</span>
-            </div>
-          </div>
-
-          <div class="cs-eda-card" onclick="openLightbox(1)">
-            <img src="outputs/charts/02_attrition_by_department.png" alt="By Department" />
-            <div class="cs-eda-card-label">
-              <span class="cs-eda-card-num">02</span>
-              <span class="cs-eda-card-title">Attrition by Department</span>
-              <span class="cs-eda-card-expand">⤢</span>
-            </div>
-          </div>
-
-          <div class="cs-eda-card" onclick="openLightbox(2)">
-            <img src="outputs/charts/03_attrition_by_tenure.png" alt="By Tenure" />
-            <div class="cs-eda-card-label">
-              <span class="cs-eda-card-num">03</span>
-              <span class="cs-eda-card-title">Attrition by Tenure Band</span>
-              <span class="cs-eda-card-expand">⤢</span>
-            </div>
-          </div>
-
-          <div class="cs-eda-card" onclick="openLightbox(3)">
-            <img src="outputs/charts/04_attrition_by_jobrole.png" alt="By Job Role" />
-            <div class="cs-eda-card-label">
-              <span class="cs-eda-card-num">04</span>
-              <span class="cs-eda-card-title">Attrition by Job Role</span>
-              <span class="cs-eda-card-expand">⤢</span>
-            </div>
-          </div>
-
-          <div class="cs-eda-card" onclick="openLightbox(4)">
-            <img src="outputs/charts/05_attrition_by_salary.png" alt="By Salary" />
-            <div class="cs-eda-card-label">
-              <span class="cs-eda-card-num">05</span>
-              <span class="cs-eda-card-title">Attrition by Salary Band</span>
-              <span class="cs-eda-card-expand">⤢</span>
-            </div>
-          </div>
-
-          <div class="cs-eda-card" onclick="openLightbox(5)">
-            <img src="outputs/charts/06_attrition_overtime.png" alt="Overtime" />
-            <div class="cs-eda-card-label">
-              <span class="cs-eda-card-num">06</span>
-              <span class="cs-eda-card-title">Overtime Impact</span>
-              <span class="cs-eda-card-expand">⤢</span>
-            </div>
-          </div>
-
-          <div class="cs-eda-card" onclick="openLightbox(6)">
-            <img src="outputs/charts/07_age_distribution.png" alt="Age Distribution" />
-            <div class="cs-eda-card-label">
-              <span class="cs-eda-card-num">07</span>
-              <span class="cs-eda-card-title">Age Distribution</span>
-              <span class="cs-eda-card-expand">⤢</span>
-            </div>
-          </div>
-
-          <div class="cs-eda-card" onclick="openLightbox(7)">
-            <img src="outputs/charts/08_satisfaction_vs_attrition.png" alt="Satisfaction" />
-            <div class="cs-eda-card-label">
-              <span class="cs-eda-card-num">08</span>
-              <span class="cs-eda-card-title">Satisfaction vs Attrition</span>
-              <span class="cs-eda-card-expand">⤢</span>
-            </div>
-          </div>
-
-          <div class="cs-eda-card" onclick="openLightbox(8)">
-            <img src="outputs/charts/09_correlation_heatmap.png" alt="Correlation" />
-            <div class="cs-eda-card-label">
-              <span class="cs-eda-card-num">09</span>
-              <span class="cs-eda-card-title">Correlation Heatmap</span>
-              <span class="cs-eda-card-expand">⤢</span>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="cs-eda-nav">
-          <button onclick="scrollCarousel(-1)">←</button>
-          <button onclick="scrollCarousel(1)">→</button>
-        </div>
+      <div style="background:var(--surface2); border:1px solid var(--border); border-radius:6px; padding:24px; font-family:var(--mono); font-size:0.82rem; color:var(--muted); line-height:1.8;">
+        <strong style="color:var(--accent);">Cloud Pipeline Workflow:</strong><br/>
+        [ Raw Match Video (50GB) ] ➔ [ Cloud Ingest Trigger ] ➔ [ Automated FFmpeg Event Trimming (10s Clips) ] ➔ [ Backblaze B2 S3 Pre-Signed URLs ] ➔ [ Label Studio Queue Auto-Population ] ➔ [ Quality Assurance Review ] ➔ [ COCO/YOLO Dataset Export ] ➔ [ Model Training Pipeline ]
       </div>
     </div>
   </section>
 
-  <!-- LIGHTBOX -->
-  <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
-    <div class="lightbox-inner">
-      <button class="lightbox-close" onclick="closeLightbox()">✕</button>
-      <button class="lightbox-prev" onclick="lightboxNav(-1)">←</button>
-      <button class="lightbox-next" onclick="lightboxNav(1)">→</button>
-      <img id="lightboxImg" src="" alt="" />
-      <div class="lightbox-caption" id="lightboxCaption"></div>
-    </div>
-  </div>
-
-  <!-- ── DASHBOARD ── -->
-  <section class="cs-section" id="dashboard">
-    <div class="cs-inner">
-      <span class="cs-section-tag">Dashboard</span>
-      <h2 class="cs-section-title">3-Page Interactive Dashboard</h2>
-
-      <div class="cs-dashboard-screens">
-
-        <div class="cs-screen">
-          <img src="page1-overview.png" alt="Dashboard Page 1 — Overview" />
-          <div class="cs-screen-label">
-            <span class="cs-screen-num">Page 01</span>
-            <span class="cs-screen-title">Overview — KPIs & Attrition by Department / Role</span>
-          </div>
-        </div>
-
-        <div class="cs-screen">
-          <img src="page2-deepdive.png" alt="Dashboard Page 2 — Deep Dive" />
-          <div class="cs-screen-label">
-            <span class="cs-screen-num">Page 02</span>
-            <span class="cs-screen-title">Deep Dive — Tenure, Salary, Overtime, Satisfaction, Age</span>
-          </div>
-        </div>
-
-        <div class="cs-screen">
-          <img src="page3-riskprofile.png" alt="Dashboard Page 3 — Risk Profile" />
-          <div class="cs-screen-label">
-            <span class="cs-screen-num">Page 03</span>
-            <span class="cs-screen-title">Risk Profile — Interactive slicers + High-risk employee table</span>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ── FINDINGS ── -->
+  <!-- ── FEATURE SPOTLIGHT: CRICKET ANNOTATION MODULE ── -->
   <section class="cs-section cs-section-alt">
     <div class="cs-inner">
-      <span class="cs-section-tag">Key Findings</span>
-      <h2 class="cs-section-title">What the data revealed</h2>
-
-      <div class="cs-findings">
-
-        <div class="cs-finding">
-          <div class="cs-finding-num">16.1%</div>
-          <div class="cs-finding-title">Overall Attrition Rate</div>
-          <p>Above the healthy 10% industry benchmark — meaning the organization is losing employees faster than it should be.</p>
-        </div>
-
-        <div class="cs-finding highlight">
-          <div class="cs-finding-num">39.8%</div>
-          <div class="cs-finding-title">Sales Rep Attrition</div>
-          <p>Highest of any job role — nearly 4 in 10 Sales Representatives leave. Combined with low average income ($2,626/month), compensation is a key driver.</p>
-        </div>
-
-        <div class="cs-finding">
-          <div class="cs-finding-num">30%+</div>
-          <div class="cs-finding-title">0–2 Year Tenure Attrition</div>
-          <p>The highest-risk window. Employees in their first 2 years are far more likely to leave — pointing to onboarding and early engagement gaps.</p>
-        </div>
-
-        <div class="cs-finding highlight">
-          <div class="cs-finding-num">3×</div>
-          <div class="cs-finding-title">Overtime Attrition Multiplier</div>
-          <p>Employees working overtime are roughly 3× more likely to leave than those who don't — work-life balance is a critical retention lever.</p>
-        </div>
-
-        <div class="cs-finding">
-          <div class="cs-finding-num">26%</div>
-          <div class="cs-finding-title">Low Salary Band Attrition</div>
-          <p>Employees earning under $3,000/month have a 26% attrition rate — the highest of any salary band. Compensation directly impacts retention.</p>
-        </div>
-
-        <div class="cs-finding">
-          <div class="cs-finding-num">20.6%</div>
-          <div class="cs-finding-title">Sales Dept vs 13.8% R&D</div>
-          <p>A 7-point gap between departments suggests culture, management style, and compensation structures vary significantly across the organization.</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ── WHAT I LEARNED ── -->
-  <section class="cs-section">
-    <div class="cs-inner">
-      <span class="cs-section-tag">Reflection</span>
-      <h2 class="cs-section-title">What I learned</h2>
+      <span class="cs-section-tag">04 / Feature Module</span>
+      <h2 class="cs-section-title">Cricket Video Annotation & Telemetry Module</h2>
+      <p style="margin-bottom:24px;">As part of EdgePlay, a specialized cricket annotation module was built to handle sport-specific telemetry (bowling release points, pitch bounce locations, shot direction vectors, and boundary events).</p>
+      
       <div class="cs-two-col">
         <div>
-          <p>This project gave me hands-on experience with the full analytics workflow — from raw CSV to boardroom-ready dashboard. The most valuable lesson was that <strong>feature engineering matters more than the model</strong> — creating TenureBand, SalaryBand, and SatisfactionScore transformed a flat dataset into something with real analytical depth.</p>
-          <p>On the SQL side, writing the high-risk employee identification query (Query 11) taught me how to combine multiple filters to produce actionable output — not just descriptive stats, but a list HR can act on immediately.</p>
-          <p>Power BI's slicer interactivity was the biggest unlock — being able to filter the entire Risk Profile page by department and see KPIs update in real time is the kind of thing that genuinely impresses stakeholders.</p>
+          <h3 style="color:var(--text); font-size:1.1rem; margin-bottom:12px;">Key Product Capabilities:</h3>
+          <ul class="tl-list">
+            <li><strong>Automated Event Trimming:</strong> Slices full 3-hour match recordings into 10-second delivery clips based on audio spikes and umpire signaling telemetry.</li>
+            <li><strong>Pre-Signed B2 Streaming:</strong> Streams trimmed clips directly into browser-based annotation interfaces without downloading gigabytes locally.</li>
+            <li><strong>Immutable Dataset Versioning:</strong> Every annotated clip is assigned a unique SHA-256 hash and metadata tag, ensuring 100% training reproducibility.</li>
+          </ul>
         </div>
-        <div class="cs-skills-used">
-          <div class="cs-skills-label">Skills demonstrated</div>
-          <div class="cs-skills-list">
-            <div class="cs-skill-item">✓ Data cleaning & validation</div>
-            <div class="cs-skill-item">✓ Feature engineering</div>
-            <div class="cs-skill-item">✓ Exploratory data analysis</div>
-            <div class="cs-skill-item">✓ Correlation analysis</div>
-            <div class="cs-skill-item">✓ SQL aggregations & cross-analysis</div>
-            <div class="cs-skill-item">✓ DAX measures in Power BI</div>
-            <div class="cs-skill-item">✓ Interactive dashboard design</div>
-            <div class="cs-skill-item">✓ Business insight communication</div>
+        <div style="background:var(--surface); border:1px solid var(--border); border-radius:6px; padding:20px;">
+          <img src="ipl-page1.png" alt="Cricket Annotation Dashboard" style="width:100%; border-radius:4px; border:1px solid var(--border);" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PRD ARTIFACT SHOWCASE ── -->
+  <section id="prd" class="cs-section">
+    <div class="cs-inner">
+      <span class="cs-section-tag">05 / PRD & Specification</span>
+      <h2 class="cs-section-title">Product Requirements Document (PRD) Snippet</h2>
+
+      <div class="prd-box" style="margin-top:24px;">
+        <div class="prd-header">
+          <span class="prd-tag">PRD-001</span>
+          <span class="prd-title">EdgePlay AI — Automated Video Annotation Queue & Cloud Sync</span>
+        </div>
+        <div class="prd-body">
+          <p><strong>1. Problem Statement:</strong> ML engineers manually trimmed 50GB+ raw match files, creating 4-hour operational delays before annotators could start labeling.</p>
+          <p><strong>2. User Persona:</strong> Data Annotators & Computer Vision Engineers requiring standardized frame rates (60fps) and pre-trimmed clips.</p>
+          <p><strong>3. Prioritization (RICE Score = 8.4/10):</strong> High Reach (100% of video ingestion), High Impact (50% turnaround reduction), High Confidence (90%), Low Effort (4-day sprint using FFmpeg + B2 API).</p>
+          <p><strong>4. Functional Requirements:</strong>
+            <br/>• Auto-detect video frame rates and transcode to 1080p 60fps upon cloud upload.
+            <br/>• Slice raw match videos into 10-second event clips around detected delivery timestamps.
+            <br/>• Generate Backblaze B2 S3 pre-signed URLs valid for 24-hour annotation sessions.
+            <br/>• Auto-sync task payload with Label Studio REST API.
+          </p>
+          <p><strong>5. Non-Functional Requirements:</strong> System must handle 500+ simultaneous clip URL generation requests with &lt; 200ms latency.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── RESULTS & LESSONS ── -->
+  <section class="cs-section cs-section-alt">
+    <div class="cs-inner">
+      <span class="cs-section-tag">06 / Business Impact & Learnings</span>
+      <h2 class="cs-section-title">Measurable Outcomes & Future Roadmap</h2>
+
+      <div class="cs-steps" style="grid-template-columns:1fr 1fr; gap:24px;">
+        <div class="cs-step">
+          <div class="cs-step-num">📈</div>
+          <div class="cs-step-content">
+            <div class="cs-step-title">Measurable Business Impact</div>
+            <p>• <strong>50% Reduction</strong> in total annotation pipeline turnaround time.</p>
+            <p>• <strong>0 Storage Waste:</strong> Eliminated duplicate local copies across external drives.</p>
+            <p>• <strong>100% Reproducibility:</strong> Enabled ML engineers to trace every training bounding box directly back to raw match timestamps.</p>
+          </div>
+        </div>
+
+        <div class="cs-step">
+          <div class="cs-step-num">🚀</div>
+          <div class="cs-step-content">
+            <div class="cs-step-title">V2 Roadmap & Key Learnings</div>
+            <p>• <strong>V2 Feature:</strong> Multi-camera angle synchronization (stump camera + broadcast camera alignment).</p>
+            <p>• <strong>Key PM Takeaway:</strong> Successful AI products depend far more on reliable data operations and workflow automation than on isolated ML algorithms.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ── NEXT ── -->
-  <section class="cs-section cs-section-alt">
-    <div class="cs-inner cs-next">
-      <div>
-        <span class="cs-section-tag">Next Project</span>
-        <h2 class="cs-section-title">Sales Performance Dashboard</h2>
-        <p>Excel → SQL → Power BI pipeline. Executive-level sales dashboard with regional breakdowns and time-series trends.</p>
-      </div>
-      <a href="index.html#projects" class="btn-primary">Back to Projects ↗</a>
-    </div>
-  </section>
-
+  <!-- ── FOOTER ── -->
   <footer>
     <div class="footer-inner">
-      <span>© 2026 Ravi Prakash</span>
-      <span>B.Tech ECE · NSUT Delhi · Open to opportunities</span>
+      <div class="footer-left">
+        <span class="footer-logo">Ravi Prakash<span class="blink">_</span></span>
+        <p class="footer-tag">Product Manager | AI Platforms & Data Products</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html#case-studies">← All Case Studies</a>
+        <a href="Ravi_Prakash_Resume.pdf" target="_blank">Resume PDF</a>
+      </div>
     </div>
   </footer>
 
   <script src="script.js"></script>
-  <script>
-    // ── EDA Carousel ──
-    const carousel = document.getElementById('edaCarousel');
-
-    function scrollCarousel(dir) {
-      carousel.scrollBy({ left: dir * 340, behavior: 'smooth' });
-    }
-
-    // ── Lightbox ──
-    const charts = [
-      { src: 'outputs/charts/01_attrition_donut.png',          caption: '01 — Overall Attrition Rate (16.1%)' },
-      { src: 'outputs/charts/02_attrition_by_department.png',  caption: '02 — Attrition by Department' },
-      { src: 'outputs/charts/03_attrition_by_tenure.png',      caption: '03 — Attrition by Tenure Band' },
-      { src: 'outputs/charts/04_attrition_by_jobrole.png',     caption: '04 — Attrition by Job Role (Sales Rep: 39.8%)' },
-      { src: 'outputs/charts/05_attrition_by_salary.png',      caption: '05 — Attrition by Salary Band' },
-      { src: 'outputs/charts/06_attrition_overtime.png',        caption: '06 — Overtime Impact on Attrition' },
-      { src: 'outputs/charts/07_age_distribution.png',          caption: '07 — Age Distribution: Attrited vs Retained' },
-      { src: 'outputs/charts/08_satisfaction_vs_attrition.png', caption: '08 — Satisfaction Score vs Attrition' },
-      { src: 'outputs/charts/09_correlation_heatmap.png',       caption: '09 — Correlation Heatmap' },
-    ];
-
-    let currentIdx = 0;
-
-    function openLightbox(idx) {
-      currentIdx = idx;
-      const lb = document.getElementById('lightbox');
-      document.getElementById('lightboxImg').src     = charts[idx].src;
-      document.getElementById('lightboxCaption').textContent = charts[idx].caption;
-      lb.classList.add('open');
-      document.body.style.overflow = 'hidden';
-    }
-
-    function closeLightbox(e) {
-      if (e && e.target !== document.getElementById('lightbox') && !e.target.classList.contains('lightbox-close')) return;
-      document.getElementById('lightbox').classList.remove('open');
-      document.body.style.overflow = '';
-    }
-
-    function lightboxNav(dir) {
-      currentIdx = (currentIdx + dir + charts.length) % charts.length;
-      document.getElementById('lightboxImg').src = charts[currentIdx].src;
-      document.getElementById('lightboxCaption').textContent = charts[currentIdx].caption;
-    }
-
-    // Keyboard navigation
-    document.addEventListener('keydown', e => {
-      if (!document.getElementById('lightbox').classList.contains('open')) return;
-      if (e.key === 'Escape')      closeLightbox({ target: document.getElementById('lightbox') });
-      if (e.key === 'ArrowRight')  lightboxNav(1);
-      if (e.key === 'ArrowLeft')   lightboxNav(-1);
-    });
-  </script>
 </body>
 </html>

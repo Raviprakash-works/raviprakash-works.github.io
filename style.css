@@ -899,14 +899,75 @@ footer {
   .contact-inner { grid-template-columns:1fr; gap:40px; }
 }
 
+/* ── MOBILE NAV TOGGLE & DRAWER ── */
+.nav-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  flex-direction: column;
+  gap: 5px;
+  z-index: 600;
+}
+.nav-toggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--text);
+  border-radius: 2px;
+  transition: transform 0.25s, opacity 0.25s;
+}
+.nav-toggle.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.nav-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+.nav-toggle.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+.nav-cta-mobile {
+  display: none;
+}
+
 @media (max-width:768px) {
   body { cursor:auto; }
   .cursor,.cursor-ring { display:none; }
 
   :root { --pad:5%; }
 
-  .nav-links { display:none; }
-  .nav-cta { font-size:.68rem; padding:6px 12px; }
+  .nav-toggle { display: flex; }
+  .nav-cta { display: none; }
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: var(--nav-h);
+    left: 0;
+    right: 0;
+    background: rgba(13, 13, 13, 0.98);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border-bottom: 1px solid var(--border);
+    padding: 24px var(--pad);
+    gap: 18px;
+    transform: translateY(-120%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+  }
+  .nav-links.open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .nav-cta-mobile {
+    display: inline-block;
+    color: var(--accent) !important;
+    font-family: var(--mono);
+    font-weight: 700;
+  }
 
   .hero-inner { grid-template-columns:1fr; gap:36px; }
   .hero-right { order:-1; max-width:240px; }
@@ -922,6 +983,7 @@ footer {
 
   .about-grid { grid-template-columns:1fr; gap:36px; }
   .projects-grid { grid-template-columns:1fr; }
+  .pt-grid { grid-template-columns: 1fr; }
 
   .timeline-item { grid-template-columns:52px 1fr; gap:16px; }
   .tl-header { flex-direction:column; gap:8px; }
