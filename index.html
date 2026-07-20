@@ -244,11 +244,78 @@
               <span class="prd-badge">📄 PRD Included</span>
             </div>
           </div>
-          <img class="project-img" src="ipl-page1.png" alt="EdgePlay AI Sports Platform" />
+          
+          <!-- Bespoke SVG Cloud Architecture Pipeline -->
+          <div class="svg-diagram-card">
+            <svg viewBox="0 0 800 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="800" height="140" rx="6" fill="#0d0d0d"/>
+              <rect x="20" y="45" width="130" height="50" rx="4" fill="#161616" stroke="#c8f53a" stroke-width="1.5"/>
+              <text x="85" y="68" fill="#edebe4" font-size="11" font-family="monospace" text-anchor="middle" font-weight="bold">Raw Video Ingest</text>
+              <text x="85" y="83" fill="#888" font-size="9" font-family="sans-serif" text-anchor="middle">50GB Match File</text>
+
+              <path d="M150 70 H190" stroke="#c8f53a" stroke-width="1.5" stroke-dasharray="4 4"/>
+              <polygon points="190,70 183,66 183,74" fill="#c8f53a"/>
+
+              <rect x="195" y="45" width="130" height="50" rx="4" fill="#161616" stroke="#c8f53a" stroke-width="1.5"/>
+              <text x="260" y="68" fill="#edebe4" font-size="11" font-family="monospace" text-anchor="middle" font-weight="bold">FFmpeg Trimmer</text>
+              <text x="260" y="83" fill="#888" font-size="9" font-family="sans-serif" text-anchor="middle">10s Event Slices</text>
+
+              <path d="M325 70 H365" stroke="#c8f53a" stroke-width="1.5" stroke-dasharray="4 4"/>
+              <polygon points="365,70 358,66 358,74" fill="#c8f53a"/>
+
+              <rect x="370" y="45" width="140" height="50" rx="4" fill="#161616" stroke="#c8f53a" stroke-width="1.5"/>
+              <text x="440" y="68" fill="#edebe4" font-size="11" font-family="monospace" text-anchor="middle" font-weight="bold">Backblaze B2 S3</text>
+              <text x="440" y="83" fill="#888" font-size="9" font-family="sans-serif" text-anchor="middle">Pre-Signed URLs</text>
+
+              <path d="M510 70 H550" stroke="#c8f53a" stroke-width="1.5" stroke-dasharray="4 4"/>
+              <polygon points="550,70 543,66 543,74" fill="#c8f53a"/>
+
+              <rect x="555" y="45" width="130" height="50" rx="4" fill="#161616" stroke="#c8f53a" stroke-width="1.5"/>
+              <text x="620" y="68" fill="#edebe4" font-size="11" font-family="monospace" text-anchor="middle" font-weight="bold">Label Studio Queue</text>
+              <text x="620" y="83" fill="#888" font-size="9" font-family="sans-serif" text-anchor="middle">Auto-Task Sync</text>
+
+              <path d="M685 70 H725" stroke="#c8f53a" stroke-width="1.5" stroke-dasharray="4 4"/>
+              <polygon points="725,70 718,66 718,74" fill="#c8f53a"/>
+
+              <rect x="730" y="45" width="55" height="50" rx="4" fill="rgba(200,245,58,0.15)" stroke="#c8f53a" stroke-width="1.5"/>
+              <text x="757" y="68" fill="#c8f53a" font-size="10" font-family="monospace" text-anchor="middle" font-weight="bold">YOLO</text>
+              <text x="757" y="83" fill="#c8f53a" font-size="8" font-family="sans-serif" text-anchor="middle">Dataset</text>
+            </svg>
+          </div>
+
           <h3 class="project-title">EdgePlay AI — Sports Computer Vision & Annotation OS</h3>
           <p class="project-desc">
             0-to-1 AI dataset & annotation infrastructure platform designed to solve data operations bottlenecks in sports AI. Built a unified cloud pipeline (Backblaze B2) that automates video segmentation, raw match trimming, and task distribution—including a specialized cricket annotation module that <strong>reduced annotation turnaround by 50%</strong>.
           </p>
+
+          <!-- Before / After Workflow Table -->
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Workflow Dimension</th>
+                <th>Before EdgePlay (Manual Ops)</th>
+                <th>With EdgePlay (Platform OS)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Video Pre-Processing</strong></td>
+                <td class="before">4 Hours manual trimming per match</td>
+                <td class="after"><strong>&lt; 10 Mins</strong> automated FFmpeg cloud slices</td>
+              </tr>
+              <tr>
+                <td><strong>Data Storage</strong></td>
+                <td class="before">Physical hard drives, duplicated 50GB files</td>
+                <td class="after"><strong>Backblaze B2 S3</strong> pre-signed URL streaming</td>
+              </tr>
+              <tr>
+                <td><strong>Dataset Reproducibility</strong></td>
+                <td class="before">Untracked versions & broken annotations</td>
+                <td class="after"><strong>100% Immutable</strong> SHA-256 metadata tags</td>
+              </tr>
+            </tbody>
+          </table>
+
           <div class="project-stack">
             <span>Product Strategy</span><span>0-to-1 Platform</span><span>AI Data Ops</span><span>Backblaze B2</span><span>PRD & SOPs</span><span>Computer Vision</span>
           </div>
@@ -264,7 +331,27 @@
             <div class="project-number">002</div>
             <span class="prd-badge">AI Product</span>
           </div>
-          <img class="project-img" src="page2-deepdive.png" alt="VoiceEval AI Platform" />
+          
+          <!-- Bespoke SVG VoiceEval Flow -->
+          <div class="svg-diagram-card">
+            <svg viewBox="0 0 400 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="400" height="110" rx="4" fill="#0d0d0d"/>
+              <rect x="15" y="30" width="100" height="50" rx="4" fill="#161616" stroke="rgba(200,245,58,0.4)"/>
+              <text x="65" y="53" fill="#edebe4" font-size="10" font-family="monospace" text-anchor="middle">Speech Input</text>
+              <text x="65" y="67" fill="#888" font-size="8" text-anchor="middle">Audio Stream</text>
+              <path d="M115 55 H145" stroke="#c8f53a" stroke-width="1.5"/>
+              <polygon points="145,55 138,51 138,59" fill="#c8f53a"/>
+              <rect x="150" y="30" width="100" height="50" rx="4" fill="#161616" stroke="rgba(200,245,58,0.4)"/>
+              <text x="200" y="53" fill="#edebe4" font-size="10" font-family="monospace" text-anchor="middle">Fluency & Clarity</text>
+              <text x="200" y="67" fill="#888" font-size="8" text-anchor="middle">NLP Engine</text>
+              <path d="M250 55 H280" stroke="#c8f53a" stroke-width="1.5"/>
+              <polygon points="280,55 273,51 273,59" fill="#c8f53a"/>
+              <rect x="285" y="30" width="100" height="50" rx="4" fill="rgba(200,245,58,0.1)" stroke="#c8f53a"/>
+              <text x="335" y="53" fill="#c8f53a" font-size="10" font-family="monospace" text-anchor="middle">Instant Scorecard</text>
+              <text x="335" y="67" fill="#c8f53a" font-size="8" text-anchor="middle">0 Bias Feedback</text>
+            </svg>
+          </div>
+
           <h3 class="project-title">VoiceEval — AI Voice Evaluation & Quality Assessment</h3>
           <p class="project-desc">
             AI-assisted spoken language evaluation platform replacing manual evaluator bias with objective feedback loops. Designed user flows and evaluation criteria for speech clarity, fluency, and scoring consistency across automated candidate assessments.
@@ -283,7 +370,27 @@
             <div class="project-number">003</div>
             <span class="project-status live">Completed</span>
           </div>
-          <img class="project-img" src="page1-overview.png" alt="HR Attrition Analytics Dashboard" />
+
+          <!-- Bespoke SVG HR Risk Tree -->
+          <div class="svg-diagram-card">
+            <svg viewBox="0 0 400 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="400" height="110" rx="4" fill="#0d0d0d"/>
+              <rect x="15" y="30" width="100" height="50" rx="4" fill="#161616" stroke="rgba(200,245,58,0.4)"/>
+              <text x="65" y="53" fill="#edebe4" font-size="10" font-family="monospace" text-anchor="middle">1,470 Employees</text>
+              <text x="65" y="67" fill="#888" font-size="8" text-anchor="middle">HR Telemetry</text>
+              <path d="M115 55 H145" stroke="#c8f53a" stroke-width="1.5"/>
+              <polygon points="145,55 138,51 138,59" fill="#c8f53a"/>
+              <rect x="150" y="30" width="100" height="50" rx="4" fill="#161616" stroke="rgba(200,245,58,0.4)"/>
+              <text x="200" y="53" fill="#edebe4" font-size="10" font-family="monospace" text-anchor="middle">Risk Filter</text>
+              <text x="200" y="67" fill="#888" font-size="8" text-anchor="middle">OverTime + &lt;2yr</text>
+              <path d="M250 55 H280" stroke="#c8f53a" stroke-width="1.5"/>
+              <polygon points="280,55 273,51 273,59" fill="#c8f53a"/>
+              <rect x="285" y="30" width="100" height="50" rx="4" fill="rgba(200,245,58,0.1)" stroke="#c8f53a"/>
+              <text x="335" y="53" fill="#c8f53a" font-size="10" font-family="monospace" text-anchor="middle">39.8% Attrition</text>
+              <text x="335" y="67" fill="#c8f53a" font-size="8" text-anchor="middle">Early HR Alert</text>
+            </svg>
+          </div>
+
           <h3 class="project-title">HR Employee Attrition — Predictive Retention Strategy</h3>
           <p class="project-desc">
             Transformed 1,470 employee records into predictive retention interventions. Identified <strong>39.8% Sales Rep attrition</strong> and early tenure risk factors (0–2 yrs), establishing telemetry frameworks to help HR leadership intervene before attrition occurs.
@@ -303,7 +410,19 @@
             <div class="project-number">004</div>
             <span class="project-status live">Completed</span>
           </div>
-          <img class="project-img" src="sales-page1.png" alt="Sales Performance Dashboard" />
+
+          <!-- Bespoke SVG Sales Discount Leakage Curve -->
+          <div class="svg-diagram-card">
+            <svg viewBox="0 0 400 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="400" height="110" rx="4" fill="#0d0d0d"/>
+              <line x1="40" y1="90" x2="360" y2="90" stroke="#444" stroke-width="1"/>
+              <line x1="40" y1="20" x2="40" y2="90" stroke="#444" stroke-width="1"/>
+              <path d="M 40 30 Q 180 35 260 65 T 360 95" fill="none" stroke="#c8f53a" stroke-width="2"/>
+              <text x="48" y="38" fill="#c8f53a" font-size="9" font-family="monospace">0% Discount: +$329.9k Profit</text>
+              <text x="230" y="85" fill="#ff6b6b" font-size="9" font-family="monospace">40%+ Discount: -$99.5k Loss</text>
+            </svg>
+          </div>
+
           <h3 class="project-title">Sales Performance Analytics — Pricing & Discount Strategy</h3>
           <p class="project-desc">
             Commercial decision-support product analyzing 5,009 orders across 4 years. Uncovered <strong>-$99,559 net loss</strong> driven by unmonitored high-discount (40%+) structures, formulating data-informed pricing guardrails for revenue optimization.
@@ -323,7 +442,27 @@
             <div class="project-number">005</div>
             <span class="project-status live">Completed</span>
           </div>
-          <img class="project-img" src="ipl-page2.png" alt="IPL Cricket Analytics Dashboard" />
+
+          <!-- Bespoke SVG IPL Sports Telemetry Engine -->
+          <div class="svg-diagram-card">
+            <svg viewBox="0 0 400 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="400" height="110" rx="4" fill="#0d0d0d"/>
+              <rect x="15" y="30" width="100" height="50" rx="4" fill="#161616" stroke="rgba(200,245,58,0.4)"/>
+              <text x="65" y="53" fill="#edebe4" font-size="10" font-family="monospace" text-anchor="middle">1,090 Matches</text>
+              <text x="65" y="67" fill="#888" font-size="8" text-anchor="middle">17 IPL Seasons</text>
+              <path d="M115 55 H145" stroke="#c8f53a" stroke-width="1.5"/>
+              <polygon points="145,55 138,51 138,59" fill="#c8f53a"/>
+              <rect x="150" y="30" width="100" height="50" rx="4" fill="#161616" stroke="rgba(200,245,58,0.4)"/>
+              <text x="200" y="53" fill="#edebe4" font-size="10" font-family="monospace" text-anchor="middle">Telemetry Engine</text>
+              <text x="200" y="67" fill="#888" font-size="8" text-anchor="middle">Python Pipeline</text>
+              <path d="M250 55 H280" stroke="#c8f53a" stroke-width="1.5"/>
+              <polygon points="280,55 273,51 273,59" fill="#c8f53a"/>
+              <rect x="285" y="30" width="100" height="50" rx="4" fill="rgba(200,245,58,0.1)" stroke="#c8f53a"/>
+              <text x="335" y="53" fill="#c8f53a" font-size="10" font-family="monospace" text-anchor="middle">Multi-Format</text>
+              <text x="335" y="67" fill="#c8f53a" font-size="8" text-anchor="middle">Dash / PDF / Excel</text>
+            </svg>
+          </div>
+
           <h3 class="project-title">IPL Cricket Analytics — Automated Telemetry Engine</h3>
           <p class="project-desc">
             Interactive sports data product analyzing 17 seasons and 1,090 matches. Automated multi-format reporting (Plotly/Dash, PDF, Excel) to deliver game strategy telemetry and win-probability insights for sports media stakeholders.
@@ -384,21 +523,99 @@
           </div>
         </div>
 
-        <!-- Artifacts & PRD Showcase -->
+        <!-- Artifacts & Interactive PRD Showcase -->
         <div class="pt-card full-width">
-          <div class="pt-card-title">📄 Sample Product Requirements Document (PRD) Snippet</div>
-          <div class="prd-box">
-            <div class="prd-header">
-              <span class="prd-tag">PRD-001</span>
-              <span class="prd-title">EdgePlay AI — Automated Video Annotation Queue & Backblaze B2 Sync</span>
-            </div>
-            <div class="prd-body">
-              <p><strong>1. Problem Statement:</strong> ML engineers manually trimmed 50GB+ raw match files, creating 4-hour operational delays before annotators could start labeling.</p>
-              <p><strong>2. User Persona:</strong> Data Annotators & Computer Vision Engineers requiring standardized frame rates and pre-trimmed clips.</p>
-              <p><strong>3. Feature Requirement:</strong> Cloud ingest trigger via FFmpeg segmentation to slice video into 10-second event clips, auto-generating Backblaze B2 S3 pre-signed URLs and populating the Label Studio annotation queue.</p>
-              <p><strong>4. Success Metric:</strong> Reduce annotation task preparation time from 4 hours to &lt; 10 minutes (50% overall turnaround reduction).</p>
+          <div class="pt-card-title">📄 Interactive Product Artifacts & PRD Showcase</div>
+          
+          <div class="prd-tabs">
+            <button class="prd-tab-btn active" data-tab="tab-prd">PRD-001: EdgePlay Queue</button>
+            <button class="prd-tab-btn" data-tab="tab-rice">RICE Prioritization Matrix</button>
+            <button class="prd-tab-btn" data-tab="tab-metrics">North Star Metrics Framework</button>
+          </div>
+
+          <!-- Tab 1: PRD Snippet -->
+          <div class="prd-tab-content active" id="tab-prd">
+            <div class="prd-box">
+              <div class="prd-header">
+                <span class="prd-tag">PRD-001</span>
+                <span class="prd-title">EdgePlay AI — Automated Video Annotation Queue & Cloud Sync</span>
+              </div>
+              <div class="prd-body">
+                <p><strong>1. Problem Statement:</strong> ML engineers manually trimmed 50GB+ raw match files, creating 4-hour operational delays before annotators could start labeling.</p>
+                <p><strong>2. Target User Persona:</strong> Data Annotators & Computer Vision Engineers requiring standardized 60fps frame rates and pre-trimmed 10-second event clips.</p>
+                <p><strong>3. Prioritization (RICE Score = 8.4/10):</strong> Reach: 100% of video ingest | Impact: 50% turnaround reduction | Confidence: 90% | Effort: 4-day sprint.</p>
+                <p><strong>4. Key Requirements:</strong> Cloud ingest trigger via FFmpeg segmentation to slice video into 10-second clips, auto-generating Backblaze B2 S3 pre-signed URLs and populating the Label Studio annotation queue.</p>
+                <p><strong>5. Success Metric:</strong> Reduce task prep time from 4 hours to &lt; 10 minutes (50% overall pipeline turnaround reduction).</p>
+              </div>
             </div>
           </div>
+
+          <!-- Tab 2: RICE Matrix -->
+          <div class="prd-tab-content" id="tab-rice">
+            <div class="prd-box">
+              <div class="prd-header">
+                <span class="prd-tag">FRAMEWORK</span>
+                <span class="prd-title">RICE Prioritization Matrix — EdgePlay V1 Feature Backlog</span>
+              </div>
+              <div class="prd-body">
+                <table class="comparison-table" style="margin-top:10px;">
+                  <thead>
+                    <tr>
+                      <th>Feature Initiative</th>
+                      <th>Reach</th>
+                      <th>Impact</th>
+                      <th>Confidence</th>
+                      <th>Effort (wks)</th>
+                      <th>RICE Score</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><strong>Automated FFmpeg Event Slicing</strong></td>
+                      <td>100%</td>
+                      <td>3 (High)</td>
+                      <td>90%</td>
+                      <td>1.0</td>
+                      <td style="color:var(--accent); font-weight:bold;">270 (Rank 1)</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Backblaze B2 Pre-Signed URL Streaming</strong></td>
+                      <td>100%</td>
+                      <td>3 (High)</td>
+                      <td>85%</td>
+                      <td>1.0</td>
+                      <td style="color:var(--accent); font-weight:bold;">255 (Rank 2)</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Multi-Camera Angle Synchronization</strong></td>
+                      <td>40%</td>
+                      <td>2 (Med)</td>
+                      <td>60%</td>
+                      <td>3.0</td>
+                      <td style="color:var(--muted);">16 (Rank 3)</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab 3: North Star Metrics -->
+          <div class="prd-tab-content" id="tab-metrics">
+            <div class="prd-box">
+              <div class="prd-header">
+                <span class="prd-tag">METRICS</span>
+                <span class="prd-title">North Star Metric & Input KPIs — AI Data Infrastructure</span>
+              </div>
+              <div class="prd-body">
+                <p><strong>North Star Metric:</strong> <em>Weekly High-Quality Bounding Box Annotations Delivered to Training Pipeline.</em></p>
+                <p><strong>Input Metric 1 (Efficiency):</strong> Average Time-to-Annotate per 10-second Event Clip (&lt; 45 seconds target).</p>
+                <p><strong>Input Metric 2 (Quality):</strong> Inter-Annotator Agreement Score (&gt; 95% IoU overlap target).</p>
+                <p><strong>Input Metric 3 (Infrastructure):</strong> Storage Redundancy Overhead (Target: 0% duplicate files saved across local drives).</p>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>

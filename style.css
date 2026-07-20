@@ -19,8 +19,98 @@
   --sans:      'Inter', sans-serif;
   --display:   'Syne', sans-serif;
   --nav-h:     60px;
-  --max-w:     1100px;
+  --max-w:     1140px;
   --pad:       6%;
+}
+
+/* ── PM DESIGN SYSTEM UTILITIES ── */
+.glass-panel {
+  background: rgba(17, 17, 17, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+.glass-panel:hover {
+  border-color: rgba(200, 245, 58, 0.3);
+  box-shadow: 0 12px 36px rgba(0,0,0,0.4);
+}
+
+.svg-diagram-card {
+  background: #0d0d0d;
+  border: 1px solid var(--border2);
+  border-radius: 6px;
+  padding: 20px;
+  margin: 20px 0;
+  overflow-x: auto;
+}
+.svg-diagram-card svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 340px;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 0.84rem;
+}
+.comparison-table th, .comparison-table td {
+  padding: 12px 16px;
+  border: 1px solid var(--border);
+  text-align: left;
+}
+.comparison-table th {
+  background: var(--surface2);
+  color: var(--accent);
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.comparison-table td.before {
+  background: rgba(255, 100, 100, 0.05);
+  color: rgba(255, 200, 200, 0.8);
+}
+.comparison-table td.after {
+  background: rgba(200, 245, 58, 0.05);
+  color: var(--text);
+}
+
+.prd-tabs {
+  display: flex;
+  gap: 10px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 20px;
+}
+.prd-tab-btn {
+  background: transparent;
+  border: none;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 10px 16px;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s;
+}
+.prd-tab-btn.active, .prd-tab-btn:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+.prd-tab-content {
+  display: none;
+}
+.prd-tab-content.active {
+  display: block;
+  animation: fadeIn 0.3s ease;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }

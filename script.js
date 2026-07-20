@@ -128,3 +128,21 @@ if (navToggle && navLinksContainer) {
     });
   });
 }
+
+/* ── 7. PRD TABBED VIEWER TOGGLE ── */
+const tabBtns = document.querySelectorAll('.prd-tab-btn');
+const tabContents = document.querySelectorAll('.prd-tab-content');
+
+if (tabBtns.length && tabContents.length) {
+  tabBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const targetId = btn.getAttribute('data-tab');
+      tabBtns.forEach(b => b.classList.remove('active'));
+      tabContents.forEach(c => c.classList.remove('active'));
+
+      btn.classList.add('active');
+      const activeContent = document.getElementById(targetId);
+      if (activeContent) activeContent.classList.add('active');
+    });
+  });
+}
