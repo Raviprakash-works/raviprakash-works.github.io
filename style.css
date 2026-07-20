@@ -648,9 +648,101 @@ nav {
   font-size:.68rem; font-weight:700;
   color:var(--accent); text-decoration:none;
   letter-spacing:.06em;
-  transition:opacity .2s;
+  transition:color .2s;
 }
-.proj-link:hover { opacity:.7; }
+.proj-link:hover { color:#fff; }
+
+/* ── PRODUCT THINKING SECTION ── */
+.pt-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.pt-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+}
+.pt-card.full-width {
+  grid-column: 1 / -1;
+}
+.pt-card-title {
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+.pt-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.pt-list li {
+  font-size: 0.84rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+.pt-list li strong {
+  color: var(--accent);
+}
+.pt-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.pt-tags span {
+  font-size: 0.72rem;
+  font-weight: 500;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--border2);
+  padding: 6px 12px;
+  border-radius: 100px;
+  color: var(--text);
+}
+.prd-box {
+  background: var(--bg);
+  border: 1px solid var(--border2);
+  border-radius: 4px;
+  padding: 20px;
+  margin-top: 8px;
+}
+.prd-header {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 14px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 10px;
+}
+.prd-tag {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  font-weight: 700;
+  background: rgba(200,245,58,0.15);
+  color: var(--accent);
+  padding: 2px 8px;
+  border-radius: 3px;
+}
+.prd-title {
+  font-family: var(--sans);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text);
+}
+.prd-body p {
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+.prd-body p strong {
+  color: var(--text);
+}
 
 /* ── SKILLS ── */
 .skills-layout {

@@ -336,8 +336,58 @@
         </span>
       </div>
 
+  <!-- ── PRODUCT THINKING ── -->
+  <section id="product-thinking" class="section section-alt">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="section-tag">04 / Product Thinking</span>
+        <h2 class="section-title">Frameworks, PRDs & Product Philosophy</h2>
+      </div>
+
+      <div class="pt-grid">
+        <!-- Principles -->
+        <div class="pt-card">
+          <div class="pt-card-title">💡 4 Core Product Principles</div>
+          <ul class="pt-list">
+            <li><strong>User Pain > Feature Creep:</strong> Prioritize solving acute operational bottlenecks before expanding product scope.</li>
+            <li><strong>Data-Informed, Not Data-Obsessed:</strong> Use telemetry to validate hypotheses, but rely on empathy and systems thinking for 0-to-1 direction.</li>
+            <li><strong>Speed to Value:</strong> Minimize time-to-value by automating repetitive steps in human workflows.</li>
+            <li><strong>Platform Scalability:</strong> Build reusable data pipelines and metadata schemas rather than isolated one-off utilities.</li>
+          </ul>
+        </div>
+
+        <!-- Prioritization & Frameworks -->
+        <div class="pt-card">
+          <div class="pt-card-title">🎯 Decision & Prioritization Frameworks</div>
+          <p class="pt-desc" style="margin-bottom:16px;">Structured methodologies I apply to evaluate trade-offs and align technical roadmaps:</p>
+          <div class="pt-tags">
+            <span>RICE Scoring (Reach, Impact, Confidence, Effort)</span>
+            <span>MoSCoW Prioritization</span>
+            <span>Impact vs. Effort Matrix</span>
+            <span>North Star & Input Metrics</span>
+            <span>AARRR Conversion Funnel</span>
+            <span>Opportunity Solution Trees</span>
+          </div>
+        </div>
+
+        <!-- Artifacts & PRD Showcase -->
+        <div class="pt-card full-width">
+          <div class="pt-card-title">📄 Sample Product Requirements Document (PRD) Snippet</div>
+          <div class="prd-box">
+            <div class="prd-header">
+              <span class="prd-tag">PRD-001</span>
+              <span class="prd-title">EdgePlay AI — Automated Video Annotation Queue & Backblaze B2 Sync</span>
+            </div>
+            <div class="prd-body">
+              <p><strong>1. Problem Statement:</strong> ML engineers manually trimmed 50GB+ raw match files, creating 4-hour operational delays before annotators could start labeling.</p>
+              <p><strong>2. User Persona:</strong> Data Annotators & Computer Vision Engineers requiring standardized frame rates and pre-trimmed clips.</p>
+              <p><strong>3. Feature Requirement:</strong> Cloud ingest trigger via FFmpeg segmentation to slice video into 10-second event clips, auto-generating Backblaze B2 S3 pre-signed URLs and populating the Label Studio annotation queue.</p>
+              <p><strong>4. Success Metric:</strong> Reduce annotation task preparation time from 4 hours to &lt; 10 minutes (50% overall turnaround reduction).</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </section>
   </section>
 
   <!-- ── SKILLS ── -->
