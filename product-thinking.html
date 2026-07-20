@@ -7,7 +7,7 @@
   <meta name="description" content="Frameworks, PRDs, North Star metrics, and product philosophy of Ravi Prakash — aspiring Product Manager." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;700&family=Syne:wght@700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&family=Syne:wght@700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/main.css" />
 </head>
 <body>
@@ -49,7 +49,7 @@
         <span class="label" style="margin-bottom: var(--space-3); display:block;">Artifacts &amp; Frameworks</span>
         <h1 class="heading-xl" style="margin-bottom: var(--space-4);">Product Thinking</h1>
         <p class="body-lg" style="max-width: 680px;">
-          How I structure product decisions — from formal PRD specifications and quantitative RICE matrices to North Star metrics and trade-off logs.
+          How I structure product decisions — from formal PRD specifications and quantitative RICE matrices to Figma wireframes, JTBD frameworks, and North Star metrics.
         </p>
       </div>
     </div>
@@ -65,7 +65,7 @@
 
       <div class="reveal">
         <div class="prd-tabs">
-          <button class="prd-tab-btn active" data-tab="prd-001">PRD-001: EdgePlay Queue</button>
+          <button class="prd-tab-btn active" data-tab="prd-001">PRD-001: EdgePlay.ai Queue</button>
           <button class="prd-tab-btn" data-tab="rice-matrix">RICE Prioritization</button>
           <button class="prd-tab-btn" data-tab="north-star">North Star Metrics</button>
         </div>
@@ -75,13 +75,13 @@
           <div class="prd-block">
             <div class="prd-block-header">
               <span class="prd-id">PRD-001</span>
-              <span class="prd-title">EdgePlay AI — Automated Video Annotation Queue &amp; Cloud Sync</span>
+              <span class="prd-title">EdgePlay.ai — Modular API Backend &amp; Automated Pipeline</span>
             </div>
             <div class="prd-block-body">
-              <p><strong>1. Problem Statement:</strong> ML engineers manually trimmed 50GB+ match footage files, causing 4-hour delays per match and zero reproducibility across annotation batches.</p>
-              <p><strong>2. Target User Persona:</strong> Data Annotators &amp; CV Engineers requiring 60fps pre-trimmed, version-controlled clips.</p>
-              <p><strong>3. RICE Score:</strong> 8.4 / 10 — Reach: 100% team, Impact: High (50% turnaround reduction), Confidence: 90%, Effort: 4-day sprint.</p>
-              <p><strong>4. Functional Requirements:</strong> Auto-detect frame rates &amp; transcode to 1080p/60fps. Slice into 10-second event clips at delivery timestamps. Generate Backblaze B2 pre-signed URLs with 24hr TTL. Auto-sync annotation tasks with Label Studio REST API.</p>
+              <p><strong>1. Product Scope:</strong> Defined schema and worker execution pipelines for a modular FastAPI backend spanning 9 core entities: Projects, Users, Assets, Tasks, Jobs, Workers, Assignments, Events &amp; Storage.</p>
+              <p><strong>2. Target User Persona:</strong> Data Annotators &amp; CV Engineers requiring frame-accurate pre-trimmed, version-controlled clips.</p>
+              <p><strong>3. RICE Score:</strong> 8.4 / 10 — Reach: 100% team, Impact: High (50% turnaround reduction), Confidence: 90%, Effort: 4-week sprint.</p>
+              <p><strong>4. Functional Requirements:</strong> Auto-detect frame rates &amp; transcode to 1080p/60fps. Slice into 10-second event clips at delivery timestamps. Generate Backblaze B2 pre-signed URLs with 24hr TTL. Embedded Label Studio layer for annotation task sync.</p>
               <p><strong>5. Success Metric:</strong> Reduce dataset preparation time from 4 hours to under 10 minutes per match.</p>
             </div>
           </div>
@@ -103,12 +103,12 @@
             </thead>
             <tbody>
               <tr>
-                <td><strong>Automated FFmpeg Slicing</strong></td>
+                <td><strong>Automated FFmpeg Worker Pipeline</strong></td>
                 <td>100% team</td>
                 <td>3.0 (High)</td>
                 <td>90%</td>
                 <td>1.0 wk</td>
-                <td style="color:var(--accent); font-weight:bold;">270.0</td>
+                <td style="color:var(--accent-cyan); font-weight:bold;">270.0</td>
                 <td><span class="tag">Rank #1</span></td>
               </tr>
               <tr>
@@ -117,16 +117,16 @@
                 <td>3.0 (High)</td>
                 <td>85%</td>
                 <td>1.0 wk</td>
-                <td style="color:var(--accent); font-weight:bold;">255.0</td>
+                <td style="color:var(--accent-cyan); font-weight:bold;">255.0</td>
                 <td><span class="tag">Rank #2</span></td>
               </tr>
               <tr>
-                <td><strong>Label Studio REST Sync</strong></td>
+                <td><strong>Embedded Label Studio Layer</strong></td>
                 <td>80% team</td>
                 <td>2.0 (Med)</td>
                 <td>80%</td>
                 <td>0.6 wk</td>
-                <td style="color:var(--accent); font-weight:bold;">213.3</td>
+                <td style="color:var(--accent-cyan); font-weight:bold;">213.3</td>
                 <td><span class="tag">Rank #3</span></td>
               </tr>
               <tr>
@@ -147,7 +147,7 @@
           <div class="prd-block">
             <div class="prd-block-header">
               <span class="prd-id">NSM</span>
-              <span class="prd-title">North Star &amp; Input KPI Taxonomy</span>
+              <span class="prd-title">North Star &amp; Inter-Rater KPI Taxonomy</span>
             </div>
             <div class="prd-block-body">
               <p><strong>🌟 North Star Metric:</strong> Weekly High-Quality Bounding Box Annotations Delivered to Model Training Pipeline.</p>
@@ -173,14 +173,14 @@
       <div class="projects-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
         <div class="glass-card reveal">
           <span class="tag" style="margin-bottom:var(--space-2);">Prioritization</span>
-          <h3 class="heading-sm" style="margin-bottom:var(--space-2);">RICE Scoring</h3>
+          <h3 class="heading-sm" style="margin-bottom:var(--space-2);">MoSCoW &amp; RICE Scoring</h3>
           <p class="body-md">Quantifies feature proposals across Reach, Impact, Confidence, and Effort to remove bias from roadmap decisions.</p>
         </div>
 
         <div class="glass-card reveal reveal-delay-1">
-          <span class="tag" style="margin-bottom:var(--space-2);">Scope Alignment</span>
-          <h3 class="heading-sm" style="margin-bottom:var(--space-2);">MoSCoW Method</h3>
-          <p class="body-md">Categorizes requirements into Must-have, Should-have, Could-have, and Won't-have for clear sprint scope negotiation.</p>
+          <span class="tag" style="margin-bottom:var(--space-2);">UX Blueprinting</span>
+          <h3 class="heading-sm" style="margin-bottom:var(--space-2);">JTBD &amp; Figma Wireframes</h3>
+          <p class="body-md">Mapping user personas, job stories, evaluator dashboard wireframes, escalation paths, and rubric scoring interfaces.</p>
         </div>
 
         <div class="glass-card reveal reveal-delay-2">
@@ -210,41 +210,13 @@
     </div>
   </section>
 
-  <!-- DECISION LOG -->
-  <section class="page-section-alt">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="label">Trade-Offs</span>
-        <h2 class="heading-lg">Example Product Decisions</h2>
-      </div>
-
-      <div class="projects-grid">
-        <div class="glass-card reveal">
-          <span class="label" style="margin-bottom:var(--space-2);">EdgePlay AI Decision</span>
-          <h3 class="heading-sm" style="margin-bottom:var(--space-2);">Why Backblaze B2 over AWS S3?</h3>
-          <p class="body-md">
-            75% lower egress costs with identical S3-compatible API. AWS S3 offered unnecessary enterprise compliance overhead for single-project scale while incurring heavy data transfer fees.
-          </p>
-        </div>
-
-        <div class="glass-card reveal reveal-delay-1">
-          <span class="label" style="margin-bottom:var(--space-2);">EdgePlay AI Decision</span>
-          <h3 class="heading-sm" style="margin-bottom:var(--space-2);">Why 10-Second Event Clips?</h3>
-          <p class="body-md">
-            Optimal annotation window for sports events. Balances enough visual context (bowler run-up + delivery + follow-through) with annotation speed and precise frame boundary labeling.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-inner">
         <div class="footer-brand">
           <div class="footer-logo">Ravi Prakash<span class="accent">.</span></div>
-          <div class="footer-tagline">Product Manager | AI Platforms & Data Products</div>
+          <div class="footer-tagline">Product Manager | AI Platforms &amp; Data Products</div>
         </div>
         <div>
           <div class="footer-col-title">Pages</div>
@@ -259,15 +231,15 @@
         <div>
           <div class="footer-col-title">Connect</div>
           <div class="footer-links">
-            <a href="mailto:ravi20140248332@gmail.com">Email</a>
-            <a href="https://linkedin.com/in/raviprakash-works" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="mailto:prakash.ravi.works@gmail.com">prakash.ravi.works@gmail.com</a>
+            <a href="https://linkedin.com/in/ravi-prakash-works" target="_blank" rel="noopener">LinkedIn</a>
             <a href="https://github.com/raviprakash-works" target="_blank" rel="noopener">GitHub</a>
             <a href="Ravi_Prakash_Resume.pdf" target="_blank" rel="noopener">Resume PDF</a>
           </div>
         </div>
       </div>
       <div class="footer-bottom">
-        © 2025 Ravi Prakash. Built with product thinking.
+        © 2026 Ravi Prakash. Built with product thinking.
       </div>
     </div>
   </footer>

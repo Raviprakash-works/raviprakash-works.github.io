@@ -4,10 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sales Performance Analytics | Case Study — Ravi Prakash</title>
-  <meta name="description" content="Sales Performance Analytics — Pricing guardrails and revenue leakage detection across 5,009 commercial orders." />
+  <meta name="description" content="Sales Performance Analytics Dashboard — Pricing guardrails and margin-waterfall analysis across 5,009 commercial orders." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;700&family=Syne:wght@700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&family=Syne:wght@700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/main.css" />
 </head>
 <body>
@@ -48,12 +48,12 @@
       <div class="reveal">
         <div class="tags-row" style="margin-bottom: var(--space-4);">
           <span class="tag">Commercial Strategy</span>
-          <span class="tag">Pricing Optimization</span>
-          <span class="tag">Revenue Leakage</span>
+          <span class="tag">Margin Waterfall Analysis</span>
+          <span class="tag">Power BI &amp; SQL</span>
         </div>
         <h1 class="heading-xl" style="margin-bottom: var(--space-3);">Sales Performance Analytics</h1>
         <p class="body-lg" style="max-width: 680px;">
-          Pricing Guardrails &amp; Revenue Leakage Detection — analyzing 5,009 order transactions to uncover -$99,559 in lost profit from unmonitored discount structures.
+          Pricing Guardrails &amp; Margin-Waterfall Analysis — analyzed 5,009 orders across 4 years via Python EDA &amp; 12 SQL queries; built a 3-page drill-through Power BI dashboard.
         </p>
 
         <div class="cs-stats">
@@ -62,16 +62,16 @@
             <span class="cs-stat-label">Orders Analyzed</span>
           </div>
           <div class="cs-stat-item">
-            <span class="cs-stat-num">-$99.5k</span>
-            <span class="cs-stat-label">Revenue Leakage</span>
+            <span class="cs-stat-num">-$9,559</span>
+            <span class="cs-stat-label">Net Loss @ 40%+</span>
           </div>
           <div class="cs-stat-item">
-            <span class="cs-stat-num">$329.9k</span>
-            <span class="cs-stat-label">Profit Baseline</span>
+            <span class="cs-stat-num">$29,988</span>
+            <span class="cs-stat-label">Profit @ Zero Discount</span>
           </div>
           <div class="cs-stat-item">
-            <span class="cs-stat-num">20%</span>
-            <span class="cs-stat-label">Guardrail Cap</span>
+            <span class="cs-stat-num">12</span>
+            <span class="cs-stat-label">SQL Queries</span>
           </div>
         </div>
 
@@ -95,7 +95,7 @@
             The sales organization lacked clear policy guardrails on promotional discounting. Account executives routinely offered 40%+ discounts to close deals, assuming top-line volume would offset margin erosion.
           </p>
           <p class="body-md">
-            In reality, orders with 40%+ discounts were consistently margin-negative, resulting in -$99,559 in cumulative revenue leakage that remained invisible to executive leadership until this diagnostic analysis.
+            Analyzed 5,009 orders across 4 years via Python EDA &amp; 12 SQL queries; built a 3-page drill-through Power BI dashboard and margin-waterfall analysis showing 40%+ discounts drive a net loss of -$9,559 vs $29,988 profit at zero discount.
           </p>
         </div>
 
@@ -111,11 +111,11 @@
             </div>
             <div class="info-row">
               <span class="info-label">Stack</span>
-              <span class="info-val">Python · SQL · Power BI</span>
+              <span class="info-val">Python · SQL · Power BI · Excel</span>
             </div>
             <div class="info-row">
               <span class="info-label">Key Output</span>
-              <span class="info-val">20% Pricing Guardrail</span>
+              <span class="info-val">Margin Waterfall Dashboard</span>
             </div>
           </div>
         </div>
@@ -123,59 +123,13 @@
     </div>
   </section>
 
-  <!-- INSIGHT & GRAPH -->
-  <section class="page-section-alt">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="label">Key Insight</span>
-        <h2 class="heading-md">The Discount-Profit Cliff</h2>
-      </div>
-
-      <div class="svg-diagram reveal" style="margin-bottom: var(--space-6);">
-        <svg viewBox="0 0 800 220" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <!-- Axes -->
-          <line x1="60" y1="180" x2="740" y2="180" stroke="#27272a" stroke-width="1.5"/>
-          <line x1="60" y1="20" x2="60" y2="180" stroke="#27272a" stroke-width="1.5"/>
-
-          <!-- Labels -->
-          <text x="60" y="200" fill="#71717a" font-size="10" font-family="monospace">0% Discount</text>
-          <text x="380" y="200" fill="#a3e635" font-size="10" font-family="monospace" font-weight="bold">20% Guardrail Cap</text>
-          <text x="680" y="200" fill="#f87171" font-size="10" font-family="monospace">40%+ Discount</text>
-
-          <!-- Zero Profit Line -->
-          <line x1="60" y1="120" x2="740" y2="120" stroke="rgba(255,255,255,0.1)" stroke-dasharray="4 4"/>
-          <text x="15" y="124" fill="#71717a" font-size="9" font-family="monospace">$0 Profit</text>
-
-          <!-- Guardrail Line -->
-          <line x1="380" y1="20" x2="380" y2="180" stroke="#a3e635" stroke-width="1.5" stroke-dasharray="3 3"/>
-
-          <!-- Curve -->
-          <path d="M60 40 Q250 45 380 90 T740 165" fill="none" stroke="#a3e635" stroke-width="2.5"/>
-
-          <circle cx="60" cy="40" r="5" fill="#a3e635"/>
-          <text x="75" y="44" fill="#a3e635" font-size="11" font-family="monospace" font-weight="bold">+$329.9k Baseline Profit</text>
-
-          <circle cx="700" cy="160" r="5" fill="#f87171"/>
-          <text x="560" y="150" fill="#f87171" font-size="11" font-family="monospace" font-weight="bold">-$99.5k Revenue Leakage</text>
-        </svg>
-      </div>
-
-      <div class="glass-card reveal">
-        <h3 class="heading-sm" style="margin-bottom:var(--space-2);">Strategic Recommendation</h3>
-        <p class="body-md">
-          Cap automated sales discounts at <strong>20% maximum</strong> across all product categories. Any discount exceeding 20% requires formal VP approval and a written margin justification, preventing profit erosion while retaining deal flexibility for strategic enterprise accounts.
-        </p>
-      </div>
-    </div>
-  </section>
-
   <!-- REPO LINK -->
-  <section class="page-section">
+  <section class="page-section-alt">
     <div class="container">
       <div class="glass-card reveal" style="text-align:center; padding: var(--space-7);">
         <h3 class="heading-md" style="margin-bottom: var(--space-3);">Explore the Code &amp; Dashboards</h3>
         <p class="body-md" style="max-width: 500px; margin: 0 auto var(--space-5);">
-          View the complete transaction analysis, cleaning scripts, and executive dashboards on GitHub.
+          View the complete transaction analysis, SQL queries, and executive dashboards on GitHub.
         </p>
         <a href="https://github.com/raviprakash-works/sales-dashboard-project" target="_blank" rel="noopener" class="btn-primary">View GitHub Repository ↗</a>
       </div>
@@ -188,7 +142,7 @@
       <div class="footer-inner">
         <div class="footer-brand">
           <div class="footer-logo">Ravi Prakash<span class="accent">.</span></div>
-          <div class="footer-tagline">Product Manager | AI Platforms & Data Products</div>
+          <div class="footer-tagline">Product Manager | AI Platforms &amp; Data Products</div>
         </div>
         <div>
           <div class="footer-col-title">Pages</div>
@@ -203,15 +157,15 @@
         <div>
           <div class="footer-col-title">Connect</div>
           <div class="footer-links">
-            <a href="mailto:ravi20140248332@gmail.com">Email</a>
-            <a href="https://linkedin.com/in/raviprakash-works" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="mailto:prakash.ravi.works@gmail.com">prakash.ravi.works@gmail.com</a>
+            <a href="https://linkedin.com/in/ravi-prakash-works" target="_blank" rel="noopener">LinkedIn</a>
             <a href="https://github.com/raviprakash-works" target="_blank" rel="noopener">GitHub</a>
             <a href="Ravi_Prakash_Resume.pdf" target="_blank" rel="noopener">Resume PDF</a>
           </div>
         </div>
       </div>
       <div class="footer-bottom">
-        © 2025 Ravi Prakash. Built with product thinking.
+        © 2026 Ravi Prakash. Built with product thinking.
       </div>
     </div>
   </footer>
