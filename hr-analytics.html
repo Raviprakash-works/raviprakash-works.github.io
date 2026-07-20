@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HR Employee Attrition Analytics | Case Study — Ravi Prakash</title>
+  <meta name="description" content="HR Employee Attrition Analytics — turning 1,470 employee records into predictive retention interventions and early warning HR systems." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;700&family=Syne:wght@700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+
+  <div class="noise"></div>
+
+  <!-- NAVIGATION -->
+  <nav class="site-nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Ravi Prakash<span class="accent">.</span></a>
+      <ul class="nav-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="case-studies.html" class="active">Case Studies</a></li>
+        <li><a href="product-thinking.html">Product Thinking</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="Ravi_Prakash_Resume.pdf" target="_blank" rel="noopener" class="nav-cta hide-mobile">Resume ↗</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Mobile navigation">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="case-studies.html">Case Studies</a>
+    <a href="product-thinking.html">Product Thinking</a>
+    <a href="experience.html">Experience</a>
+    <a href="contact.html">Contact</a>
+    <a href="Ravi_Prakash_Resume.pdf" target="_blank" rel="noopener">Resume ↗</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="cs-hero">
+    <div class="container">
+      <div class="reveal">
+        <div class="tags-row" style="margin-bottom: var(--space-4);">
+          <span class="tag">Product Analytics</span>
+          <span class="tag">Retention Strategy</span>
+          <span class="tag">SQL &amp; Telemetry</span>
+        </div>
+        <h1 class="heading-xl" style="margin-bottom: var(--space-3);">HR Attrition Analytics</h1>
+        <p class="body-lg" style="max-width: 680px;">
+          Predictive Retention &amp; Early Risk Intervention — turning 1,470 employee telemetry records into actionable HR retention strategies.
+        </p>
+
+        <div class="cs-stats">
+          <div class="cs-stat-item">
+            <span class="cs-stat-num">1,470</span>
+            <span class="cs-stat-label">Records Analyzed</span>
+          </div>
+          <div class="cs-stat-item">
+            <span class="cs-stat-num">39.8%</span>
+            <span class="cs-stat-label">Sales Rep Risk</span>
+          </div>
+          <div class="cs-stat-item">
+            <span class="cs-stat-num">3x</span>
+            <span class="cs-stat-label">Higher Risk 0-2yr</span>
+          </div>
+          <div class="cs-stat-item">
+            <span class="cs-stat-num">11</span>
+            <span class="cs-stat-label">SQL Diagnostic Queries</span>
+          </div>
+        </div>
+
+        <div class="hero-actions">
+          <a href="case-studies.html" class="btn-ghost">← All Case Studies</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROBLEM & CONTEXT -->
+  <section class="page-section">
+    <div class="container">
+      <div class="two-col">
+        <div class="reveal">
+          <div class="section-header">
+            <span class="label">The Problem</span>
+            <h2 class="heading-md">HR Teams Notice Attrition Too Late</h2>
+          </div>
+          <p class="body-md" style="margin-bottom: var(--space-4);">
+            Employee turnover costs organizations 50% to 200% of an employee's annual salary. HR leadership typically relies on exit interviews — a reactive approach that captures feedback after the employee has already decided to leave.
+          </p>
+          <p class="body-md">
+            No systematic early-warning mechanism existed to identify high-risk employee cohorts before departure decisions were finalized.
+          </p>
+        </div>
+
+        <div class="reveal reveal-delay-1">
+          <div class="info-box">
+            <div class="info-row">
+              <span class="info-label">Product Focus</span>
+              <span class="info-val">Predictive Retention Strategy</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Users</span>
+              <span class="info-val">HR Leaders &amp; CHROs</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Stack</span>
+              <span class="info-val">Python · SQL · Power BI</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Key Discovery</span>
+              <span class="info-val">39.8% Sales Rep Attrition</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- METHODOLOGY & FINDINGS -->
+  <section class="page-section-alt">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="label">Methodology</span>
+        <h2 class="heading-md">Feature Engineering &amp; Risk Segmentation</h2>
+      </div>
+
+      <div class="glass-card reveal" style="margin-bottom: var(--space-6);">
+        <p class="body-md" style="margin-bottom: var(--space-4);">
+          Engineered 5 key telemetry features from 1,470 raw employee records. Wrote 11 targeted SQL queries to segment high-risk cohorts across department, tenure, overtime status, and salary band.
+        </p>
+
+        <ul class="tl-list">
+          <li><strong>Sales Representatives</strong> exhibit <strong>39.8% attrition rate</strong> — highest across all job roles</li>
+          <li>Employees in the <strong>0-2 years tenure band</strong> show <strong>3x higher departure risk</strong> compared to 5+ year tenure cohort</li>
+          <li><strong>Overtime workers</strong> have significantly elevated attrition probability across all departments</li>
+          <li><strong>Low salary band</strong> combined with zero stock options strongly correlates with early voluntary departure</li>
+        </ul>
+      </div>
+
+      <div class="metric-row reveal">
+        <div class="metric-badge">
+          <div class="metric-num">39.8%</div>
+          <div class="metric-label">Sales Rep Departure Risk</div>
+        </div>
+        <div class="metric-badge">
+          <div class="metric-num">3x</div>
+          <div class="metric-label">Early Tenure Risk Multiplier</div>
+        </div>
+        <div class="metric-badge">
+          <div class="metric-num">11</div>
+          <div class="metric-label">SQL Diagnostic Queries</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REPO LINK -->
+  <section class="page-section">
+    <div class="container">
+      <div class="glass-card reveal" style="text-align:center; padding: var(--space-7);">
+        <h3 class="heading-md" style="margin-bottom: var(--space-3);">Explore the Open-Source Analysis</h3>
+        <p class="body-md" style="max-width: 500px; margin: 0 auto var(--space-5);">
+          View the full SQL queries, cleaned datasets, and Power BI dashboard source files on GitHub.
+        </p>
+        <a href="https://github.com/raviprakash-works/hr-attrition-analytics" target="_blank" rel="noopener" class="btn-primary">View GitHub Repository ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="footer-logo">Ravi Prakash<span class="accent">.</span></div>
+          <div class="footer-tagline">Product Manager | AI Platforms & Data Products</div>
+        </div>
+        <div>
+          <div class="footer-col-title">Pages</div>
+          <div class="footer-links">
+            <a href="about.html">About</a>
+            <a href="case-studies.html">Case Studies</a>
+            <a href="product-thinking.html">Product Thinking</a>
+            <a href="experience.html">Experience</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-title">Connect</div>
+          <div class="footer-links">
+            <a href="mailto:ravi20140248332@gmail.com">Email</a>
+            <a href="https://linkedin.com/in/raviprakash-works" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://github.com/raviprakash-works" target="_blank" rel="noopener">GitHub</a>
+            <a href="Ravi_Prakash_Resume.pdf" target="_blank" rel="noopener">Resume PDF</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        © 2025 Ravi Prakash. Built with product thinking.
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
